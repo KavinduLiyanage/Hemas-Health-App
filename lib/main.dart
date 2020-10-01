@@ -105,9 +105,9 @@ class Dashboard extends StatelessWidget {
           ),
           Container(
             //padding: EdgeInsets.all(100),
-            margin: EdgeInsets.fromLTRB(15, 100, 15, 0),
-            height: size.height * .75,
-            width: size.height * .75,
+            margin: EdgeInsets.fromLTRB(15, 120, 15, 0),
+            height: size.height * contentAreaHeight,
+            width: size.height * contentAreaWidth,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
               color: Colors.white,
@@ -149,7 +149,7 @@ class Dashboard extends StatelessWidget {
 
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 65.0),
+                      padding: const EdgeInsets.only(top: 85.0),
                       child: GridView.count(
                         crossAxisCount: 2,
                         childAspectRatio: 1,

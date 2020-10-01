@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
+import 'package:hemashealth/widgets/category_card.dart';
+import 'package:hemashealth/widgets/category_card_orders_list.dart';
 import 'constants.dart';
 
 void main() {
@@ -65,23 +67,32 @@ class OrderMedicine extends StatelessWidget {
               ),
             ),
           ),
+          Container(
+            //padding: EdgeInsets.all(100),
+            margin: EdgeInsets.fromLTRB(15, 120, 15, 0),
+            height: size.height * contentAreaHeight,
+            width: size.height * contentAreaWidth,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black26),
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+              ,
+            ),
+            child: Container(
+              child: Text("Ordered List",
+                style: TextStyle(fontWeight: FontWeight.bold,
+                    fontSize: 18
+                ),
+              ),
+              padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
+            ),
+          ),
           SafeArea(
             child: Padding(
-
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Container(
-                    //padding: EdgeInsets.all(100),
-                    margin: EdgeInsets.all(20),
-                    height: size.height * .35,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(20))
-                      ,
-                    ),
-                  ),
                   Align(
                     alignment: Alignment.topLeft,
                     child: Container(
@@ -92,17 +103,35 @@ class OrderMedicine extends StatelessWidget {
                       //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
                     ),
                   ),
-                  Text(
-                    "Order Medicine",
-                    style: Theme.of(context)
-                        .textTheme
-                        .display1
-                        .copyWith(fontWeight: FontWeight.w600, fontSize: 28),
+
+
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 50, 10, 0),
+                      child: GridView.count(
+                        crossAxisCount: 1,
+                        childAspectRatio: 3,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        children: <Widget>[
+                          CategoryCardOrdersList(
+                            title: "Channel a Doctor",
+                            svgSrc:
+                            "assets/icons/dashboard_ChannelaDoctor2.svg",
+                            press: () {},
+                          ),
+                          CategoryCardOrdersList(
+                            title: "Order Medicine",
+                            svgSrc: "assets/icons/dashboard_OrderMedicine2.svg",
+                            press: () {
+
+                            },
+                          ),
+
+                        ],
+                      ),
+                    ),
                   ),
-
-                  //Expanded(
-
-                  //),
                 ],
               ),
             ),

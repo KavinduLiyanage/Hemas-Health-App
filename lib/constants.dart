@@ -9,3 +9,6 @@ const kTextColor = Color(0xFFFFFFFF);
 const kBlueLightColor = Color(0xFFC7B8F5);
 const kBlueColor = Color(0xFF817DC0);
 const kShadowColor = Color(0xFFE6E6E6);
+
+const contentAreaHeight = .74;
+const contentAreaWidth = .50;
