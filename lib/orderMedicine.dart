@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
@@ -31,6 +32,19 @@ class OrderMedicine extends StatelessWidget {
         .size; //this gonna give us total height and with of our device
     return Scaffold(
       bottomNavigationBar: BottomNavBar(),
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        centerTitle: true,
+        title: new Text(
+          "Order Medicine",
+          style: Theme.of(context)
+              .textTheme
+              .display1
+              .copyWith(fontWeight: FontWeight.w500,  fontSize: 20),
+        ),
+        backgroundColor: Color(0x44000000),
+        elevation: 0,
+      ),
       body: Stack(
         children: <Widget>[
           Container(
@@ -53,10 +67,21 @@ class OrderMedicine extends StatelessWidget {
           ),
           SafeArea(
             child: Padding(
+
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  Container(
+                    //padding: EdgeInsets.all(100),
+                    margin: EdgeInsets.all(20),
+                    height: size.height * .35,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(20))
+                      ,
+                    ),
+                  ),
                   Align(
                     alignment: Alignment.topLeft,
                     child: Container(
@@ -64,7 +89,7 @@ class OrderMedicine extends StatelessWidget {
                       height: 62,
                       width: 32,
 
-                      child: SvgPicture.asset("assets/icons/menuIcon.svg"),
+                      //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
                     ),
                   ),
                   Text(
