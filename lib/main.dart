@@ -6,6 +6,7 @@ import 'package:hemashealth/widgets/category_card.dart';
 
 import 'constants.dart';
 import 'orderMedicine.dart';
+import 'members.dart';
 
 void main() {
   runApp(MyApp());
@@ -43,7 +44,7 @@ class Dashboard extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .display1
-              .copyWith(fontWeight: FontWeight.w500,  fontSize: 20),
+              .copyWith(fontWeight: FontWeight.w500, fontSize: 20),
         ),
         backgroundColor: Color(0x44000000),
         elevation: 0,
@@ -62,8 +63,7 @@ class Dashboard extends StatelessWidget {
                     colors: [
                       kBackgroundColor1,
                       kBackgroundColor2,
-                    ]
-                ),
+                    ]),
               ),
             ),
             ListTile(
@@ -95,8 +95,7 @@ class Dashboard extends StatelessWidget {
                   colors: [
                     kBackgroundColor1,
                     kBackgroundColor2,
-                  ]
-              ),
+                  ]),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(26),
                 bottomRight: Radius.circular(26),
@@ -111,14 +110,12 @@ class Dashboard extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
               color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(20))
-              ,
+              borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
             child: Container(
-              child: Text("Quick Links",
-                style: TextStyle(fontWeight: FontWeight.bold,
-                    fontSize: 18
-                ),
+              child: Text(
+                "Quick Links",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
               padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
             ),
@@ -129,7 +126,7 @@ class Dashboard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                /*  Align(
+                  /*  Align(
                     alignment: Alignment.topLeft,
                     child: Container(
                       alignment: Alignment.center,
@@ -177,18 +174,21 @@ class Dashboard extends StatelessWidget {
                           CategoryCard(
                             title: "Lab Reports",
                             svgSrc: "assets/icons/dashboard_LabReport.svg",
-                            press: () {},
+                            press: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return Members();
+                              }));
+                            },
                           ),
                           CategoryCard(
                             title: "Feedback",
-                            svgSrc:
-                                "assets/icons/dashboard_Feedback.svg",
+                            svgSrc: "assets/icons/dashboard_Feedback.svg",
                             press: () {},
                           ),
                           CategoryCard(
                             title: "Sample",
-                            svgSrc:
-                                "assets/icons/dashboard_VideoCalls.svg",
+                            svgSrc: "assets/icons/dashboard_VideoCalls.svg",
                             press: () {
                               Navigator.push(
                                 context,
@@ -203,8 +203,8 @@ class Dashboard extends StatelessWidget {
                             svgSrc: "assets/icons/dashboard_ContactsUs2.svg",
                             press: () {},
                           ),
-              ],
-            ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
