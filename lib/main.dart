@@ -7,6 +7,7 @@ import 'package:hemashealth/widgets/category_card.dart';
 import 'constants.dart';
 import 'orderMedicine.dart';
 import 'members.dart';
+import 'channelDoctor.dart';
 
 void main() {
   runApp(MyApp());
@@ -157,7 +158,14 @@ class Dashboard extends StatelessWidget {
                             title: "Channel a Doctor",
                             svgSrc:
                                 "assets/icons/dashboard_ChannelaDoctor2.svg",
-                            press: () {},
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return ChannelDoctor();
+                                }),
+                              );
+                            },
                           ),
                           CategoryCard(
                             title: "Order Medicine",
