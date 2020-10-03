@@ -100,6 +100,46 @@ class ChannelDoctor extends StatelessWidget {
                       //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
                     ),
                   ),
+                  new DropdownButton<String>(
+                    hint: Text('Select Doctor'),
+                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
+                      return new DropdownMenuItem<String>(
+                        value: value,
+                        child: new Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (_) {},
+                  ),
+                  new DropdownButton<String>(
+                    hint: Text('Select Speciality'),
+                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
+                      return new DropdownMenuItem<String>(
+                        value: value,
+                        child: new Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (_) {},
+                  ),
+                  new DropdownButton<String>(
+                    hint: Text('Select Hospital'),
+                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
+                      return new DropdownMenuItem<String>(
+                        value: value,
+                        child: new Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (_) {},
+                  ),
+                  new DropdownButton<String>(
+                    hint: Text('Select Date'),
+                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
+                      return new DropdownMenuItem<String>(
+                        value: value,
+                        child: new Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (_) {},
+                  ),
                 ],
               ),
             ),
