@@ -5,7 +5,6 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card.dart';
 import 'package:hemashealth/widgets/category_card_orders_list.dart';
 import 'constants.dart';
-import 'doctorResult.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,12 +22,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
-      home: ChannelDoctor(),
+      home: DoctorResult(),
     );
   }
 }
 
-class ChannelDoctor extends StatelessWidget {
+class DoctorResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context)
@@ -39,7 +38,7 @@ class ChannelDoctor extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: new Text(
-          "Channel Doctor",
+          "Channel a Doctor",
           style: Theme.of(context)
               .textTheme
               .display1
@@ -100,59 +99,6 @@ class ChannelDoctor extends StatelessWidget {
 
                       //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
                     ),
-                  ),
-                  new DropdownButton<String>(
-                    hint: Text('Select Doctor'),
-                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
-                      return new DropdownMenuItem<String>(
-                        value: value,
-                        child: new Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
-                  ),
-                  new DropdownButton<String>(
-                    hint: Text('Select Speciality'),
-                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
-                      return new DropdownMenuItem<String>(
-                        value: value,
-                        child: new Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
-                  ),
-                  new DropdownButton<String>(
-                    hint: Text('Select Hospital'),
-                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
-                      return new DropdownMenuItem<String>(
-                        value: value,
-                        child: new Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
-                  ),
-                  new DropdownButton<String>(
-                    hint: Text('Select Date'),
-                    items: <String>['A', 'B', 'C', 'D'].map((String value) {
-                      return new DropdownMenuItem<String>(
-                        value: value,
-                        child: new Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (_) {},
-                  ),
-                  new RaisedButton(
-                    color: Colors.orange,
-                    textColor: Colors.white,
-                    child: new Text('Submit'),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) {
-                          return DoctorResult();
-                        }),
-                      );
-                    },
                   ),
                 ],
               ),
