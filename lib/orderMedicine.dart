@@ -107,7 +107,7 @@ class OrderMedicine extends StatelessWidget {
 
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 50, 10, 0),
+                      padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
                       child: GridView.count(
                         crossAxisCount: 1,
                         childAspectRatio: 3,
@@ -115,14 +115,13 @@ class OrderMedicine extends StatelessWidget {
                         mainAxisSpacing: 10,
                         children: <Widget>[
                           CategoryCardOrdersList(
-                            title: "Channel a Doctor",
-                            svgSrc:
-                            "assets/icons/dashboard_ChannelaDoctor2.svg",
+                            title: "Address - Pattiyawatta, Kaduwela.",
+                            svgSrc: "assets/icons/dashboard_Feedback.svg",
                             press: () {},
                           ),
                           CategoryCardOrdersList(
-                            title: "Order Medicine",
-                            svgSrc: "assets/icons/dashboard_OrderMedicine2.svg",
+                            title: "Address - Isurupura, Weliwita.",
+                            svgSrc: "assets/icons/dashboard_Feedback.svg",
                             press: () {
 
                             },
