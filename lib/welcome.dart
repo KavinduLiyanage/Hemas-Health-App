@@ -46,7 +46,6 @@ class Welcome extends StatelessWidget {
               ),
             ),
           ),
-
         ],
       ),
     );

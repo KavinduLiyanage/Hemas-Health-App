@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hemashealth/welcome.dart';
+import 'file:///C:/Users/Kavindu%20Sandeepa/AndroidStudioProjects/hemashealth/lib/LoginRegister/welcomeNew.dart';
 import 'constants.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
-      home: Welcome(),
+      home: WelcomeNew(),
     );
   }
 }

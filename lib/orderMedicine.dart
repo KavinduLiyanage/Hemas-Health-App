@@ -1,31 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
-import 'package:hemashealth/widgets/category_card.dart';
 import 'package:hemashealth/widgets/category_card_orders_list.dart';
 import 'constants.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Hemas Health',
-      theme: ThemeData(
-        fontFamily: "Cairo",
-        scaffoldBackgroundColor: kBackgroundColor,
-        textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
-      ),
-      home: OrderMedicine(),
-    );
-  }
-}
 
 class OrderMedicine extends StatelessWidget {
   @override

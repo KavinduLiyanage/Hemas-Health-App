@@ -96,7 +96,6 @@ class Members extends StatelessWidget {
                       alignment: Alignment.center,
                       height: 62,
                       width: 32,
-
                       //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
                     ),
                   ),
