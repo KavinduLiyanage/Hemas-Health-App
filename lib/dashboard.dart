@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card.dart';
+import 'OrderMedicine/uploadPres.dart';
 import 'channelDoctor.dart';
 import 'constants.dart';
 import 'members.dart';
@@ -180,7 +181,12 @@ class Dashboard extends StatelessWidget {
                           CategoryCard(
                             title: "Contact Us",
                             svgSrc: "assets/icons/dashboard_ContactsUs2.svg",
-                            press: () {},
+                            press: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                    return UploadPres();
+                                  }));
+                            },
                           ),
                         ],
                       ),
