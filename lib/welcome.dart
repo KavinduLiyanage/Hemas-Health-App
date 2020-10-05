@@ -25,7 +25,8 @@ class Welcome extends StatelessWidget {
                 );
               },
             ),
-            alignment: Alignment(0.1, 0.7)),
+            alignment: Alignment(0.1, 0.7)
+        ),
       ),
       body: Stack(
         children: <Widget>[

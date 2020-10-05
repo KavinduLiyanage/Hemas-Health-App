@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card.dart';
+import 'OrderMedicine/uploadNew.dart';
 import 'OrderMedicine/uploadPres.dart';
 import 'channelDoctor.dart';
 import 'constants.dart';
@@ -176,6 +177,10 @@ class Dashboard extends StatelessWidget {
                             title: "Video Calls",
                             svgSrc: "assets/icons/dashboard_VideoCalls.svg",
                             press: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                    return ImagePickerWidgetNew();
+                                  }));
                             },
                           ),
                           CategoryCard(

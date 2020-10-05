@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card_orders_list.dart';
+import 'OrderMedicine/uploadNew.dart';
 import 'constants.dart';
+import 'dashboard.dart';
 
 class OrderMedicine extends StatelessWidget {
   @override
@@ -24,8 +26,52 @@ class OrderMedicine extends StatelessWidget {
         backgroundColor: Color(0x44000000),
         elevation: 0,
       ),
+      floatingActionButton: Align(
+          child: Container(
+              margin: EdgeInsets.fromLTRB(0, 0,0, 10),
+              width: 280.0,
+              height: 50.0,
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ImagePickerWidgetNew()),
+                  );
+                },
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                padding: const EdgeInsets.all(0.0),
+                child: Ink(
+
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          kBackgroundColor1,
+                          kBackgroundColor2,
+                        ]
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                  ),
+                  child: Container(
+                    constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0), // min sizes for Material buttons
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Next',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontSize: 16),
+
+                    ),
+                  ),
+                ),
+              )
+          ),
+          alignment: Alignment(0, 0.9)
+      ),
       body: Stack(
         children: <Widget>[
+
           Container(
             // Here the height of the container is 35% of our total height
             height: size.height * .35,
@@ -64,12 +110,14 @@ class OrderMedicine extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
             ),
           ),
+
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+
                   Align(
                     alignment: Alignment.topLeft,
                     child: Container(
@@ -83,6 +131,7 @@ class OrderMedicine extends StatelessWidget {
 
 
                   Expanded(
+
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
                       child: GridView.count(
@@ -111,7 +160,9 @@ class OrderMedicine extends StatelessWidget {
                 ],
               ),
             ),
-          )
+
+          ),
+
         ],
       ),
     );
