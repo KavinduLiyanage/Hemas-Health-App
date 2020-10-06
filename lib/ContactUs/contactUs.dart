@@ -791,19 +791,13 @@ class ContactUs extends StatelessWidget {
                                       pinBottom: true,
                                       fixedWidth: true,
                                       fixedHeight: true,
-                                      child: GestureDetector(
-                                        onTap: () => send?.call(),
-                                        child: PageLink(
-                                          links: [
-                                            PageLinkInfo(
-                                              transition: LinkTransition.Fade,
-                                              ease: Curves.easeOut,
-                                              duration: 0.3,
-                                              pageBuilder: () => AboutWidget(
-                                                title: "Your Reorder Request Sent.",
-                                              ),
-                                            ),
-                                          ],
+                                      child: new GestureDetector(
+                                        onTap: () => showDialog(
+                                          context: context,
+                                          builder: (context) => AboutWidget(
+                                            title: "Your Contact Form Sent.",
+                                          ),
+                                        ),
                                           child: Stack(
                                             children: <Widget>[
                                               Pinned.fromSize(
@@ -817,7 +811,7 @@ class ContactUs extends StatelessWidget {
                                                 child: SvgPicture.string(
                                                   _svg_dcicw3,
                                                   allowDrawingOutsideViewBox:
-                                                      true,
+                                                  true,
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -845,10 +839,10 @@ class ContactUs extends StatelessWidget {
                                                           color: const Color(
                                                               0xffffffff),
                                                           fontWeight:
-                                                              FontWeight.w500,
+                                                          FontWeight.w500,
                                                         ),
                                                         textAlign:
-                                                            TextAlign.center,
+                                                        TextAlign.center,
                                                       ),
                                                     ),
                                                   ],
@@ -856,7 +850,6 @@ class ContactUs extends StatelessWidget {
                                               ),
                                             ],
                                           ),
-                                        ),
                                       ),
                                     ),
                                   ],

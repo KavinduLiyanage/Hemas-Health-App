@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/ContactUs/contactUs.dart';
 import 'package:hemashealth/LabReport/reportList.dart';
 import 'package:hemashealth/OrderMedicine/uploadNew.dart';
+import 'package:hemashealth/widgets/alert_dialog.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 
 import '../constants.dart';
@@ -402,81 +403,77 @@ class MembersNew extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Pinned.fromSize(
-                                            bounds: Rect.fromLTWH(
-                                                140.0, 0.0, 50.0, 40.0),
-                                            size: Size(190.0, 40.0),
-                                            pinRight: true,
-                                            pinTop: true,
-                                            pinBottom: true,
-                                            fixedWidth: true,
-                                            child: PageLink(
-                                              links: [
-                                                PageLinkInfo(
-                                                  transition:
-                                                      LinkTransition.Fade,
-                                                  ease: Curves.easeOut,
-                                                  duration: 0.3,
-                                                  pageBuilder: () =>
-                                                      ContactUs(),
-                                                ),
-                                              ],
-                                              child: Stack(
-                                                children: <Widget>[
-                                                  Pinned.fromSize(
-                                                    bounds: Rect.fromLTWH(
-                                                        0.0, 0.0, 50.0, 40.0),
-                                                    size: Size(50.0, 40.0),
-                                                    pinLeft: true,
-                                                    pinRight: true,
-                                                    pinTop: true,
-                                                    pinBottom: true,
-                                                    child: SvgPicture.string(
-                                                      _svg_3jhtir,
-                                                      allowDrawingOutsideViewBox:
-                                                          true,
-                                                      fit: BoxFit.fill,
-                                                    ),
-                                                  ),
-                                                  Pinned.fromSize(
-                                                    bounds: Rect.fromLTWH(
-                                                        11.1, 21.9, 32.0, 15.0),
-                                                    size: Size(50.0, 40.0),
-                                                    pinBottom: true,
-                                                    fixedWidth: true,
-                                                    fixedHeight: true,
-                                                    child: Text(
-                                                      'Delete',
-                                                      style: TextStyle(
-                                                        fontFamily: 'Poppins',
-                                                        fontSize: 10,
-                                                        color: const Color(
-                                                            0xff000000),
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                      ),
-                                                      textAlign: TextAlign.left,
-                                                    ),
-                                                  ),
-                                                  Pinned.fromSize(
-                                                    bounds: Rect.fromLTWH(
-                                                        19.0, 6.0, 12.4, 16.0),
-                                                    size: Size(50.0, 40.0),
-                                                    pinTop: true,
-                                                    fixedWidth: true,
-                                                    fixedHeight: true,
-                                                    child:
-                                                        // Adobe XD layer: 'ic_delete_forever_2…' (shape)
-                                                        SvgPicture.string(
-                                                      _svg_vkacvh,
-                                                      allowDrawingOutsideViewBox:
-                                                          true,
-                                                      fit: BoxFit.fill,
-                                                    ),
-                                                  ),
-                                                ],
+                                          new GestureDetector(
+                                            onTap: () => showDialog(
+                                              context: context,
+                                              builder: (context) => AboutWidget(
+                                                title: "Member Profile Deleted.",
                                               ),
                                             ),
+                                              child: Pinned.fromSize(
+                                                bounds: Rect.fromLTWH(
+                                                    140.0, 0.0, 50.0, 40.0),
+                                                size: Size(190.0, 40.0),
+                                                pinRight: true,
+                                                pinTop: true,
+                                                pinBottom: true,
+                                                fixedWidth: true,
+                                                child: Stack(
+                                                  children: <Widget>[
+                                                    Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          0.0, 0.0, 50.0, 40.0),
+                                                      size: Size(50.0, 40.0),
+                                                      pinLeft: true,
+                                                      pinRight: true,
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      child: SvgPicture.string(
+                                                        _svg_3jhtir,
+                                                        allowDrawingOutsideViewBox:
+                                                        true,
+                                                        fit: BoxFit.fill,
+                                                      ),
+                                                    ),
+                                                    Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          11.1, 21.9, 32.0, 15.0),
+                                                      size: Size(50.0, 40.0),
+                                                      pinBottom: true,
+                                                      fixedWidth: true,
+                                                      fixedHeight: true,
+                                                      child: Text(
+                                                        'Delete',
+                                                        style: TextStyle(
+                                                          fontFamily: 'Poppins',
+                                                          fontSize: 10,
+                                                          color: const Color(
+                                                              0xff000000),
+                                                          fontWeight:
+                                                          FontWeight.w500,
+                                                        ),
+                                                        textAlign: TextAlign.left,
+                                                      ),
+                                                    ),
+                                                    Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          19.0, 6.0, 12.4, 16.0),
+                                                      size: Size(50.0, 40.0),
+                                                      pinTop: true,
+                                                      fixedWidth: true,
+                                                      fixedHeight: true,
+                                                      child:
+                                                      // Adobe XD layer: 'ic_delete_forever_2…' (shape)
+                                                      SvgPicture.string(
+                                                        _svg_vkacvh,
+                                                        allowDrawingOutsideViewBox:
+                                                        true,
+                                                        fit: BoxFit.fill,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
                                           ),
                                         ],
                                       ),
@@ -751,81 +748,78 @@ class MembersNew extends StatelessWidget {
                                               ),
                                             ),
                                           ),
-                                          Pinned.fromSize(
-                                            bounds: Rect.fromLTWH(
-                                                140.0, 0.0, 50.0, 40.0),
-                                            size: Size(190.0, 40.0),
-                                            pinRight: true,
-                                            pinTop: true,
-                                            pinBottom: true,
-                                            fixedWidth: true,
-                                            child: PageLink(
-                                              links: [
-                                                PageLinkInfo(
-                                                  transition:
-                                                      LinkTransition.Fade,
-                                                  ease: Curves.easeOut,
-                                                  duration: 0.3,
-                                                  pageBuilder: () =>
-                                                      ContactUs(),
-                                                ),
-                                              ],
-                                              child: Stack(
-                                                children: <Widget>[
-                                                  Pinned.fromSize(
-                                                    bounds: Rect.fromLTWH(
-                                                        0.0, 0.0, 50.0, 40.0),
-                                                    size: Size(50.0, 40.0),
-                                                    pinLeft: true,
-                                                    pinRight: true,
-                                                    pinTop: true,
-                                                    pinBottom: true,
-                                                    child: SvgPicture.string(
-                                                      _svg_3jhtir,
-                                                      allowDrawingOutsideViewBox:
-                                                          true,
-                                                      fit: BoxFit.fill,
-                                                    ),
-                                                  ),
-                                                  Pinned.fromSize(
-                                                    bounds: Rect.fromLTWH(
-                                                        11.1, 21.9, 32.0, 15.0),
-                                                    size: Size(50.0, 40.0),
-                                                    pinBottom: true,
-                                                    fixedWidth: true,
-                                                    fixedHeight: true,
-                                                    child: Text(
-                                                      'Delete',
-                                                      style: TextStyle(
-                                                        fontFamily: 'Poppins',
-                                                        fontSize: 10,
-                                                        color: const Color(
-                                                            0xff000000),
-                                                        fontWeight:
-                                                            FontWeight.w500,
-                                                      ),
-                                                      textAlign: TextAlign.left,
-                                                    ),
-                                                  ),
-                                                  Pinned.fromSize(
-                                                    bounds: Rect.fromLTWH(
-                                                        19.0, 6.0, 12.4, 16.0),
-                                                    size: Size(50.0, 40.0),
-                                                    pinTop: true,
-                                                    fixedWidth: true,
-                                                    fixedHeight: true,
-                                                    child:
-                                                        // Adobe XD layer: 'ic_delete_forever_2…' (shape)
-                                                        SvgPicture.string(
-                                                      _svg_vkacvh,
-                                                      allowDrawingOutsideViewBox:
-                                                          true,
-                                                      fit: BoxFit.fill,
-                                                    ),
-                                                  ),
-                                                ],
+                                          new GestureDetector(
+                                            onTap: () => showDialog(
+                                              context: context,
+                                              builder: (context) => AboutWidget(
+                                                title:
+                                                    "Member Profile Deleted.",
                                               ),
                                             ),
+                                            child: Pinned.fromSize(
+                                                bounds: Rect.fromLTWH(
+                                                    140.0, 0.0, 50.0, 40.0),
+                                                size: Size(190.0, 40.0),
+                                                pinRight: true,
+                                                pinTop: true,
+                                                pinBottom: true,
+                                                fixedWidth: true,
+                                                child: Stack(
+                                                  children: <Widget>[
+                                                    Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          0.0, 0.0, 50.0, 40.0),
+                                                      size: Size(50.0, 40.0),
+                                                      pinLeft: true,
+                                                      pinRight: true,
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      child: SvgPicture.string(
+                                                        _svg_3jhtir,
+                                                        allowDrawingOutsideViewBox:
+                                                        true,
+                                                        fit: BoxFit.fill,
+                                                      ),
+                                                    ),
+                                                    Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          11.1, 21.9, 32.0, 15.0),
+                                                      size: Size(50.0, 40.0),
+                                                      pinBottom: true,
+                                                      fixedWidth: true,
+                                                      fixedHeight: true,
+                                                      child: Text(
+                                                        'Delete',
+                                                        style: TextStyle(
+                                                          fontFamily: 'Poppins',
+                                                          fontSize: 10,
+                                                          color: const Color(
+                                                              0xff000000),
+                                                          fontWeight:
+                                                          FontWeight.w500,
+                                                        ),
+                                                        textAlign: TextAlign.left,
+                                                      ),
+                                                    ),
+                                                    Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          19.0, 6.0, 12.4, 16.0),
+                                                      size: Size(50.0, 40.0),
+                                                      pinTop: true,
+                                                      fixedWidth: true,
+                                                      fixedHeight: true,
+                                                      child:
+                                                      // Adobe XD layer: 'ic_delete_forever_2…' (shape)
+                                                      SvgPicture.string(
+                                                        _svg_vkacvh,
+                                                        allowDrawingOutsideViewBox:
+                                                        true,
+                                                        fit: BoxFit.fill,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
                                           ),
                                         ],
                                       ),

@@ -216,13 +216,13 @@ class ReportList extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 14.0, 65.0, 18.0),
+                                          Rect.fromLTWH(0.0, 14.0, 80.0, 18.0),
                                       size: Size(288.0, 30.0),
                                       pinLeft: true,
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: Text(
-                                        'Cholestrol',
+                                        'Cholesterol',
                                         style: TextStyle(
                                           fontFamily: 'Muli',
                                           fontSize: 14,
@@ -254,260 +254,282 @@ class ReportList extends StatelessWidget {
                                             pinBottom: true,
                                             child: Stack(
                                               children: <Widget>[
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      55.0, 0.0, 40.0, 30.0),
-                                                  size: Size(150.0, 30.0),
-                                                  pinTop: true,
-                                                  pinBottom: true,
-                                                  fixedWidth: true,
-                                                  child: Stack(
-                                                    children: <Widget>[
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            0.0,
-                                                            0.0,
-                                                            40.0,
-                                                            30.0),
-                                                        size: Size(40.0, 30.0),
-                                                        pinLeft: true,
-                                                        pinRight: true,
-                                                        pinTop: true,
-                                                        pinBottom: true,
-                                                        child: Stack(
-                                                          children: <Widget>[
-                                                            Pinned.fromSize(
-                                                              bounds:
+                                                new GestureDetector(
+                                                  onTap: () => showDialog(
+                                                    context: context,
+                                                    builder: (context) => AboutWidget(
+                                                      title: "Cholesterol Report Downloaded.",
+                                                    ),
+                                                  ),
+                                                    child: Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          55.0, 0.0, 40.0, 30.0),
+                                                      size: Size(150.0, 30.0),
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      fixedWidth: true,
+                                                      child: Stack(
+                                                        children: <Widget>[
+                                                          Pinned.fromSize(
+                                                            bounds: Rect.fromLTWH(
+                                                                0.0,
+                                                                0.0,
+                                                                40.0,
+                                                                30.0),
+                                                            size: Size(40.0, 30.0),
+                                                            pinLeft: true,
+                                                            pinRight: true,
+                                                            pinTop: true,
+                                                            pinBottom: true,
+                                                            child: Stack(
+                                                              children: <Widget>[
+                                                                Pinned.fromSize(
+                                                                  bounds:
                                                                   Rect.fromLTWH(
                                                                       0.0,
                                                                       0.0,
                                                                       40.0,
                                                                       30.0),
-                                                              size: Size(
-                                                                  40.0, 30.0),
-                                                              pinLeft: true,
-                                                              pinRight: true,
-                                                              pinTop: true,
-                                                              pinBottom: true,
-                                                              child: Stack(
-                                                                children: <
-                                                                    Widget>[
-                                                                  Pinned
-                                                                      .fromSize(
-                                                                    bounds: Rect
-                                                                        .fromLTWH(
+                                                                  size: Size(
+                                                                      40.0, 30.0),
+                                                                  pinLeft: true,
+                                                                  pinRight: true,
+                                                                  pinTop: true,
+                                                                  pinBottom: true,
+                                                                  child: Stack(
+                                                                    children: <
+                                                                        Widget>[
+                                                                      Pinned
+                                                                          .fromSize(
+                                                                        bounds: Rect
+                                                                            .fromLTWH(
                                                                             0.0,
                                                                             0.0,
                                                                             40.0,
                                                                             30.0),
-                                                                    size: Size(
-                                                                        40.0,
-                                                                        30.0),
-                                                                    pinLeft:
+                                                                        size: Size(
+                                                                            40.0,
+                                                                            30.0),
+                                                                        pinLeft:
                                                                         true,
-                                                                    pinRight:
+                                                                        pinRight:
                                                                         true,
-                                                                    pinTop:
+                                                                        pinTop:
                                                                         true,
-                                                                    pinBottom:
+                                                                        pinBottom:
                                                                         true,
-                                                                    child: SvgPicture
-                                                                        .string(
-                                                                      _svg_s6o8ld,
-                                                                      allowDrawingOutsideViewBox:
+                                                                        child: SvgPicture
+                                                                            .string(
+                                                                          _svg_s6o8ld,
+                                                                          allowDrawingOutsideViewBox:
                                                                           true,
-                                                                      fit: BoxFit
-                                                                          .fill,
-                                                                    ),
-                                                                  ),
-                                                                  Pinned
-                                                                      .fromSize(
-                                                                    bounds: Rect
-                                                                        .fromLTWH(
+                                                                          fit: BoxFit
+                                                                              .fill,
+                                                                        ),
+                                                                      ),
+                                                                      Pinned
+                                                                          .fromSize(
+                                                                        bounds: Rect
+                                                                            .fromLTWH(
                                                                             13.0,
                                                                             6.8,
                                                                             15.0,
                                                                             16.0),
-                                                                    size: Size(
-                                                                        40.0,
-                                                                        30.0),
-                                                                    pinTop:
+                                                                        size: Size(
+                                                                            40.0,
+                                                                            30.0),
+                                                                        pinTop:
                                                                         true,
-                                                                    pinBottom:
+                                                                        pinBottom:
                                                                         true,
-                                                                    fixedWidth:
+                                                                        fixedWidth:
                                                                         true,
-                                                                    child:
+                                                                        child:
                                                                         // Adobe XD layer: 'download' (shape)
                                                                         SvgPicture
                                                                             .string(
-                                                                      _svg_6mghew,
-                                                                      allowDrawingOutsideViewBox:
+                                                                          _svg_6mghew,
+                                                                          allowDrawingOutsideViewBox:
                                                                           true,
-                                                                      fit: BoxFit
-                                                                          .fill,
-                                                                    ),
+                                                                          fit: BoxFit
+                                                                              .fill,
+                                                                        ),
+                                                                      ),
+                                                                    ],
                                                                   ),
-                                                                ],
-                                                              ),
+                                                                ),
+                                                              ],
                                                             ),
-                                                          ],
-                                                        ),
+                                                          ),
+                                                        ],
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
                                                 ),
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      0.0, 0.0, 40.0, 30.0),
-                                                  size: Size(150.0, 30.0),
-                                                  pinLeft: true,
-                                                  pinTop: true,
-                                                  pinBottom: true,
-                                                  fixedWidth: true,
-                                                  child: Stack(
-                                                    children: <Widget>[
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            0.0,
-                                                            0.0,
-                                                            40.0,
-                                                            30.0),
-                                                        size: Size(40.0, 30.0),
-                                                        pinLeft: true,
-                                                        pinRight: true,
-                                                        pinTop: true,
-                                                        pinBottom: true,
-                                                        child: Stack(
-                                                          children: <Widget>[
-                                                            Pinned.fromSize(
-                                                              bounds:
+                                                new GestureDetector(
+                                                    onTap: () {
+                                                      print(
+                                                          "Container clicked3");
+                                                    },
+                                                    child: Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          0.0, 0.0, 40.0, 30.0),
+                                                      size: Size(150.0, 30.0),
+                                                      pinLeft: true,
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      fixedWidth: true,
+                                                      child: Stack(
+                                                        children: <Widget>[
+                                                          Pinned.fromSize(
+                                                            bounds: Rect.fromLTWH(
+                                                                0.0,
+                                                                0.0,
+                                                                40.0,
+                                                                30.0),
+                                                            size: Size(40.0, 30.0),
+                                                            pinLeft: true,
+                                                            pinRight: true,
+                                                            pinTop: true,
+                                                            pinBottom: true,
+                                                            child: Stack(
+                                                              children: <Widget>[
+                                                                Pinned.fromSize(
+                                                                  bounds:
                                                                   Rect.fromLTWH(
                                                                       0.0,
                                                                       0.0,
                                                                       40.0,
                                                                       30.0),
-                                                              size: Size(
-                                                                  40.0, 30.0),
-                                                              pinLeft: true,
-                                                              pinRight: true,
-                                                              pinTop: true,
-                                                              pinBottom: true,
-                                                              child: Stack(
-                                                                children: <
-                                                                    Widget>[
-                                                                  Pinned
-                                                                      .fromSize(
-                                                                    bounds: Rect
-                                                                        .fromLTWH(
+                                                                  size: Size(
+                                                                      40.0, 30.0),
+                                                                  pinLeft: true,
+                                                                  pinRight: true,
+                                                                  pinTop: true,
+                                                                  pinBottom: true,
+                                                                  child: Stack(
+                                                                    children: <
+                                                                        Widget>[
+                                                                      Pinned
+                                                                          .fromSize(
+                                                                        bounds: Rect
+                                                                            .fromLTWH(
                                                                             0.0,
                                                                             0.0,
                                                                             40.0,
                                                                             30.0),
-                                                                    size: Size(
-                                                                        40.0,
-                                                                        30.0),
-                                                                    pinLeft:
+                                                                        size: Size(
+                                                                            40.0,
+                                                                            30.0),
+                                                                        pinLeft:
                                                                         true,
-                                                                    pinRight:
+                                                                        pinRight:
                                                                         true,
-                                                                    pinTop:
+                                                                        pinTop:
                                                                         true,
-                                                                    pinBottom:
+                                                                        pinBottom:
                                                                         true,
-                                                                    child: SvgPicture
-                                                                        .string(
-                                                                      _svg_1b5z0f,
-                                                                      allowDrawingOutsideViewBox:
+                                                                        child: SvgPicture
+                                                                            .string(
+                                                                          _svg_1b5z0f,
+                                                                          allowDrawingOutsideViewBox:
                                                                           true,
-                                                                      fit: BoxFit
-                                                                          .fill,
-                                                                    ),
-                                                                  ),
-                                                                  Pinned
-                                                                      .fromSize(
-                                                                    bounds: Rect
-                                                                        .fromLTWH(
+                                                                          fit: BoxFit
+                                                                              .fill,
+                                                                        ),
+                                                                      ),
+                                                                      Pinned
+                                                                          .fromSize(
+                                                                        bounds: Rect
+                                                                            .fromLTWH(
                                                                             12.0,
                                                                             8.0,
                                                                             17.0,
                                                                             13.2),
-                                                                    size: Size(
-                                                                        40.0,
-                                                                        30.0),
-                                                                    fixedWidth:
+                                                                        size: Size(
+                                                                            40.0,
+                                                                            30.0),
+                                                                        fixedWidth:
                                                                         true,
-                                                                    fixedHeight:
+                                                                        fixedHeight:
                                                                         true,
-                                                                    child:
+                                                                        child:
                                                                         // Adobe XD layer: 'ic_reorder_24px' (shape)
                                                                         SvgPicture
                                                                             .string(
-                                                                      _svg_nlnfvy,
-                                                                      allowDrawingOutsideViewBox:
+                                                                          _svg_nlnfvy,
+                                                                          allowDrawingOutsideViewBox:
                                                                           true,
-                                                                      fit: BoxFit
-                                                                          .fill,
-                                                                    ),
+                                                                          fit: BoxFit
+                                                                              .fill,
+                                                                        ),
+                                                                      ),
+                                                                    ],
                                                                   ),
-                                                                ],
-                                                              ),
+                                                                ),
+                                                              ],
                                                             ),
-                                                          ],
-                                                        ),
+                                                          ),
+                                                        ],
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
                                                 ),
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      110.0, 0.0, 40.0, 30.0),
-                                                  size: Size(150.0, 30.0),
-                                                  pinRight: true,
-                                                  pinTop: true,
-                                                  pinBottom: true,
-                                                  fixedWidth: true,
-                                                  child: Stack(
-                                                    children: <Widget>[
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            0.0,
-                                                            0.0,
-                                                            40.0,
-                                                            30.0),
-                                                        size: Size(40.0, 30.0),
-                                                        pinLeft: true,
-                                                        pinRight: true,
-                                                        pinTop: true,
-                                                        pinBottom: true,
-                                                        child:
+                                                new GestureDetector(
+                                                  onTap: () => showDialog(
+                                                    context: context,
+                                                    builder: (context) => AboutWidget(
+                                                      title: "Cholesterol Report deleted.",
+                                                    ),
+                                                  ),
+                                                    child: Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          110.0, 0.0, 40.0, 30.0),
+                                                      size: Size(150.0, 30.0),
+                                                      pinRight: true,
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      fixedWidth: true,
+                                                      child: Stack(
+                                                        children: <Widget>[
+                                                          Pinned.fromSize(
+                                                            bounds: Rect.fromLTWH(
+                                                                0.0,
+                                                                0.0,
+                                                                40.0,
+                                                                30.0),
+                                                            size: Size(40.0, 30.0),
+                                                            pinLeft: true,
+                                                            pinRight: true,
+                                                            pinTop: true,
+                                                            pinBottom: true,
+                                                            child:
                                                             SvgPicture.string(
-                                                          _svg_x5hvc3,
-                                                          allowDrawingOutsideViewBox:
+                                                              _svg_x5hvc3,
+                                                              allowDrawingOutsideViewBox:
                                                               true,
-                                                          fit: BoxFit.fill,
-                                                        ),
-                                                      ),
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            13.0,
-                                                            8.0,
-                                                            14.0,
-                                                            14.0),
-                                                        size: Size(40.0, 30.0),
-                                                        fixedWidth: true,
-                                                        fixedHeight: true,
-                                                        child:
+                                                              fit: BoxFit.fill,
+                                                            ),
+                                                          ),
+                                                          Pinned.fromSize(
+                                                            bounds: Rect.fromLTWH(
+                                                                13.0,
+                                                                8.0,
+                                                                14.0,
+                                                                14.0),
+                                                            size: Size(40.0, 30.0),
+                                                            fixedWidth: true,
+                                                            fixedHeight: true,
+                                                            child:
                                                             // Adobe XD layer: 'ic_clear_24px' (shape)
                                                             SvgPicture.string(
-                                                          _svg_al7aid,
-                                                          allowDrawingOutsideViewBox:
+                                                              _svg_al7aid,
+                                                              allowDrawingOutsideViewBox:
                                                               true,
-                                                          fit: BoxFit.fill,
-                                                        ),
+                                                              fit: BoxFit.fill,
+                                                            ),
+                                                          ),
+                                                        ],
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
                                                 ),
                                               ],
                                             ),
@@ -573,7 +595,7 @@ class ReportList extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: Text(
-                                        'Haemaglobin',
+                                        'Haemoglobin',
                                         style: TextStyle(
                                           fontFamily: 'Muli',
                                           fontSize: 14,
@@ -605,260 +627,282 @@ class ReportList extends StatelessWidget {
                                             pinBottom: true,
                                             child: Stack(
                                               children: <Widget>[
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      55.0, 0.0, 40.0, 30.0),
-                                                  size: Size(150.0, 30.0),
-                                                  pinTop: true,
-                                                  pinBottom: true,
-                                                  fixedWidth: true,
-                                                  child: Stack(
-                                                    children: <Widget>[
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            0.0,
-                                                            0.0,
-                                                            40.0,
-                                                            30.0),
-                                                        size: Size(40.0, 30.0),
-                                                        pinLeft: true,
-                                                        pinRight: true,
-                                                        pinTop: true,
-                                                        pinBottom: true,
-                                                        child: Stack(
-                                                          children: <Widget>[
-                                                            Pinned.fromSize(
-                                                              bounds:
+                                                new GestureDetector(
+                                                  onTap: () => showDialog(
+                                                    context: context,
+                                                    builder: (context) => AboutWidget(
+                                                      title: "Haemoglobin Report Downloaded.",
+                                                    ),
+                                                  ),
+                                                    child: Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          55.0, 0.0, 40.0, 30.0),
+                                                      size: Size(150.0, 30.0),
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      fixedWidth: true,
+                                                      child: Stack(
+                                                        children: <Widget>[
+                                                          Pinned.fromSize(
+                                                            bounds: Rect.fromLTWH(
+                                                                0.0,
+                                                                0.0,
+                                                                40.0,
+                                                                30.0),
+                                                            size: Size(40.0, 30.0),
+                                                            pinLeft: true,
+                                                            pinRight: true,
+                                                            pinTop: true,
+                                                            pinBottom: true,
+                                                            child: Stack(
+                                                              children: <Widget>[
+                                                                Pinned.fromSize(
+                                                                  bounds:
                                                                   Rect.fromLTWH(
                                                                       0.0,
                                                                       0.0,
                                                                       40.0,
                                                                       30.0),
-                                                              size: Size(
-                                                                  40.0, 30.0),
-                                                              pinLeft: true,
-                                                              pinRight: true,
-                                                              pinTop: true,
-                                                              pinBottom: true,
-                                                              child: Stack(
-                                                                children: <
-                                                                    Widget>[
-                                                                  Pinned
-                                                                      .fromSize(
-                                                                    bounds: Rect
-                                                                        .fromLTWH(
+                                                                  size: Size(
+                                                                      40.0, 30.0),
+                                                                  pinLeft: true,
+                                                                  pinRight: true,
+                                                                  pinTop: true,
+                                                                  pinBottom: true,
+                                                                  child: Stack(
+                                                                    children: <
+                                                                        Widget>[
+                                                                      Pinned
+                                                                          .fromSize(
+                                                                        bounds: Rect
+                                                                            .fromLTWH(
                                                                             0.0,
                                                                             0.0,
                                                                             40.0,
                                                                             30.0),
-                                                                    size: Size(
-                                                                        40.0,
-                                                                        30.0),
-                                                                    pinLeft:
+                                                                        size: Size(
+                                                                            40.0,
+                                                                            30.0),
+                                                                        pinLeft:
                                                                         true,
-                                                                    pinRight:
+                                                                        pinRight:
                                                                         true,
-                                                                    pinTop:
+                                                                        pinTop:
                                                                         true,
-                                                                    pinBottom:
+                                                                        pinBottom:
                                                                         true,
-                                                                    child: SvgPicture
-                                                                        .string(
-                                                                      _svg_s6o8ld,
-                                                                      allowDrawingOutsideViewBox:
+                                                                        child: SvgPicture
+                                                                            .string(
+                                                                          _svg_s6o8ld,
+                                                                          allowDrawingOutsideViewBox:
                                                                           true,
-                                                                      fit: BoxFit
-                                                                          .fill,
-                                                                    ),
-                                                                  ),
-                                                                  Pinned
-                                                                      .fromSize(
-                                                                    bounds: Rect
-                                                                        .fromLTWH(
+                                                                          fit: BoxFit
+                                                                              .fill,
+                                                                        ),
+                                                                      ),
+                                                                      Pinned
+                                                                          .fromSize(
+                                                                        bounds: Rect
+                                                                            .fromLTWH(
                                                                             13.0,
                                                                             6.8,
                                                                             15.0,
                                                                             16.0),
-                                                                    size: Size(
-                                                                        40.0,
-                                                                        30.0),
-                                                                    pinTop:
+                                                                        size: Size(
+                                                                            40.0,
+                                                                            30.0),
+                                                                        pinTop:
                                                                         true,
-                                                                    pinBottom:
+                                                                        pinBottom:
                                                                         true,
-                                                                    fixedWidth:
+                                                                        fixedWidth:
                                                                         true,
-                                                                    child:
+                                                                        child:
                                                                         // Adobe XD layer: 'download' (shape)
                                                                         SvgPicture
                                                                             .string(
-                                                                      _svg_rnzwjt,
-                                                                      allowDrawingOutsideViewBox:
+                                                                          _svg_rnzwjt,
+                                                                          allowDrawingOutsideViewBox:
                                                                           true,
-                                                                      fit: BoxFit
-                                                                          .fill,
-                                                                    ),
+                                                                          fit: BoxFit
+                                                                              .fill,
+                                                                        ),
+                                                                      ),
+                                                                    ],
                                                                   ),
-                                                                ],
-                                                              ),
+                                                                ),
+                                                              ],
                                                             ),
-                                                          ],
-                                                        ),
+                                                          ),
+                                                        ],
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
                                                 ),
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      0.0, 0.0, 40.0, 30.0),
-                                                  size: Size(150.0, 30.0),
-                                                  pinLeft: true,
-                                                  pinTop: true,
-                                                  pinBottom: true,
-                                                  fixedWidth: true,
-                                                  child: Stack(
-                                                    children: <Widget>[
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            0.0,
-                                                            0.0,
-                                                            40.0,
-                                                            30.0),
-                                                        size: Size(40.0, 30.0),
-                                                        pinLeft: true,
-                                                        pinRight: true,
-                                                        pinTop: true,
-                                                        pinBottom: true,
-                                                        child: Stack(
-                                                          children: <Widget>[
-                                                            Pinned.fromSize(
-                                                              bounds:
+                                                new GestureDetector(
+                                                    onTap: () {
+                                                      print(
+                                                          "Container clicked2");
+                                                    },
+                                                    child: Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          0.0, 0.0, 40.0, 30.0),
+                                                      size: Size(150.0, 30.0),
+                                                      pinLeft: true,
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      fixedWidth: true,
+                                                      child: Stack(
+                                                        children: <Widget>[
+                                                          Pinned.fromSize(
+                                                            bounds: Rect.fromLTWH(
+                                                                0.0,
+                                                                0.0,
+                                                                40.0,
+                                                                30.0),
+                                                            size: Size(40.0, 30.0),
+                                                            pinLeft: true,
+                                                            pinRight: true,
+                                                            pinTop: true,
+                                                            pinBottom: true,
+                                                            child: Stack(
+                                                              children: <Widget>[
+                                                                Pinned.fromSize(
+                                                                  bounds:
                                                                   Rect.fromLTWH(
                                                                       0.0,
                                                                       0.0,
                                                                       40.0,
                                                                       30.0),
-                                                              size: Size(
-                                                                  40.0, 30.0),
-                                                              pinLeft: true,
-                                                              pinRight: true,
-                                                              pinTop: true,
-                                                              pinBottom: true,
-                                                              child: Stack(
-                                                                children: <
-                                                                    Widget>[
-                                                                  Pinned
-                                                                      .fromSize(
-                                                                    bounds: Rect
-                                                                        .fromLTWH(
+                                                                  size: Size(
+                                                                      40.0, 30.0),
+                                                                  pinLeft: true,
+                                                                  pinRight: true,
+                                                                  pinTop: true,
+                                                                  pinBottom: true,
+                                                                  child: Stack(
+                                                                    children: <
+                                                                        Widget>[
+                                                                      Pinned
+                                                                          .fromSize(
+                                                                        bounds: Rect
+                                                                            .fromLTWH(
                                                                             0.0,
                                                                             0.0,
                                                                             40.0,
                                                                             30.0),
-                                                                    size: Size(
-                                                                        40.0,
-                                                                        30.0),
-                                                                    pinLeft:
+                                                                        size: Size(
+                                                                            40.0,
+                                                                            30.0),
+                                                                        pinLeft:
                                                                         true,
-                                                                    pinRight:
+                                                                        pinRight:
                                                                         true,
-                                                                    pinTop:
+                                                                        pinTop:
                                                                         true,
-                                                                    pinBottom:
+                                                                        pinBottom:
                                                                         true,
-                                                                    child: SvgPicture
-                                                                        .string(
-                                                                      _svg_1b5z0f,
-                                                                      allowDrawingOutsideViewBox:
+                                                                        child: SvgPicture
+                                                                            .string(
+                                                                          _svg_1b5z0f,
+                                                                          allowDrawingOutsideViewBox:
                                                                           true,
-                                                                      fit: BoxFit
-                                                                          .fill,
-                                                                    ),
-                                                                  ),
-                                                                  Pinned
-                                                                      .fromSize(
-                                                                    bounds: Rect
-                                                                        .fromLTWH(
+                                                                          fit: BoxFit
+                                                                              .fill,
+                                                                        ),
+                                                                      ),
+                                                                      Pinned
+                                                                          .fromSize(
+                                                                        bounds: Rect
+                                                                            .fromLTWH(
                                                                             12.0,
                                                                             8.0,
                                                                             17.0,
                                                                             13.2),
-                                                                    size: Size(
-                                                                        40.0,
-                                                                        30.0),
-                                                                    fixedWidth:
+                                                                        size: Size(
+                                                                            40.0,
+                                                                            30.0),
+                                                                        fixedWidth:
                                                                         true,
-                                                                    fixedHeight:
+                                                                        fixedHeight:
                                                                         true,
-                                                                    child:
+                                                                        child:
                                                                         // Adobe XD layer: 'ic_reorder_24px' (shape)
                                                                         SvgPicture
                                                                             .string(
-                                                                      _svg_nlnfvy,
-                                                                      allowDrawingOutsideViewBox:
+                                                                          _svg_nlnfvy,
+                                                                          allowDrawingOutsideViewBox:
                                                                           true,
-                                                                      fit: BoxFit
-                                                                          .fill,
-                                                                    ),
+                                                                          fit: BoxFit
+                                                                              .fill,
+                                                                        ),
+                                                                      ),
+                                                                    ],
                                                                   ),
-                                                                ],
-                                                              ),
+                                                                ),
+                                                              ],
                                                             ),
-                                                          ],
-                                                        ),
+                                                          ),
+                                                        ],
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
                                                 ),
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      110.0, 0.0, 40.0, 30.0),
-                                                  size: Size(150.0, 30.0),
-                                                  pinRight: true,
-                                                  pinTop: true,
-                                                  pinBottom: true,
-                                                  fixedWidth: true,
-                                                  child: Stack(
-                                                    children: <Widget>[
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            0.0,
-                                                            0.0,
-                                                            40.0,
-                                                            30.0),
-                                                        size: Size(40.0, 30.0),
-                                                        pinLeft: true,
-                                                        pinRight: true,
-                                                        pinTop: true,
-                                                        pinBottom: true,
-                                                        child:
+                                                new GestureDetector(
+                                                  onTap: () => showDialog(
+                                                    context: context,
+                                                    builder: (context) => AboutWidget(
+                                                      title: "Haemoglobin Report deleted.",
+                                                    ),
+                                                  ),
+                                                    child: Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          110.0, 0.0, 40.0, 30.0),
+                                                      size: Size(150.0, 30.0),
+                                                      pinRight: true,
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      fixedWidth: true,
+                                                      child: Stack(
+                                                        children: <Widget>[
+                                                          Pinned.fromSize(
+                                                            bounds: Rect.fromLTWH(
+                                                                0.0,
+                                                                0.0,
+                                                                40.0,
+                                                                30.0),
+                                                            size: Size(40.0, 30.0),
+                                                            pinLeft: true,
+                                                            pinRight: true,
+                                                            pinTop: true,
+                                                            pinBottom: true,
+                                                            child:
                                                             SvgPicture.string(
-                                                          _svg_x5hvc3,
-                                                          allowDrawingOutsideViewBox:
+                                                              _svg_x5hvc3,
+                                                              allowDrawingOutsideViewBox:
                                                               true,
-                                                          fit: BoxFit.fill,
-                                                        ),
-                                                      ),
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            13.0,
-                                                            8.0,
-                                                            14.0,
-                                                            14.0),
-                                                        size: Size(40.0, 30.0),
-                                                        fixedWidth: true,
-                                                        fixedHeight: true,
-                                                        child:
+                                                              fit: BoxFit.fill,
+                                                            ),
+                                                          ),
+                                                          Pinned.fromSize(
+                                                            bounds: Rect.fromLTWH(
+                                                                13.0,
+                                                                8.0,
+                                                                14.0,
+                                                                14.0),
+                                                            size: Size(40.0, 30.0),
+                                                            fixedWidth: true,
+                                                            fixedHeight: true,
+                                                            child:
                                                             // Adobe XD layer: 'ic_clear_24px' (shape)
                                                             SvgPicture.string(
-                                                          _svg_al7aid,
-                                                          allowDrawingOutsideViewBox:
+                                                              _svg_al7aid,
+                                                              allowDrawingOutsideViewBox:
                                                               true,
-                                                          fit: BoxFit.fill,
-                                                        ),
+                                                              fit: BoxFit.fill,
+                                                            ),
+                                                          ),
+                                                        ],
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
                                                 ),
                                               ],
                                             ),
@@ -914,7 +958,7 @@ class ReportList extends StatelessWidget {
                                 fixedWidth: true,
                                 fixedHeight: true,
                                 child: Text(
-                                  'Fasting Blood Suger',
+                                  'Fasting Blood Sugar',
                                   style: TextStyle(
                                     fontFamily: 'Muli',
                                     fontSize: 14,
@@ -945,38 +989,121 @@ class ReportList extends StatelessWidget {
                                       pinBottom: true,
                                       child: Stack(
                                         children: <Widget>[
-                                      new GestureDetector(
-                                      onTap: () => showDialog(
-                                        context: context,
-                                        builder: (context) => AboutWidget(
-                                          title: "Lab Report Downloaded.",
-                                        ),
-                                      ),
-                                        child: Pinned.fromSize(
-                                          bounds: Rect.fromLTWH(
-                                              55.0, 0.0, 40.0, 30.0),
-                                          size: Size(150.0, 30.0),
-                                          pinTop: true,
-                                          pinBottom: true,
-                                          fixedWidth: true,
-                                          child: Stack(
-                                            children: <Widget>[
-                                              Pinned.fromSize(
+                                          new GestureDetector(
+                                            onTap: () => showDialog(
+                                              context: context,
+                                              builder: (context) => AboutWidget(
+                                                title:
+                                                    "Fasting Blood Suger Report Downloaded.",
+                                              ),
+                                            ),
+                                            child: Pinned.fromSize(
+                                              bounds: Rect.fromLTWH(
+                                                  55.0, 0.0, 40.0, 30.0),
+                                              size: Size(150.0, 30.0),
+                                              pinTop: true,
+                                              pinBottom: true,
+                                              fixedWidth: true,
+                                              child: Stack(
+                                                children: <Widget>[
+                                                  Pinned.fromSize(
+                                                    bounds: Rect.fromLTWH(
+                                                        0.0, 0.0, 40.0, 30.0),
+                                                    size: Size(40.0, 30.0),
+                                                    pinLeft: true,
+                                                    pinRight: true,
+                                                    pinTop: true,
+                                                    pinBottom: true,
+                                                    child: Stack(
+                                                      children: <Widget>[
+                                                        Pinned.fromSize(
+                                                          bounds: Rect.fromLTWH(
+                                                              0.0,
+                                                              0.0,
+                                                              40.0,
+                                                              30.0),
+                                                          size:
+                                                              Size(40.0, 30.0),
+                                                          pinLeft: true,
+                                                          pinRight: true,
+                                                          pinTop: true,
+                                                          pinBottom: true,
+                                                          child: Stack(
+                                                            children: <Widget>[
+                                                              Pinned.fromSize(
+                                                                bounds: Rect
+                                                                    .fromLTWH(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        40.0,
+                                                                        30.0),
+                                                                size: Size(
+                                                                    40.0, 30.0),
+                                                                pinLeft: true,
+                                                                pinRight: true,
+                                                                pinTop: true,
+                                                                pinBottom: true,
+                                                                child:
+                                                                    SvgPicture
+                                                                        .string(
+                                                                  _svg_t8dat,
+                                                                  allowDrawingOutsideViewBox:
+                                                                      true,
+                                                                  fit: BoxFit
+                                                                      .fill,
+                                                                ),
+                                                              ),
+                                                              Pinned.fromSize(
+                                                                bounds: Rect
+                                                                    .fromLTWH(
+                                                                        13.0,
+                                                                        7.0,
+                                                                        15.0,
+                                                                        16.0),
+                                                                size: Size(
+                                                                    40.0, 30.0),
+                                                                pinTop: true,
+                                                                pinBottom: true,
+                                                                fixedWidth:
+                                                                    true,
+                                                                child:
+                                                                    // Adobe XD layer: 'download' (shape)
+                                                                    SvgPicture
+                                                                        .string(
+                                                                  _svg_tszs6b,
+                                                                  allowDrawingOutsideViewBox:
+                                                                      true,
+                                                                  fit: BoxFit
+                                                                      .fill,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          new GestureDetector(
+                                              onTap: () {
+                                                print("Container clicked5");
+                                              },
+                                              child: Pinned.fromSize(
                                                 bounds: Rect.fromLTWH(
                                                     0.0, 0.0, 40.0, 30.0),
-                                                size: Size(40.0, 30.0),
+                                                size: Size(150.0, 30.0),
                                                 pinLeft: true,
-                                                pinRight: true,
                                                 pinTop: true,
                                                 pinBottom: true,
+                                                fixedWidth: true,
                                                 child: Stack(
                                                   children: <Widget>[
                                                     Pinned.fromSize(
                                                       bounds: Rect.fromLTWH(
-                                                          0.0,
-                                                          0.0,
-                                                          40.0,
-                                                          30.0),
+                                                          0.0, 0.0, 40.0, 30.0),
                                                       size: Size(40.0, 30.0),
                                                       pinLeft: true,
                                                       pinRight: true,
@@ -985,48 +1112,63 @@ class ReportList extends StatelessWidget {
                                                       child: Stack(
                                                         children: <Widget>[
                                                           Pinned.fromSize(
-                                                            bounds:
-                                                            Rect.fromLTWH(
+                                                            bounds: Rect.fromLTWH(
                                                                 0.0,
                                                                 0.0,
                                                                 40.0,
                                                                 30.0),
-                                                            size: Size(
-                                                                40.0, 30.0),
+                                                            size: Size(40.0, 30.0),
                                                             pinLeft: true,
                                                             pinRight: true,
                                                             pinTop: true,
                                                             pinBottom: true,
-                                                            child: SvgPicture
-                                                                .string(
-                                                              _svg_t8dat,
-                                                              allowDrawingOutsideViewBox:
-                                                              true,
-                                                              fit:
-                                                              BoxFit.fill,
-                                                            ),
-                                                          ),
-                                                          Pinned.fromSize(
-                                                            bounds:
-                                                            Rect.fromLTWH(
-                                                                13.0,
-                                                                7.0,
-                                                                15.0,
-                                                                16.0),
-                                                            size: Size(
-                                                                40.0, 30.0),
-                                                            pinTop: true,
-                                                            pinBottom: true,
-                                                            fixedWidth: true,
-                                                            child:
-                                                            // Adobe XD layer: 'download' (shape)
-                                                            SvgPicture
-                                                                .string(
-                                                              _svg_tszs6b,
-                                                              allowDrawingOutsideViewBox:
-                                                              true,
-                                                              fit:
-                                                              BoxFit.fill,
+                                                            child: Stack(
+                                                              children: <Widget>[
+                                                                Pinned.fromSize(
+                                                                  bounds:
+                                                                  Rect.fromLTWH(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      40.0,
+                                                                      30.0),
+                                                                  size: Size(
+                                                                      40.0, 30.0),
+                                                                  pinLeft: true,
+                                                                  pinRight: true,
+                                                                  pinTop: true,
+                                                                  pinBottom: true,
+                                                                  child: SvgPicture
+                                                                      .string(
+                                                                    _svg_4kyhiw,
+                                                                    allowDrawingOutsideViewBox:
+                                                                    true,
+                                                                    fit:
+                                                                    BoxFit.fill,
+                                                                  ),
+                                                                ),
+                                                                Pinned.fromSize(
+                                                                  bounds:
+                                                                  Rect.fromLTWH(
+                                                                      12.0,
+                                                                      8.0,
+                                                                      17.0,
+                                                                      13.2),
+                                                                  size: Size(
+                                                                      40.0, 30.0),
+                                                                  fixedWidth: true,
+                                                                  fixedHeight: true,
+                                                                  child:
+                                                                  // Adobe XD layer: 'ic_reorder_24px' (shape)
+                                                                  SvgPicture
+                                                                      .string(
+                                                                    _svg_r01xvs,
+                                                                    allowDrawingOutsideViewBox:
+                                                                    true,
+                                                                    fit:
+                                                                    BoxFit.fill,
+                                                                  ),
+                                                                ),
+                                                              ],
                                                             ),
                                                           ),
                                                         ],
@@ -1035,138 +1177,57 @@ class ReportList extends StatelessWidget {
                                                   ],
                                                 ),
                                               ),
-                                            ],
                                           ),
-                                        ),
-                              ),
-                                          Pinned.fromSize(
-                                            bounds: Rect.fromLTWH(
-                                                0.0, 0.0, 40.0, 30.0),
-                                            size: Size(150.0, 30.0),
-                                            pinLeft: true,
-                                            pinTop: true,
-                                            pinBottom: true,
-                                            fixedWidth: true,
-                                            child: Stack(
-                                              children: <Widget>[
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      0.0, 0.0, 40.0, 30.0),
-                                                  size: Size(40.0, 30.0),
-                                                  pinLeft: true,
-                                                  pinRight: true,
-                                                  pinTop: true,
-                                                  pinBottom: true,
-                                                  child: Stack(
-                                                    children: <Widget>[
-                                                      Pinned.fromSize(
-                                                        bounds: Rect.fromLTWH(
-                                                            0.0,
-                                                            0.0,
-                                                            40.0,
-                                                            30.0),
-                                                        size: Size(40.0, 30.0),
-                                                        pinLeft: true,
-                                                        pinRight: true,
-                                                        pinTop: true,
-                                                        pinBottom: true,
-                                                        child: Stack(
-                                                          children: <Widget>[
-                                                            Pinned.fromSize(
-                                                              bounds:
-                                                                  Rect.fromLTWH(
-                                                                      0.0,
-                                                                      0.0,
-                                                                      40.0,
-                                                                      30.0),
-                                                              size: Size(
-                                                                  40.0, 30.0),
-                                                              pinLeft: true,
-                                                              pinRight: true,
-                                                              pinTop: true,
-                                                              pinBottom: true,
-                                                              child: SvgPicture
-                                                                  .string(
-                                                                _svg_4kyhiw,
-                                                                allowDrawingOutsideViewBox:
-                                                                    true,
-                                                                fit:
-                                                                    BoxFit.fill,
-                                                              ),
-                                                            ),
-                                                            Pinned.fromSize(
-                                                              bounds:
-                                                                  Rect.fromLTWH(
-                                                                      12.0,
-                                                                      8.0,
-                                                                      17.0,
-                                                                      13.2),
-                                                              size: Size(
-                                                                  40.0, 30.0),
-                                                              fixedWidth: true,
-                                                              fixedHeight: true,
-                                                              child:
-                                                                  // Adobe XD layer: 'ic_reorder_24px' (shape)
-                                                                  SvgPicture
-                                                                      .string(
-                                                                _svg_r01xvs,
-                                                                allowDrawingOutsideViewBox:
-                                                                    true,
-                                                                fit:
-                                                                    BoxFit.fill,
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ],
+                                          new GestureDetector(
+                                            onTap: () => showDialog(
+                                              context: context,
+                                              builder: (context) => AboutWidget(
+                                                title: "Fasting Blood Sugar Report deleted.",
+                                              ),
                                             ),
-                                          ),
-                                          Pinned.fromSize(
-                                            bounds: Rect.fromLTWH(
-                                                110.0, 0.0, 40.0, 30.0),
-                                            size: Size(150.0, 30.0),
-                                            pinRight: true,
-                                            pinTop: true,
-                                            pinBottom: true,
-                                            fixedWidth: true,
-                                            child: Stack(
-                                              children: <Widget>[
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      0.0, 0.0, 40.0, 30.0),
-                                                  size: Size(40.0, 30.0),
-                                                  pinLeft: true,
-                                                  pinRight: true,
-                                                  pinTop: true,
-                                                  pinBottom: true,
-                                                  child: SvgPicture.string(
-                                                    _svg_hrobut,
-                                                    allowDrawingOutsideViewBox:
+                                              child: Pinned.fromSize(
+                                                bounds: Rect.fromLTWH(
+                                                    110.0, 0.0, 40.0, 30.0),
+                                                size: Size(150.0, 30.0),
+                                                pinRight: true,
+                                                pinTop: true,
+                                                pinBottom: true,
+                                                fixedWidth: true,
+                                                child: Stack(
+                                                  children: <Widget>[
+                                                    Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          0.0, 0.0, 40.0, 30.0),
+                                                      size: Size(40.0, 30.0),
+                                                      pinLeft: true,
+                                                      pinRight: true,
+                                                      pinTop: true,
+                                                      pinBottom: true,
+                                                      child: SvgPicture.string(
+                                                        _svg_hrobut,
+                                                        allowDrawingOutsideViewBox:
                                                         true,
-                                                    fit: BoxFit.fill,
-                                                  ),
-                                                ),
-                                                Pinned.fromSize(
-                                                  bounds: Rect.fromLTWH(
-                                                      13.0, 8.0, 14.0, 14.0),
-                                                  size: Size(40.0, 30.0),
-                                                  fixedWidth: true,
-                                                  fixedHeight: true,
-                                                  child:
+                                                        fit: BoxFit.fill,
+                                                      ),
+                                                    ),
+                                                    Pinned.fromSize(
+                                                      bounds: Rect.fromLTWH(
+                                                          13.0, 8.0, 14.0, 14.0),
+                                                      size: Size(40.0, 30.0),
+                                                      fixedWidth: true,
+                                                      fixedHeight: true,
+                                                      child:
                                                       // Adobe XD layer: 'ic_clear_24px' (shape)
                                                       SvgPicture.string(
-                                                    _svg_xfitpf,
-                                                    allowDrawingOutsideViewBox:
+                                                        _svg_xfitpf,
+                                                        allowDrawingOutsideViewBox:
                                                         true,
-                                                    fit: BoxFit.fill,
-                                                  ),
+                                                        fit: BoxFit.fill,
+                                                      ),
+                                                    ),
+                                                  ],
                                                 ),
-                                              ],
-                                            ),
+                                              ),
                                           ),
                                         ],
                                       ),
