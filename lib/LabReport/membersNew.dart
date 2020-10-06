@@ -4,6 +4,7 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/ContactUs/contactUs.dart';
+import 'package:hemashealth/LabReport/reportList.dart';
 import 'package:hemashealth/OrderMedicine/uploadNew.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 
@@ -342,7 +343,7 @@ class MembersNew extends StatelessWidget {
                                                   ease: Curves.easeOut,
                                                   duration: 0.3,
                                                   pageBuilder: () =>
-                                                      ContactUs(),
+                                                      ReportList(),
                                                 ),
                                               ],
                                               child: Stack(
@@ -662,7 +663,7 @@ class MembersNew extends StatelessWidget {
                                                   ease: Curves.easeOut,
                                                   duration: 0.3,
                                                   pageBuilder: () =>
-                                                      ContactUs(),
+                                                      ReportList(),
                                                 ),
                                               ],
                                               child: Stack(
