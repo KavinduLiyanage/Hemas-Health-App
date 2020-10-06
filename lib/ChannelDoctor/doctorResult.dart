@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/Mini_Drop_down_card.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
-import 'package:hemashealth/widgets/Drop_down_card.dart';
+import 'package:hemashealth/widgets/doctor_card.dart';
 import '../constants.dart';
 
 void main() {
@@ -155,6 +155,45 @@ class DoctorResult extends StatelessWidget {
             ),
             child: Container(
               padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
+            ),
+          ),
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 62,
+                      width: 32,
+
+                      //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 150, 10, 0),
+                      child: GridView.count(
+                        crossAxisCount: 1,
+                        childAspectRatio: 8,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 25,
+                        children: <Widget>[
+                          DoctorCardBox(
+                              hint: "Select Doctor",
+                              list: ['A', 'B', 'C', 'D']),
+                          DoctorCardBox(
+                              hint: "Select Doctor",
+                              list: ['A', 'B', 'C', 'D']),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

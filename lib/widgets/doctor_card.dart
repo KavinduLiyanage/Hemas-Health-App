@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
 
-class MiniDropDownCard extends StatelessWidget {
+class DoctorCardBox extends StatelessWidget {
   final String hint;
   final List list;
-  const MiniDropDownCard({
+  const DoctorCardBox({
     Key key,
     this.hint,
     this.list,
