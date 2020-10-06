@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card.dart';
-import 'OrderMedicine/uploadNew.dart';
-import 'OrderMedicine/uploadPres.dart';
+import 'ContactUs/contactUs.dart';
 import 'ChannelDoctor/channelDoctor.dart';
+import 'LabReport/membersNew.dart';
 import 'constants.dart';
-import 'members.dart';
 import 'orderMedicine.dart';
 
 class Dashboard extends StatelessWidget {
@@ -163,7 +162,7 @@ class Dashboard extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return Members();
+                                return MembersNew();
                               }));
                             },
                           ),
@@ -176,10 +175,7 @@ class Dashboard extends StatelessWidget {
                             title: "Video Calls",
                             svgSrc: "assets/icons/dashboard_VideoCalls.svg",
                             press: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return ImagePickerWidgetNew();
-                              }));
+
                             },
                           ),
                           CategoryCard(
@@ -188,7 +184,7 @@ class Dashboard extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                return UploadPres();
+                                return ContactUs();
                               }));
                             },
                           ),

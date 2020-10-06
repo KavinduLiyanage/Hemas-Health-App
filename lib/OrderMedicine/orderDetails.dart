@@ -17,7 +17,6 @@ class OrderDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context)
         .size;
-    final bool showFab = MediaQuery.of(context).viewInsets.bottom==0.0;
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       bottomNavigationBar: BottomNavBar(),
