@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
-import 'package:hemashealth/widgets/category_card.dart';
-import 'package:hemashealth/widgets/category_card_orders_list.dart';
-import 'constants.dart';
+import 'package:hemashealth/widgets/Drop_down_card.dart';
+import '../constants.dart';
+import 'doctorResult.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,17 +21,57 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
-      home: DoctorResult(),
+      home: ChannelDoctor(),
     );
   }
 }
 
-class DoctorResult extends StatelessWidget {
+class ChannelDoctor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context)
         .size; //this gonna give us total height and with of our device
     return Scaffold(
+      floatingActionButton: Align(
+          child: Container(
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+              width: 280.0,
+              height: 50.0,
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DoctorResult()),
+                  );
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)),
+                padding: const EdgeInsets.all(0.0),
+                child: Ink(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          kBackgroundColor1,
+                          kBackgroundColor2,
+                        ]),
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                  ),
+                  child: Container(
+                    constraints: const BoxConstraints(
+                        minWidth: 88.0,
+                        minHeight: 36.0), // min sizes for Material buttons
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Search Doctor',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
+                  ),
+                ),
+              )),
+          alignment: Alignment(0.25, 0.9)),
       bottomNavigationBar: BottomNavBar(),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -98,6 +137,31 @@ class DoctorResult extends StatelessWidget {
                       width: 32,
 
                       //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 70, 10, 0),
+                      child: GridView.count(
+                        crossAxisCount: 1,
+                        childAspectRatio: 8,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 25,
+                        children: <Widget>[
+                          DropDownCard(
+                              hint: "Select Doctor",
+                              list: ['A', 'B', 'C', 'D']),
+                          DropDownCard(
+                              hint: "Select Speciality",
+                              list: ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D']),
+                          DropDownCard(
+                              hint: "Select Hospital",
+                              list: ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D']),
+                          DropDownCard(
+                              hint: "Select Date",
+                              list: ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D']),
+                        ],
+                      ),
                     ),
                   ),
                 ],

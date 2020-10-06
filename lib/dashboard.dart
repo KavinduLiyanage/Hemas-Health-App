@@ -3,7 +3,7 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card.dart';
 import 'OrderMedicine/uploadNew.dart';
 import 'OrderMedicine/uploadPres.dart';
-import 'channelDoctor.dart';
+import 'ChannelDoctor/channelDoctor.dart';
 import 'constants.dart';
 import 'members.dart';
 import 'orderMedicine.dart';
@@ -135,7 +135,7 @@ class Dashboard extends StatelessWidget {
                           CategoryCard(
                             title: "Channel a Doctor",
                             svgSrc:
-                            "assets/icons/dashboard_ChannelaDoctor2.svg",
+                                "assets/icons/dashboard_ChannelaDoctor2.svg",
                             press: () {
                               Navigator.push(
                                 context,
@@ -163,15 +163,14 @@ class Dashboard extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                    return Members();
-                                  }));
+                                return Members();
+                              }));
                             },
                           ),
                           CategoryCard(
                             title: "Feedback",
                             svgSrc: "assets/icons/dashboard_Feedback.svg",
-                            press: () {
-                            },
+                            press: () {},
                           ),
                           CategoryCard(
                             title: "Video Calls",
@@ -179,8 +178,8 @@ class Dashboard extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                    return ImagePickerWidgetNew();
-                                  }));
+                                return ImagePickerWidgetNew();
+                              }));
                             },
                           ),
                           CategoryCard(
@@ -189,8 +188,8 @@ class Dashboard extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                    return UploadPres();
-                                  }));
+                                return UploadPres();
+                              }));
                             },
                           ),
                         ],
