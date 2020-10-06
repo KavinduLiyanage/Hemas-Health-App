@@ -57,7 +57,7 @@ class OrderMedicine extends StatelessWidget {
                     constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0), // min sizes for Material buttons
                     alignment: Alignment.center,
                     child: const Text(
-                      'Next',
+                      'New Order',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white,
                           fontSize: 16),
@@ -67,11 +67,10 @@ class OrderMedicine extends StatelessWidget {
                 ),
               )
           ),
-          alignment: Alignment(0, 0.9)
+          alignment: Alignment(0.25, 0.9)
       ),
       body: Stack(
         children: <Widget>[
-
           Container(
             // Here the height of the container is 35% of our total height
             height: size.height * .35,
@@ -124,14 +123,10 @@ class OrderMedicine extends StatelessWidget {
                       alignment: Alignment.center,
                       height: 62,
                       width: 32,
-
                       //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
                     ),
                   ),
-
-
                   Expanded(
-
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
                       child: GridView.count(
@@ -149,10 +144,8 @@ class OrderMedicine extends StatelessWidget {
                             title: "Address - Isurupura, Weliwita.",
                             svgSrc: "assets/icons/dashboard_Feedback.svg",
                             press: () {
-
                             },
                           ),
-
                         ],
                       ),
                     ),
@@ -160,9 +153,7 @@ class OrderMedicine extends StatelessWidget {
                 ],
               ),
             ),
-
           ),
-
         ],
       ),
     );
