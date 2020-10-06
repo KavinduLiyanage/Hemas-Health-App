@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hemashealth/widgets/Mini_Drop_down_card.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
+import 'package:hemashealth/widgets/Drop_down_card.dart';
 import '../constants.dart';
 
 void main() {
@@ -66,7 +68,7 @@ class DoctorResult extends StatelessWidget {
           Container(
             //padding: EdgeInsets.all(100),
             margin: EdgeInsets.fromLTRB(15, 120, 15, 0),
-            height: size.height * contentAreaHeight,
+            height: size.height * contentAreaHeight * 0.25,
             width: size.height * contentAreaWidth,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
@@ -97,10 +99,64 @@ class DoctorResult extends StatelessWidget {
                       //child: SvgPicture.asset("assets/icons/menuIcon.svg"),
                     ),
                   ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 20, 10, 0),
+                      child: GridView.count(
+                        crossAxisCount: 1,
+                        childAspectRatio: 8,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        children: <Widget>[
+                          Row(children: <Widget>[
+                            Expanded(
+                                child: Row(children: <Widget>[
+                              Expanded(
+                                  child: MiniDropDownCard(
+                                      hint: "Select Doctor",
+                                      list: ['A', 'B', 'C', 'D'])),
+                              Expanded(
+                                  child: MiniDropDownCard(
+                                      hint: "Select Doctor",
+                                      list: ['A', 'B', 'C', 'D']))
+                            ]))
+                          ]),
+                          Row(children: <Widget>[
+                            Expanded(
+                                child: Row(children: <Widget>[
+                              Expanded(
+                                  child: MiniDropDownCard(
+                                      hint: "Select Hospital",
+                                      list: ['A', 'B', 'C', 'D'])),
+                              Expanded(
+                                  child: MiniDropDownCard(
+                                      hint: "Select Date",
+                                      list: ['A', 'B', 'C', 'D']))
+                            ]))
+                          ])
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
-          )
+          ),
+          Container(
+            //padding: EdgeInsets.all(100),
+            margin: EdgeInsets.fromLTRB(
+                15, 130 + size.height * contentAreaHeight * 0.25, 15, 0),
+            height: size.height * contentAreaHeight * 0.73,
+            width: size.height * contentAreaWidth,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black26),
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+            ),
+            child: Container(
+              padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
+            ),
+          ),
         ],
       ),
     );
