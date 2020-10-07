@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hemashealth/LabReport/reportView.dart';
 import 'package:hemashealth/OrderMedicine/uploadNew.dart';
 import 'package:hemashealth/widgets/alert_dialog.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
@@ -62,7 +63,7 @@ class ReportList extends StatelessWidget {
                     constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0), // min sizes for Material buttons
                     alignment: Alignment.center,
                     child: const Text(
-                      'Add Report',
+                      'Update Report',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white,
                           fontSize: 16),
@@ -739,11 +740,14 @@ class ReportList extends StatelessWidget {
                                                     ),
                                                 ),
                                                 new GestureDetector(
-                                                    onTap: () {
-                                                      print(
-                                                          "Container clicked2");
-                                                    },
-                                                    child: Pinned.fromSize(
+                                                  onTap: () {
+                                                    Navigator.push(context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) {
+                                                      return ReportView();
+                                                    }));
+                                                  },
+                                                  child: Pinned.fromSize(
                                                       bounds: Rect.fromLTWH(
                                                           0.0, 0.0, 40.0, 30.0),
                                                       size: Size(150.0, 30.0),

@@ -44,7 +44,7 @@ class OrderDetails extends StatelessWidget {
                   builder: (context) => AlertDialog2(
                     title2: "Your Medicine Order Placed.",
                     press: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) {
                           return OrderMedicine();

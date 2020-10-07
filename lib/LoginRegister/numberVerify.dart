@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/services.dart';
-import 'package:hemashealth/dashboard.dart';
+import 'package:hemashealth/LoginRegister/userRegister.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../constants.dart';
@@ -330,7 +330,7 @@ class NumberVerify extends StatelessWidget {
                                       transition: LinkTransition.Fade,
                                       ease: Curves.easeOut,
                                       duration: 0.3,
-                                      pageBuilder: () => Dashboard(),
+                                      pageBuilder: () => UserRegister(),
                                     ),
                                   ],
                                   child: Stack(
