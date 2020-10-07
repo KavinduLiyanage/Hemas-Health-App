@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hemashealth/LabReport/reportUpdate.dart';
 import 'package:hemashealth/LabReport/reportView.dart';
-import 'package:hemashealth/OrderMedicine/uploadNew.dart';
 import 'package:hemashealth/widgets/alert_dialog.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 
@@ -41,7 +41,7 @@ class ReportList extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ImagePickerWidgetNew()),
+                    MaterialPageRoute(builder: (context) => ReportUpdate()),
                   );
                 },
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
