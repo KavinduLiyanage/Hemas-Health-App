@@ -1,28 +1,97 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'package:adobe_xd/page_link.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/dashboard.dart';
+import 'package:hemashealth/widgets/alert_dialog2.dart';
+import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import '../constants.dart';
 
-class UserRegister extends StatelessWidget {
+class UserEdit extends StatelessWidget {
 
-  UserRegister({
+  TextEditingController myControllerName = TextEditingController()..text = 'Ridmi Ekanayaka';
+  TextEditingController myControllerNic = TextEditingController()..text = '966581321v';
+  TextEditingController myControllerEmail = TextEditingController()..text = 'ridmi123@gmail.com';
+  TextEditingController myControllerDate = TextEditingController()..text = '1996-10-08';
+
+  UserEdit({
     Key key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size;
-
+    var size = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
+      bottomNavigationBar: BottomNavBar(),
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        centerTitle: true,
+        title: new Text(
+          "My Profile",
+          style: Theme.of(context)
+              .textTheme
+              .display1
+              .copyWith(fontWeight: FontWeight.w500,  fontSize: 20),
+        ),
+        backgroundColor: Color(0x44000000),
+        elevation: 0,
+      ),
+      floatingActionButton: Align(
+          child: Container(
+              margin: EdgeInsets.fromLTRB(0, 0,0, 10),
+              width: 280.0,
+              height: 50.0,
+              child: RaisedButton(
+                onPressed: () => showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog2(
+                    title2: "Profile details updated.",
+                    press: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) {
+                          return Dashboard();
+                        }),
+                      );
+                    },
+                  ),
+                ),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                padding: const EdgeInsets.all(0.0),
+                child: Ink(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          kBackgroundColor1,
+                          kBackgroundColor2,
+                        ]
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                  ),
+                  child: Container(
+                    constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0), // min sizes for Material buttons
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Update Details',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontSize: 16),
+                    ),
+                  ),
+                ),
+              )
+          ),
+          alignment: Alignment(0.25, 0.9)
+      ),
       //backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
           Container(
-            // Here the height of the container is 45% of our total height
-            height: size.height,
+            // Here the height of the container is 35% of our total height
+            height: size.height * .35,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -30,7 +99,33 @@ class UserRegister extends StatelessWidget {
                   colors: [
                     kBackgroundColor1,
                     kBackgroundColor2,
-                  ]),
+                  ]
+              ),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(26),
+                bottomRight: Radius.circular(26),
+              ),
+            ),
+          ),
+          Container(
+            //padding: EdgeInsets.all(100),
+            margin: EdgeInsets.fromLTRB(20, 155, 20, 0),
+            height: size.height * .7,
+            width: size.height * contentAreaWidth,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black26),
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(20))
+              ,
+            ),
+            child: Container(
+              child: Text("Edit Profile Details",
+                style: TextStyle(fontWeight: FontWeight.bold,
+                    fontSize: 20
+                ),
+              ),
+              padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+              alignment: Alignment.topCenter,
             ),
           ),
           Transform.translate(
@@ -41,7 +136,7 @@ class UserRegister extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 93.0, 350.0, 525.0),
+                    bounds: Rect.fromLTWH(0.0, 113.0, 350.0, 525.0),
                     size: Size(350.0, 618.0),
                     pinLeft: true,
                     pinRight: true,
@@ -49,141 +144,6 @@ class UserRegister extends StatelessWidget {
                     pinBottom: true,
                     child: Stack(
                       children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 350.0, 525.0),
-                          size: Size(350.0, 525.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              color: const Color(0xffffffff),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: const Color(0x29000000),
-                                  offset: Offset(0, 9),
-                                  blurRadius: 38,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(35.0, 437.0, 280.0, 50.0),
-                          size: Size(350.0, 525.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinBottom: true,
-                          fixedHeight: true,
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                transition: LinkTransition.Fade,
-                                ease: Curves.easeOut,
-                                duration: 0.3,
-                                pageBuilder: () => Dashboard(),
-                              ),
-                            ],
-                            child: Stack(
-                              children: <Widget>[
-                                Pinned.fromSize(
-                                  bounds: Rect.fromLTWH(0.0, 0.0, 280.0, 50.0),
-                                  size: Size(280.0, 50.0),
-                                  pinLeft: true,
-                                  pinRight: true,
-                                  pinTop: true,
-                                  pinBottom: true,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(25.0),
-                                      gradient: LinearGradient(
-                                        begin: Alignment(0.88, -0.84),
-                                        end: Alignment(-0.69, 1.0),
-                                        colors: [
-                                          const Color(0xffefa405),
-                                          const Color(0xffff6000)
-                                        ],
-                                        stops: [0.0, 1.0],
-                                      ),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: const Color(0x33000000),
-                                          offset: Offset(0, 15),
-                                          blurRadius: 45,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Pinned.fromSize(
-                                  bounds:
-                                      Rect.fromLTWH(109.0, 16.0, 62.0, 21.0),
-                                  size: Size(280.0, 50.0),
-                                  fixedWidth: true,
-                                  fixedHeight: true,
-                                  child: Text(
-                                    'Register',
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 15,
-                                      color: const Color(0xffffffff),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(35.0, 385.0, 280.0, 33.0),
-                          size: Size(350.0, 525.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          fixedHeight: true,
-                          child: Text.rich(
-                            TextSpan(
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 11,
-                                color: const Color(0xff000000),
-                              ),
-                              children: [
-                                TextSpan(
-                                  text:
-                                      'By continuing, I confirm that I have read and agree \nto the ',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: 'Terms & Conditions',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: ' and ',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: 'Privacy Policy',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    decoration: TextDecoration.underline,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
                         Pinned.fromSize(
                           bounds: Rect.fromLTWH(36.0, 34.0, 279.0, 330.0),
                           size: Size(350.0, 525.0),
@@ -194,7 +154,7 @@ class UserRegister extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(1.0, 175.0, 230.0, 44.0),
+                                bounds: Rect.fromLTWH(1.0, 165.0, 230.0, 44.0),
                                 size: Size(300.0, 218.0),
                                 pinLeft: true,
                                 pinBottom: true,
@@ -213,7 +173,7 @@ class UserRegister extends StatelessWidget {
                                       child: Text(
                                         'Gender',
                                         style: TextStyle(
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Lato',
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500,
                                           color: const Color(0xff000000),
@@ -344,7 +304,7 @@ class UserRegister extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 216.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 196.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -387,26 +347,28 @@ class UserRegister extends StatelessWidget {
                                       ),
                                     ),
                                     Pinned.fromSize(
-                                      bounds:
-                                          Rect.fromLTWH(20.0, 25.0, 300.0, 25.0),
+                                      bounds: Rect.fromLTWH(
+                                          20.0, 25.0, 300.0, 25.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinBottom: true,
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                          controller: myControllerDate,
                                         style: TextStyle(
-                                            letterSpacing: 1.0,
-                                            fontSize: 16
-                                        ),
+                                            letterSpacing: 1.0, fontSize: 16),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           enabledBorder: InputBorder.none,
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
-                                          contentPadding:
-                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
+                                          contentPadding: EdgeInsets.only(
+                                              left: 10,
+                                              bottom: 10,
+                                              top: 0,
+                                              right: 10),
                                           hintText: "Select Date",
                                         ),
                                         keyboardType: TextInputType.datetime,
@@ -437,7 +399,7 @@ class UserRegister extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 144.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 114.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -464,29 +426,32 @@ class UserRegister extends StatelessWidget {
                                       ),
                                     ),
                                     Pinned.fromSize(
-                                      bounds:
-                                          Rect.fromLTWH(20.0, 25.0, 300.0, 25.0),
+                                      bounds: Rect.fromLTWH(
+                                          20.0, 25.0, 300.0, 25.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinBottom: true,
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                          controller: myControllerEmail,
                                         style: TextStyle(
-                                            letterSpacing: 1.0,
-                                            fontSize: 16
-                                        ),
+                                            letterSpacing: 1.0, fontSize: 16),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           enabledBorder: InputBorder.none,
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
-                                          contentPadding:
-                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
+                                          contentPadding: EdgeInsets.only(
+                                              left: 10,
+                                              bottom: 10,
+                                              top: 0,
+                                              right: 10),
                                           hintText: "Enter Email",
                                         ),
-                                        keyboardType: TextInputType.emailAddress,
+                                        keyboardType:
+                                            TextInputType.emailAddress,
                                         cursorColor: Colors.black12,
                                         // Only numbers can be entered
                                       ),
@@ -514,7 +479,7 @@ class UserRegister extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 72.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 32.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -541,26 +506,28 @@ class UserRegister extends StatelessWidget {
                                       ),
                                     ),
                                     Pinned.fromSize(
-                                      bounds:
-                                          Rect.fromLTWH(20.0, 25.0, 300.0, 25.0),
+                                      bounds: Rect.fromLTWH(
+                                          20.0, 25.0, 300.0, 25.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinBottom: true,
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                          controller: myControllerNic,
                                         style: TextStyle(
-                                            letterSpacing: 1.0,
-                                            fontSize: 16
-                                        ),
+                                            letterSpacing: 1.0, fontSize: 16),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           enabledBorder: InputBorder.none,
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
-                                          contentPadding:
-                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
+                                          contentPadding: EdgeInsets.only(
+                                              left: 10,
+                                              bottom: 10,
+                                              top: 0,
+                                              right: 10),
                                           hintText: "Enter Nic",
                                         ),
                                         keyboardType: TextInputType.number,
@@ -594,7 +561,7 @@ class UserRegister extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, -50.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -630,18 +597,20 @@ class UserRegister extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                          controller: myControllerName,
                                         style: TextStyle(
-                                            letterSpacing: 1.0,
-                                            fontSize: 16
-                                        ),
+                                            letterSpacing: 1.0, fontSize: 16),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           enabledBorder: InputBorder.none,
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
-                                          contentPadding:
-                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
+                                          contentPadding: EdgeInsets.only(
+                                              left: 10,
+                                              bottom: 10,
+                                              top: 0,
+                                              right: 10),
                                           hintText: "Enter full name",
                                         ),
                                         keyboardType: TextInputType.text,
@@ -672,58 +641,6 @@ class UserRegister extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(48.0, 0.0, 254.0, 61.0),
-                    size: Size(350.0, 618.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: 'content' (group)
-                        Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 254.0, 37.0),
-                          size: Size(254.0, 61.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          fixedHeight: true,
-                          child: Text(
-                            'Register Account',
-                            style: TextStyle(
-                              fontFamily: 'Raleway',
-                              fontSize: 32,
-                              color: const Color(0xffffffff),
-                              letterSpacing: -0.32,
-                              fontWeight: FontWeight.w600,
-                              height: 0.5,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(56.0, 45.0, 162.0, 26.0),
-                          size: Size(254.0, 61.0),
-                          pinBottom: true,
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: Text(
-                            'Please fill the details below',
-                            style: TextStyle(
-                              fontFamily: 'Gibson',
-                              fontSize: 16,
-                              color: const Color(0xd6ffffff),
-                              height: 1.3333333333333333,
-                              fontWeight: FontWeight.w600,
-                            ),
-                            textAlign: TextAlign.left,
                           ),
                         ),
                       ],
