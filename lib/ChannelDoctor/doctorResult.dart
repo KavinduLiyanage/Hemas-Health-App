@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/Mini_Drop_down_card.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/doctor_card.dart';
+import 'package:hemashealth/widgets/doctor_card_white.dart';
 import '../constants.dart';
 
 void main() {
@@ -175,19 +176,36 @@ class DoctorResult extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 150, 10, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 130, 0, 0),
                       child: GridView.count(
                         crossAxisCount: 1,
-                        childAspectRatio: 8,
+                        childAspectRatio: 5.20,
                         crossAxisSpacing: 10,
-                        mainAxisSpacing: 25,
                         children: <Widget>[
                           DoctorCardBox(
-                              hint: "Select Doctor",
-                              list: ['A', 'B', 'C', 'D']),
+                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              name: "Dr. Sherley Abraham",
+                              hint: "General Physician"),
+                          DoctorCardWhiteBox(
+                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              name: "Dr. Sherley Abraham",
+                              hint: "General Physician"),
                           DoctorCardBox(
-                              hint: "Select Doctor",
-                              list: ['A', 'B', 'C', 'D']),
+                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              name: "Dr. Sherley Abraham",
+                              hint: "General Physician"),
+                          DoctorCardWhiteBox(
+                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              name: "Dr. Sherley Abraham",
+                              hint: "General Physician"),
+                          DoctorCardBox(
+                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              name: "Dr. Sherley Abraham",
+                              hint: "General Physician"),
+                          DoctorCardWhiteBox(
+                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              name: "Dr. Sherley Abraham",
+                              hint: "General Physician"),
                         ],
                       ),
                     ),

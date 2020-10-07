@@ -4,7 +4,6 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card_orders_list.dart';
 import 'OrderMedicine/uploadNew.dart';
 import 'constants.dart';
-import 'dashboard.dart';
 
 class OrderMedicine extends StatelessWidget {
   @override
@@ -21,27 +20,28 @@ class OrderMedicine extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .display1
-              .copyWith(fontWeight: FontWeight.w500,  fontSize: 20),
+              .copyWith(fontWeight: FontWeight.w500, fontSize: 20),
         ),
         backgroundColor: Color(0x44000000),
         elevation: 0,
       ),
       floatingActionButton: Align(
           child: Container(
-              margin: EdgeInsets.fromLTRB(0, 0,0, 10),
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
               width: 280.0,
               height: 50.0,
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ImagePickerWidgetNew()),
+                    MaterialPageRoute(
+                        builder: (context) => ImagePickerWidgetNew()),
                   );
                 },
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)),
                 padding: const EdgeInsets.all(0.0),
                 child: Ink(
-
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                         begin: Alignment.topLeft,
@@ -49,26 +49,23 @@ class OrderMedicine extends StatelessWidget {
                         colors: [
                           kBackgroundColor1,
                           kBackgroundColor2,
-                        ]
-                    ),
+                        ]),
                     borderRadius: BorderRadius.all(Radius.circular(50.0)),
                   ),
                   child: Container(
-                    constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0), // min sizes for Material buttons
+                    constraints: const BoxConstraints(
+                        minWidth: 88.0,
+                        minHeight: 36.0), // min sizes for Material buttons
                     alignment: Alignment.center,
                     child: const Text(
                       'New Order',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white,
-                          fontSize: 16),
-
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                   ),
                 ),
-              )
-          ),
-          alignment: Alignment(0.25, 0.9)
-      ),
+              )),
+          alignment: Alignment(0.25, 0.9)),
       body: Stack(
         children: <Widget>[
           Container(
@@ -81,8 +78,7 @@ class OrderMedicine extends StatelessWidget {
                   colors: [
                     kBackgroundColor1,
                     kBackgroundColor2,
-                  ]
-              ),
+                  ]),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(26),
                 bottomRight: Radius.circular(26),
@@ -97,26 +93,22 @@ class OrderMedicine extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
               color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(20))
-              ,
+              borderRadius: BorderRadius.all(Radius.circular(20)),
             ),
             child: Container(
-              child: Text("Ordered List",
-                style: TextStyle(fontWeight: FontWeight.bold,
-                    fontSize: 18
-                ),
+              child: Text(
+                "Ordered List",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
               padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
             ),
           ),
-
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-
                   Align(
                     alignment: Alignment.topLeft,
                     child: Container(
@@ -143,8 +135,7 @@ class OrderMedicine extends StatelessWidget {
                           CategoryCardOrdersList(
                             title: "Address - Isurupura, Weliwita.",
                             svgSrc: "assets/icons/dashboard_Feedback.svg",
-                            press: () {
-                            },
+                            press: () {},
                           ),
                         ],
                       ),

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../constants.dart';
 
-class DoctorCardBox extends StatelessWidget {
+class DoctorCardWhiteBox extends StatelessWidget {
   final String svgSrc;
   final String name;
   final String hint;
-  const DoctorCardBox({Key key, this.svgSrc, this.name, this.hint})
+  const DoctorCardWhiteBox({Key key, this.svgSrc, this.name, this.hint})
       : super(key: key);
 
   @override
@@ -17,14 +17,14 @@ class DoctorCardBox extends StatelessWidget {
         // padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
-          color: Color(0x01EFEFEF),
+          color: Color(0x01FFFFFF),
           borderRadius: BorderRadius.circular(11),
           boxShadow: [
             BoxShadow(
               offset: Offset(0, 17),
               blurRadius: 17,
               spreadRadius: -23,
-              color: Color(0x01EFEFEF),
+              color: Color(0x01FFFFFF),
             ),
           ],
         ),
