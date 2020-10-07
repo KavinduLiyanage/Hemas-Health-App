@@ -4,6 +4,7 @@ import 'package:hemashealth/widgets/category_card.dart';
 import 'ContactUs/contactUs.dart';
 import 'ChannelDoctor/channelDoctor.dart';
 import 'LabReport/membersNew.dart';
+import 'LoginRegister/userProfile.dart';
 import 'constants.dart';
 import 'orderMedicine.dart';
 
@@ -46,6 +47,13 @@ class Dashboard extends StatelessWidget {
             ),
             ListTile(
               title: Text('Home'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+            ListTile(
+              title: Text('Feedback'),
               onTap: () {
                 // Update the state of the app.
                 // ...
@@ -175,7 +183,10 @@ class Dashboard extends StatelessWidget {
                             title: "Video Calls",
                             svgSrc: "assets/icons/dashboard_VideoCalls.svg",
                             press: () {
-
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                    return UserProfile();
+                                  }));
                             },
                           ),
                           CategoryCard(

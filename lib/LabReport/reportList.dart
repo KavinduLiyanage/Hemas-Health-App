@@ -62,7 +62,7 @@ class ReportList extends StatelessWidget {
                     constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0), // min sizes for Material buttons
                     alignment: Alignment.center,
                     child: const Text(
-                      'Add Report',
+                      'Update Report',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white,
                           fontSize: 16),
