@@ -8,8 +8,16 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 
 import '../constants.dart';
 
-class MemberAdd extends StatelessWidget {
-  MemberAdd({
+// ignore: must_be_immutable
+class MemberUpdate extends StatelessWidget {
+
+  TextEditingController myControllerName = TextEditingController()..text = 'Ridmi';
+  TextEditingController myControllerRelationship = TextEditingController()..text = 'Sister';
+  TextEditingController myControllerAge = TextEditingController()..text = '24';
+  TextEditingController myControllerWeight = TextEditingController()..text = '50';
+  TextEditingController myControllerHeight = TextEditingController()..text = '155';
+
+  MemberUpdate({
     Key key,
   }) : super(key: key);
   @override
@@ -41,7 +49,7 @@ class MemberAdd extends StatelessWidget {
                 onPressed: () => showDialog(
                   context: context,
                   builder: (context) => AlertDialog2(
-                    title2: "Member profile created.",
+                    title2: "Member Details updated.",
                     press: () {
                       Navigator.pushReplacement(
                         context,
@@ -71,7 +79,7 @@ class MemberAdd extends StatelessWidget {
                     constraints: const BoxConstraints(minWidth: 88.0, minHeight: 36.0), // min sizes for Material buttons
                     alignment: Alignment.center,
                     child: const Text(
-                      'Create Member Profile',
+                      'Update Member Details',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white,
                           fontSize: 16),
@@ -116,7 +124,7 @@ class MemberAdd extends StatelessWidget {
               ,
             ),
             child: Container(
-              child: Text("Add New Family Member",
+              child: Text("Update Member Details",
                 style: TextStyle(fontWeight: FontWeight.bold,
                     fontSize: 18
                 ),
@@ -259,6 +267,7 @@ class MemberAdd extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                        controller: myControllerHeight,
                                         style: TextStyle(
                                             letterSpacing: 1.0,
                                             fontSize: 16
@@ -346,6 +355,7 @@ class MemberAdd extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                        controller: myControllerWeight,
                                         style: TextStyle(
                                             letterSpacing: 1.0,
                                             fontSize: 16
@@ -433,6 +443,7 @@ class MemberAdd extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                        controller: myControllerAge,
                                         style: TextStyle(
                                             letterSpacing: 1.0,
                                             fontSize: 16
@@ -583,7 +594,6 @@ class MemberAdd extends StatelessWidget {
                                                   pinBottom: true,
                                                   fixedWidth: true,
                                                   child: Radio(
-                                                    value: 1,
                                                   ),
                                                 ),
                                                 Pinned.fromSize(
@@ -682,6 +692,7 @@ class MemberAdd extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                        controller: myControllerRelationship,
                                         style: TextStyle(
                                             letterSpacing: 1.0,
                                             fontSize: 16
@@ -781,6 +792,7 @@ class MemberAdd extends StatelessWidget {
                                             fixedWidth: true,
                                             fixedHeight: true,
                                             child: TextField(
+                                              controller: myControllerName,
                                               style: TextStyle(
                                                   letterSpacing: 1.0,
                                                   fontSize: 16
