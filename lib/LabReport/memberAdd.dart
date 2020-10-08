@@ -38,7 +38,7 @@ class MemberAdd extends StatelessWidget {
               width: 280.0,
               height: 50.0,
               child: RaisedButton(
-                onPressed: () => showDialog(
+                onPressed: () { showDialog(
                   context: context,
                   builder: (context) => AlertDialog2(
                     title2: "Member profile created.",
@@ -51,7 +51,9 @@ class MemberAdd extends StatelessWidget {
                       );
                     },
                   ),
-                ),
+                );
+                memberAdded = 1;
+                },
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
                 padding: const EdgeInsets.all(0.0),
                 child: Ink(

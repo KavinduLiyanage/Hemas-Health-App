@@ -9,8 +9,11 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import '../constants.dart';
 
 class ReportList extends StatelessWidget {
+
+  final String memberName;
   ReportList({
     Key key,
+    this.memberName
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -161,7 +164,7 @@ class ReportList extends StatelessWidget {
                           pinTop: true,
                           fixedHeight: true,
                           child: Text(
-                            'Ridmi Ekanayaka - Reports',
+                            memberName+' - Reports',
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               fontSize: 20,

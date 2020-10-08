@@ -4,6 +4,7 @@ import 'package:hemashealth/widgets/category_card.dart';
 import 'ContactUs/contactUs.dart';
 import 'ChannelDoctor/channelDoctor.dart';
 import 'Feedback/feedback.dart';
+import 'LabReport/membersCurrent.dart';
 import 'LabReport/membersNew.dart';
 import 'LoginRegister/userEdit.dart';
 import 'LoginRegister/userProfile.dart';
@@ -77,8 +78,7 @@ class Dashboard extends StatelessWidget {
                 leading: Icon(Icons.home),
                 title: Text('Home'),
                 onTap: () {
-                  // Update the state of the app.
-                  // ...
+                  Navigator.pop(context);
                 },
               ),
               ListTile(
@@ -216,10 +216,18 @@ class Dashboard extends StatelessWidget {
                             title: "Lab Reports",
                             svgSrc: "assets/icons/dashboard_LabReport.svg",
                             press: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                return MembersNew();
-                              }));
+                              if(memberAdded==1) {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                      return MembersNew();
+                                    }));
+                              }
+                              else {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                      return MembersCurrent();
+                                    }));
+                              }
                             },
                           ),
                           CategoryCard(
@@ -238,7 +246,7 @@ class Dashboard extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                    return UserProfile();
+                                    return MembersCurrent();
                                   }));
                             },
                           ),

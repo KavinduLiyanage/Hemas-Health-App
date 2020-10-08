@@ -46,7 +46,7 @@ class ReportUpdate extends StatelessWidget {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) {
-                          return ReportList();
+                          return ReportList(memberName : 'Ridmi Ekanayaka');
                         }),
                       );
                     },
