@@ -15,7 +15,7 @@ class AboutWidget extends StatelessWidget {
           style: TextStyle(
               color: kAlertTextColor,
               fontSize: 22,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w600,
           ),
         ),
         alignment: Alignment.center,
@@ -24,7 +24,13 @@ class AboutWidget extends StatelessWidget {
         child: ListBody(
           children: <Widget>[
             Container(
-              child: Text(title),
+              child: Text(title,
+                style: TextStyle(
+                  color: kActiveIconColor,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               width: 250.0,
               alignment: Alignment.center,
             ),
