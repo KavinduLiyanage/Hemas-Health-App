@@ -15,3 +15,4 @@ const kAlertTextColor = Color(0xFF3F4079);
 const contentAreaHeight = .74;
 const contentAreaWidth = .50;
 int memberAdded = 0;
+int orderPlaced = 0;

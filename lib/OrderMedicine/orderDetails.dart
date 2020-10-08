@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/services.dart';
-import 'package:hemashealth/orderMedicine.dart';
+import 'package:hemashealth/orderMedicineNew.dart';
 import 'package:hemashealth/widgets/alert_dialog2.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'dart:io';
@@ -39,7 +39,7 @@ class OrderDetails extends StatelessWidget {
               width: 280.0,
               height: 50.0,
               child: RaisedButton(
-                onPressed: () => showDialog(
+                onPressed: () { showDialog(
                   context: context,
                   builder: (context) => AlertDialog2(
                     title2: "Your Medicine Order Placed.",
@@ -47,12 +47,15 @@ class OrderDetails extends StatelessWidget {
                       Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(builder: (context) {
-                          return OrderMedicine();
+                          return OrderMedicineNew();
                         }),
                       );
+
                     },
                   ),
-                ),
+                );
+                orderPlaced = 1;
+                },
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
                 padding: const EdgeInsets.all(0.0),
                 child: Ink(

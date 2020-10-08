@@ -4,8 +4,9 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card_orders_list.dart';
 import 'OrderMedicine/uploadNew.dart';
 import 'constants.dart';
+import 'dashboard.dart';
 
-class OrderMedicine extends StatelessWidget {
+class OrderMedicineNew extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context)
@@ -14,6 +15,16 @@ class OrderMedicine extends StatelessWidget {
       bottomNavigationBar: BottomNavBar(),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: IconButton(
+          tooltip: 'Previous choice',
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Dashboard()),
+            );
+          },
+        ),
         centerTitle: true,
         title: new Text(
           "Order Medicine",
@@ -136,6 +147,12 @@ class OrderMedicine extends StatelessWidget {
                           CategoryCardOrdersList(
                             title: "Order ID - 202008222143",
                             address: "Address - Isurupura, Weliwita.",
+                            svgSrc: "assets/icons/dashboard_Feedback.svg",
+                            press: () {},
+                          ),
+                          CategoryCardOrdersList(
+                            title: "Order ID - 202010172319",
+                            address: "Address - Pittugala junction, Malabe.",
                             svgSrc: "assets/icons/dashboard_Feedback.svg",
                             press: () {},
                           ),

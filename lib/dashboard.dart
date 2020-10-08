@@ -10,6 +10,7 @@ import 'LoginRegister/userEdit.dart';
 import 'LoginRegister/userProfile.dart';
 import 'constants.dart';
 import 'orderMedicine.dart';
+import 'orderMedicineNew.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -204,12 +205,18 @@ class Dashboard extends StatelessWidget {
                             title: "Order Medicine",
                             svgSrc: "assets/icons/dashboard_OrderMedicine2.svg",
                             press: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return OrderMedicine();
-                                }),
-                              );
+                              if(orderPlaced==1) {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                      return OrderMedicineNew();
+                                    }));
+                              }
+                              else {
+                                Navigator.push(context,
+                                    MaterialPageRoute(builder: (context) {
+                                      return OrderMedicine();
+                                    }));
+                              }
                             },
                           ),
                           CategoryCard(
@@ -244,10 +251,7 @@ class Dashboard extends StatelessWidget {
                             title: "Video Calls",
                             svgSrc: "assets/icons/dashboard_VideoCalls.svg",
                             press: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                    return MembersCurrent();
-                                  }));
+
                             },
                           ),
                           CategoryCard(
