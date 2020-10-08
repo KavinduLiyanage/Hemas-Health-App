@@ -3,6 +3,7 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card.dart';
 import 'ContactUs/contactUs.dart';
 import 'ChannelDoctor/channelDoctor.dart';
+import 'Feedback/feedback.dart';
 import 'LabReport/membersNew.dart';
 import 'LoginRegister/userEdit.dart';
 import 'LoginRegister/userProfile.dart';
@@ -56,8 +57,8 @@ class Dashboard extends StatelessWidget {
             ListTile(
               title: Text('Feedback'),
               onTap: () {
-                // Update the state of the app.
-                // ...
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (_) => UserFeedback()));
               },
             ),
             ListTile(
@@ -185,7 +186,12 @@ class Dashboard extends StatelessWidget {
                           CategoryCard(
                             title: "Feedback",
                             svgSrc: "assets/icons/dashboard_Feedback.svg",
-                            press: () {},
+                            press: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                    return UserFeedback();
+                                  }));
+                            },
                           ),
                           CategoryCard(
                             title: "Video Calls",

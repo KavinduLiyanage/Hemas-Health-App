@@ -3,7 +3,7 @@ import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/dashboard.dart';
-import 'package:hemashealth/widgets/alert_dialog.dart';
+import 'package:hemashealth/widgets/alert_dialog2.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 
 import '../constants.dart';
@@ -794,8 +794,16 @@ class ContactUs extends StatelessWidget {
                                       child: new GestureDetector(
                                         onTap: () => showDialog(
                                           context: context,
-                                          builder: (context) => AboutWidget(
-                                            title: "Your Contact Form Sent.",
+                                          builder: (context) => AlertDialog2(
+                                            title2: "Your Contact Form Sent.",
+                                            press: () {
+                                              Navigator.pushReplacement(
+                                                context,
+                                                MaterialPageRoute(builder: (context) {
+                                                  return Dashboard();
+                                                }),
+                                              );
+                                            },
                                           ),
                                         ),
                                           child: Stack(
