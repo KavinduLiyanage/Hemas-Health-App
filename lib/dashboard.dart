@@ -30,53 +30,92 @@ class Dashboard extends StatelessWidget {
         backgroundColor: Color(0x44000000),
         elevation: 0,
       ),
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Kavindu Sandeepa'),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      kBackgroundColor1,
-                      kBackgroundColor2,
-                    ]),
+      drawer: Container(
+        width: 250,
+        child: Drawer(
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        width: 100,
+                        height: 100,
+                        margin: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                              Radius.elliptical(9999.0, 9999.0)),
+                          image: DecorationImage(
+                            image: const AssetImage(
+                                'assets/images/profile5.jpg'),
+                            fit: BoxFit.cover,
+                          ),
+                          border: Border.all(
+                              width: 1.0, color: const Color(0xffffffff)),
+                        )
+                    ),
+                    Text("Ridmi Ekanayaka",
+                      style: TextStyle(
+                          color: Colors.white, fontSize: 20
+                      ),
+                    ),
+                  ],
+                ),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        kBackgroundColor1,
+                        kBackgroundColor2,
+                      ]),
+                ),
               ),
-            ),
-            ListTile(
-              title: Text('Home'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: Text('Feedback'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (_) => UserFeedback()));
-              },
-            ),
-            ListTile(
-              title: Text('Profile'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (_) => UserProfile()));
-              },
-            ),
-            ListTile(
-              title: Text('Edit Profile'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (_) => UserEdit()));
-              },
-            ),
-          ],
-        ), // Populate the Drawer in the next step.
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text('Profile'),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => UserProfile()));
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.edit),
+                title: Text('Edit Profile'),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => UserEdit()));
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.message),
+                title: Text('Feedback'),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => UserFeedback()));
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.phone),
+                title: Text('Contact us'),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => ContactUs()));
+                },
+              ),
+            ],
+          ), // Populate the Drawer in the next step.
+        ),
       ),
       body: Stack(
         children: <Widget>[

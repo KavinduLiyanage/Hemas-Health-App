@@ -31,6 +31,7 @@ class UserFeedback extends StatelessWidget {
         backgroundColor: Color(0x44000000),
         elevation: 0,
       ),
+      resizeToAvoidBottomPadding: false,
       floatingActionButton: Align(
           child: Container(
               margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
@@ -40,7 +41,7 @@ class UserFeedback extends StatelessWidget {
                 onPressed: () => showDialog(
                   context: context,
                   builder: (context) => AlertDialog2(
-                    title2: "Your Feedback Received",
+                    title2: "Your Feedback Sent.",
                     press: () {
                       Navigator.pushReplacement(
                         context,
@@ -166,6 +167,7 @@ class UserFeedback extends StatelessWidget {
                                 pinTop: true,
                                 pinBottom: true,
                                 child: ToggleSwitch(
+                                  initialLabelIndex: 1,
                                   minWidth: 90.0,
                                   cornerRadius: 20.0,
                                   activeBgColor: kBackgroundColor3,
