@@ -22,7 +22,7 @@ class MiniDropDownCard extends StatelessWidget {
         child: Center(
           child: new DropdownButton<String>(
             hint: Text(this.hint),
-            dropdownColor: Colors.grey,
+            dropdownColor: kBackgroundColor,
             elevation: 5,
             icon: Icon(Icons.arrow_drop_down),
             iconSize: 32.0,
@@ -31,7 +31,11 @@ class MiniDropDownCard extends StatelessWidget {
             items: list.map((value) {
               return new DropdownMenuItem<String>(
                 value: value,
-                child: new Text(value),
+                child: new Text(value,
+                  style: TextStyle(
+                      color: kActiveIconColor
+                  ),
+                ),
               );
             }).toList(),
             onChanged: (_) {},

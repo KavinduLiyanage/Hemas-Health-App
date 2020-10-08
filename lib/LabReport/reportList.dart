@@ -367,10 +367,13 @@ class ReportList extends StatelessWidget {
                                                     ),
                                                 ),
                                                 new GestureDetector(
-                                                    onTap: () {
-                                                      print(
-                                                          "Container clicked3");
-                                                    },
+                                                  onTap: () {
+                                                    Navigator.push(context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) {
+                                                              return ReportView();
+                                                            }));
+                                                  },
                                                     child: Pinned.fromSize(
                                                       bounds: Rect.fromLTWH(
                                                           0.0, 0.0, 40.0, 30.0),
@@ -1092,10 +1095,14 @@ class ReportList extends StatelessWidget {
                                             ),
                                           ),
                                           new GestureDetector(
-                                              onTap: () {
-                                                print("Container clicked5");
-                                              },
-                                              child: Pinned.fromSize(
+                                            onTap: () {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return ReportView();
+                                              }));
+                                            },
+                                            child: Pinned.fromSize(
                                                 bounds: Rect.fromLTWH(
                                                     0.0, 0.0, 40.0, 30.0),
                                                 size: Size(150.0, 30.0),

@@ -114,14 +114,14 @@ class ReportUpdate extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(57.0, 144.8),
+            offset: Offset(57.0, 134.8),
             child: SizedBox(
               width: 300.0,
               height: 437.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(73.0, 319.2, 155.0, 40.0),
+                    bounds: Rect.fromLTWH(73.0, 300.2, 155.0, 40.0),
                     size: Size(300.0, 437.2),
                     fixedWidth: true,
                     fixedHeight: true,
@@ -163,7 +163,7 @@ class ReportUpdate extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 47.2, 300.0, 40.0),
+                    bounds: Rect.fromLTWH(0.0, 37.2, 300.0, 40.0),
                     size: Size(300.0, 437.2),
                     pinLeft: true,
                     pinRight: true,
@@ -265,7 +265,7 @@ class ReportUpdate extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(17.0, 364.2, 175.0, 93.0),
+                    bounds: Rect.fromLTWH(-5.0, 335.2, 175.0, 140.0),
                     size: Size(300.0, 437.2),
                     pinLeft: true,
                     pinBottom: true,
@@ -293,14 +293,14 @@ class ReportUpdate extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 30.0, 175.0, 83.0),
-                          size: Size(175.0, 93.0),
+                          bounds: Rect.fromLTWH(0.0, 20.0, 310.0, 130.0),
+                          size: Size(175.0, 133.0),
                           pinLeft: true,
                           pinRight: true,
                           pinBottom: true,
                           fixedHeight: true,
                           child: Text(
-                            'Average Hemoglobin Ranges\nAdult Males - 14-18 gm/dl\nAdult Females - 12-16 gm/dl',
+                            'Contact your doctor if you have any of the following symptoms while trying to raise your hemoglobin level; pale skin and gums, fatigue and muscle weakness, a fast or irregular heartbeat, frequent headaches or frequent/unexplained bruising.',
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               fontSize: 13,
@@ -314,7 +314,7 @@ class ReportUpdate extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(15.0, 103.2, 269.5, 203.0),
+                    bounds: Rect.fromLTWH(15.0, 93.2, 269.5, 203.0),
                     size: Size(300.0, 437.2),
                     pinLeft: true,
                     pinRight: true,

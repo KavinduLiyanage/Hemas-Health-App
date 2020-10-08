@@ -5,11 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/ContactUs/contactUs.dart';
 import 'package:hemashealth/LabReport/reportList.dart';
-import 'package:hemashealth/OrderMedicine/uploadNew.dart';
 import 'package:hemashealth/widgets/alert_dialog.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
-
 import '../constants.dart';
+import 'memberAdd.dart';
 
 class MembersNew extends StatelessWidget {
   MembersNew({
@@ -44,7 +43,7 @@ class MembersNew extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ImagePickerWidgetNew()),
+                    MaterialPageRoute(builder: (context) => MemberAdd()),
                   );
                 },
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
