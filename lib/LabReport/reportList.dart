@@ -481,7 +481,7 @@ class ReportList extends StatelessWidget {
                                                   onTap: () => showDialog(
                                                     context: context,
                                                     builder: (context) => AboutWidget(
-                                                      title: "Cholesterol Report deleted.",
+                                                      title: "Cholesterol Report Deleted.",
                                                     ),
                                                   ),
                                                     child: Pinned.fromSize(
@@ -857,7 +857,7 @@ class ReportList extends StatelessWidget {
                                                   onTap: () => showDialog(
                                                     context: context,
                                                     builder: (context) => AboutWidget(
-                                                      title: "Haemoglobin Report deleted.",
+                                                      title: "Haemoglobin Report Deleted.",
                                                     ),
                                                   ),
                                                     child: Pinned.fromSize(
@@ -1001,7 +1001,7 @@ class ReportList extends StatelessWidget {
                                               context: context,
                                               builder: (context) => AboutWidget(
                                                 title:
-                                                    "Fasting Blood Suger Report Downloaded.",
+                                                    "Blood Sugar Report Downloaded.",
                                               ),
                                             ),
                                             child: Pinned.fromSize(
@@ -1193,7 +1193,7 @@ class ReportList extends StatelessWidget {
                                             onTap: () => showDialog(
                                               context: context,
                                               builder: (context) => AboutWidget(
-                                                title: "Fasting Blood Sugar Report deleted.",
+                                                title: "Blood Sugar Report Deleted.",
                                               ),
                                             ),
                                               child: Pinned.fromSize(
