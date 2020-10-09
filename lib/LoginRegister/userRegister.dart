@@ -4,6 +4,7 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/dashboard.dart';
+import 'package:hemashealth/widgets/alert_dialog2.dart';
 import '../constants.dart';
 
 class UserRegister extends StatelessWidget {
@@ -70,73 +71,81 @@ class UserRegister extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(35.0, 437.0, 280.0, 50.0),
-                          size: Size(350.0, 525.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinBottom: true,
-                          fixedHeight: true,
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                transition: LinkTransition.Fade,
-                                ease: Curves.easeOut,
-                                duration: 0.3,
-                                pageBuilder: () => Dashboard(),
-                              ),
-                            ],
-                            child: Stack(
-                              children: <Widget>[
-                                Pinned.fromSize(
-                                  bounds: Rect.fromLTWH(0.0, 0.0, 280.0, 50.0),
-                                  size: Size(280.0, 50.0),
-                                  pinLeft: true,
-                                  pinRight: true,
-                                  pinTop: true,
-                                  pinBottom: true,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(25.0),
-                                      gradient: LinearGradient(
-                                        begin: Alignment(0.88, -0.84),
-                                        end: Alignment(-0.69, 1.0),
-                                        colors: [
-                                          const Color(0xffefa405),
-                                          const Color(0xffff6000)
-                                        ],
-                                        stops: [0.0, 1.0],
-                                      ),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: const Color(0x33000000),
-                                          offset: Offset(0, 15),
-                                          blurRadius: 45,
+                        GestureDetector(
+                            onTap: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog2(
+                                  title2: "Your Account Created.",
+                                  press: () {
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(builder: (context) {
+                                        return Dashboard();
+                                      }),
+                                    );
+                                  },
+                                ),
+                              );
+                            },
+                            child: Pinned.fromSize(
+                              bounds: Rect.fromLTWH(35.0, 437.0, 280.0, 50.0),
+                              size: Size(350.0, 525.0),
+                              pinLeft: true,
+                              pinRight: true,
+                              pinBottom: true,
+                              fixedHeight: true,
+                              child: Stack(
+                                children: <Widget>[
+                                  Pinned.fromSize(
+                                    bounds: Rect.fromLTWH(0.0, 0.0, 280.0, 50.0),
+                                    size: Size(280.0, 50.0),
+                                    pinLeft: true,
+                                    pinRight: true,
+                                    pinTop: true,
+                                    pinBottom: true,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(25.0),
+                                        gradient: LinearGradient(
+                                          begin: Alignment(0.88, -0.84),
+                                          end: Alignment(-0.69, 1.0),
+                                          colors: [
+                                            const Color(0xffefa405),
+                                            const Color(0xffff6000)
+                                          ],
+                                          stops: [0.0, 1.0],
                                         ),
-                                      ],
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: const Color(0x33000000),
+                                            offset: Offset(0, 15),
+                                            blurRadius: 45,
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Pinned.fromSize(
-                                  bounds:
-                                      Rect.fromLTWH(109.0, 16.0, 62.0, 21.0),
-                                  size: Size(280.0, 50.0),
-                                  fixedWidth: true,
-                                  fixedHeight: true,
-                                  child: Text(
-                                    'Register',
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 15,
-                                      color: const Color(0xffffffff),
-                                      fontWeight: FontWeight.w500,
+                                  Pinned.fromSize(
+                                    bounds:
+                                    Rect.fromLTWH(109.0, 16.0, 62.0, 21.0),
+                                    size: Size(280.0, 50.0),
+                                    fixedWidth: true,
+                                    fixedHeight: true,
+                                    child: Text(
+                                      'Register',
+                                      style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 15,
+                                        color: const Color(0xffffffff),
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      textAlign: TextAlign.center,
                                     ),
-                                    textAlign: TextAlign.center,
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
                         ),
                         Pinned.fromSize(
                           bounds: Rect.fromLTWH(35.0, 385.0, 280.0, 33.0),
