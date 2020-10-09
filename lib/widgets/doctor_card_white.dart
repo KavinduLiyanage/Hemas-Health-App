@@ -37,7 +37,10 @@ class DoctorCardWhiteBox extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Spacer(),
-                  SvgPicture.asset(svgSrc),
+                  SvgPicture.asset(
+                    svgSrc,
+                    width: 33,
+                  ),
                   Spacer(),
                   Column(
                     children: <Widget>[

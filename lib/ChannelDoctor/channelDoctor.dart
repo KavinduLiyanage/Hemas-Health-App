@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/Drop_down_card.dart';
 import '../constants.dart';
-import 'doctorResult.dart';
+import 'doctorSearchResult.dart';
 
 void main() {
   runApp(MyApp());
@@ -41,7 +41,8 @@ class ChannelDoctor extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => DoctorResult()),
+                    MaterialPageRoute(
+                        builder: (context) => DoctorSearchResult()),
                   );
                 },
                 shape: RoundedRectangleBorder(

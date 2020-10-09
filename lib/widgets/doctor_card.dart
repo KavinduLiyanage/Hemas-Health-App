@@ -6,7 +6,8 @@ class DoctorCardBox extends StatelessWidget {
   final String svgSrc;
   final String name;
   final String hint;
-  const DoctorCardBox({Key key, this.svgSrc, this.name, this.hint})
+  final Function press;
+  const DoctorCardBox({Key key, this.svgSrc, this.name, this.hint, this.press})
       : super(key: key);
 
   @override
@@ -31,13 +32,16 @@ class DoctorCardBox extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            //onTap: press,
+            onTap: press,
             child: Padding(
               padding: const EdgeInsets.all(2.0),
               child: Row(
                 children: <Widget>[
                   Spacer(),
-                  SvgPicture.asset(svgSrc),
+                  SvgPicture.asset(
+                    svgSrc,
+                    width: 33,
+                  ),
                   Spacer(),
                   Column(
                     children: <Widget>[

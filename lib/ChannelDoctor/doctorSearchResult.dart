@@ -5,6 +5,7 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/doctor_card.dart';
 import 'package:hemashealth/widgets/doctor_card_white.dart';
 import '../constants.dart';
+import 'doctorInfo.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,12 +23,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
-      home: DoctorResult(),
+      home: DoctorSearchResult(),
     );
   }
 }
 
-class DoctorResult extends StatelessWidget {
+class DoctorSearchResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context)
@@ -183,27 +184,36 @@ class DoctorResult extends StatelessWidget {
                         crossAxisSpacing: 10,
                         children: <Widget>[
                           DoctorCardBox(
-                              svgSrc: "assets/icons/dashboard_Feedback.svg",
-                              name: "Dr. Sherley Abraham",
-                              hint: "General Physician"),
+                            svgSrc: "assets/icons/doc01.svg",
+                            name: "Dr. Sherley Abraham",
+                            hint: "General Physician",
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return SelectedDoctor();
+                                }),
+                              );
+                            },
+                          ),
                           DoctorCardWhiteBox(
-                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              svgSrc: "assets/icons/doc02.svg",
                               name: "Dr. Sherley Abraham",
                               hint: "General Physician"),
                           DoctorCardBox(
-                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              svgSrc: "assets/icons/doc03.svg",
                               name: "Dr. Sherley Abraham",
                               hint: "General Physician"),
                           DoctorCardWhiteBox(
-                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              svgSrc: "assets/icons/doc01.svg",
                               name: "Dr. Sherley Abraham",
                               hint: "General Physician"),
                           DoctorCardBox(
-                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              svgSrc: "assets/icons/doc02.svg",
                               name: "Dr. Sherley Abraham",
                               hint: "General Physician"),
                           DoctorCardWhiteBox(
-                              svgSrc: "assets/icons/dashboard_Feedback.svg",
+                              svgSrc: "assets/icons/doc03.svg",
                               name: "Dr. Sherley Abraham",
                               hint: "General Physician"),
                         ],
