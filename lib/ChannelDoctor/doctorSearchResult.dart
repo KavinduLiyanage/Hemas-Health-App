@@ -234,7 +234,7 @@ class DoctorSearchResult extends StatelessWidget {
                         crossAxisSpacing: 10,
                         children: <Widget>[
                           DoctorCardBox(
-                            svgSrc: "assets/icons/doc01.svg",
+                            svgSrc: "assets/images/doc03.png",
                             name: "Dr. Edwin Alvarez",
                             hint: "MBBS - Cardiologist",
                             press: () {
@@ -247,7 +247,7 @@ class DoctorSearchResult extends StatelessWidget {
                             },
                           ),
                           DoctorCardWhiteBox(
-                            svgSrc: "assets/icons/doc02.svg",
+                            svgSrc: "assets/images/doc02.png",
                             name: "Dr. Sherley Abraham",
                             hint: "General Physician",
                             press: () {
@@ -260,7 +260,7 @@ class DoctorSearchResult extends StatelessWidget {
                             },
                           ),
                           DoctorCardBox(
-                            svgSrc: "assets/icons/doc03.svg",
+                            svgSrc: "assets/images/doc01.png",
                             name: "Dr. Stacey AkersMD",
                             hint: "Dermitologist",
                             press: () {
@@ -273,7 +273,7 @@ class DoctorSearchResult extends StatelessWidget {
                             },
                           ),
                           DoctorCardWhiteBox(
-                            svgSrc: "assets/icons/doc01.svg",
+                            svgSrc: "assets/images/doc04.png",
                             name: "Dr. Louisiana Johns",
                             hint: "Obstetrics & Gynecology",
                             press: () {
@@ -286,7 +286,7 @@ class DoctorSearchResult extends StatelessWidget {
                             },
                           ),
                           DoctorCardBox(
-                            svgSrc: "assets/icons/doc02.svg",
+                            svgSrc: "assets/images/doc05.png",
                             name: "Dr. Turgut Alagoz",
                             hint: "Eye Surgeon",
                             press: () {
@@ -299,9 +299,9 @@ class DoctorSearchResult extends StatelessWidget {
                             },
                           ),
                           DoctorCardWhiteBox(
-                            svgSrc: "assets/icons/doc03.svg",
-                            name: "Dr. Mariam Al HilliM",
-                            hint: "General Obstetrics & Gynecology",
+                            svgSrc: "assets/images/doc06.png",
+                            name: "Dr. Mariam Alagoz",
+                            hint: "General Obstetrics",
                             press: () {
                               Navigator.push(
                                 context,

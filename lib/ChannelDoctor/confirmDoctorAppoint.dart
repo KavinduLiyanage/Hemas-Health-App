@@ -165,9 +165,12 @@ class ConfirmDoctor extends StatelessWidget {
                             child: Row(
                               children: <Widget>[
                                 Spacer(),
-                                SvgPicture.asset(
-                                  "assets/icons/doc01.svg",
-                                  width: 33,
+                                new Container(
+                                  child: new Image.asset(
+                                    "assets/images/doc06.png",
+                                    height: 45.0,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                                 Spacer(),
                                 Column(

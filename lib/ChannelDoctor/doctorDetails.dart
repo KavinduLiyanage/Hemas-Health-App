@@ -626,7 +626,7 @@ class DoctorDetails extends StatelessWidget {
                                 fixedHeight: true,
                                 child: Container(
                                   child: DropDownCard(
-                                      hint: "Select Hospital",
+                                      hint: "Hemas - Thalawathugoda",
                                       list: [
                                         'Hemas - Thalawathugoda',
                                         'Hemas - Wattala'

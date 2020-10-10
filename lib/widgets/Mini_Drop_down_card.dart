@@ -31,10 +31,9 @@ class MiniDropDownCard extends StatelessWidget {
             items: list.map((value) {
               return new DropdownMenuItem<String>(
                 value: value,
-                child: new Text(value,
-                  style: TextStyle(
-                      color: kActiveIconColor
-                  ),
+                child: new Text(
+                  value,
+                  style: TextStyle(color: kActiveIconColor),
                 ),
               );
             }).toList(),

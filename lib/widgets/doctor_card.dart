@@ -38,9 +38,12 @@ class DoctorCardBox extends StatelessWidget {
               child: Row(
                 children: <Widget>[
                   Spacer(),
-                  SvgPicture.asset(
-                    svgSrc,
-                    width: 33,
+                  new Container(
+                    child: new Image.asset(
+                      svgSrc,
+                      height: 45.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   Spacer(),
                   Column(

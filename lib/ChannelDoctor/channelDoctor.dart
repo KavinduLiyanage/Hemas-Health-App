@@ -161,7 +161,7 @@ class ChannelDoctor extends StatelessWidget {
                             'General Physician',
                             'Eye Surgeon',
                             'Dermitologist',
-                            'General Obstetrics & Gynecology',
+                            'General Obstetrics',
                             'Cardiologist',
                             'Obstetrics & Gynecology'
                           ]),
