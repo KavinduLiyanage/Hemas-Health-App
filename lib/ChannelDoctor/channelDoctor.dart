@@ -149,18 +149,59 @@ class ChannelDoctor extends StatelessWidget {
                         crossAxisSpacing: 10,
                         mainAxisSpacing: 25,
                         children: <Widget>[
-                          DropDownCard(
-                              hint: "Select Doctor",
-                              list: ['A', 'B', 'C', 'D']),
-                          DropDownCard(
-                              hint: "Select Speciality",
-                              list: ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D']),
-                          DropDownCard(
-                              hint: "Select Hospital",
-                              list: ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D']),
-                          DropDownCard(
-                              hint: "Select Date",
-                              list: ['A', 'B', 'C', 'D', 'A', 'B', 'C', 'D']),
+                          DropDownCard(hint: "Select Doctor", list: [
+                            'Dr. Sherley Abraham',
+                            'Dr. Turgut Alagoz',
+                            'Dr. Stacey Akersmd',
+                            'Dr. Mariam Al Hillim',
+                            'Dr. Edwin Alvarez',
+                            'Dr. Louisiana Johns'
+                          ]),
+                          DropDownCard(hint: "Select Speciality", list: [
+                            'General Physician',
+                            'Eye Surgeon',
+                            'Dermitologist',
+                            'General Obstetrics & Gynecology',
+                            'Cardiologist',
+                            'Obstetrics & Gynecology'
+                          ]),
+                          DropDownCard(hint: "Select Hospital", list: [
+                            'Hemas - Thalawathugoda',
+                            'Hemas - Wattala'
+                          ]),
+                          DropDownCard(hint: "Select Date", list: [
+                            '01',
+                            '02',
+                            '03',
+                            '04',
+                            '05',
+                            '06',
+                            '07',
+                            '08',
+                            '09',
+                            '10',
+                            '11',
+                            '12',
+                            '13',
+                            '14',
+                            '15',
+                            '16',
+                            '17',
+                            '18',
+                            '19',
+                            '20',
+                            '21',
+                            '22',
+                            '23',
+                            '24',
+                            '25',
+                            '26',
+                            '27',
+                            '28',
+                            '29',
+                            '30',
+                            '31'
+                          ]),
                         ],
                       ),
                     ),

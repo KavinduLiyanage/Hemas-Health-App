@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card.dart';
+import 'ChannelDoctor/confirmDoctorAppoint.dart';
 import 'ChannelDoctor/doctorDetails.dart';
 import 'ContactUs/contactUs.dart';
 import 'ChannelDoctor/channelDoctor.dart';
@@ -51,18 +52,16 @@ class Dashboard extends StatelessWidget {
                           borderRadius: BorderRadius.all(
                               Radius.elliptical(9999.0, 9999.0)),
                           image: DecorationImage(
-                            image: const AssetImage(
-                                'assets/images/profile5.jpg'),
+                            image:
+                                const AssetImage('assets/images/profile5.jpg'),
                             fit: BoxFit.cover,
                           ),
                           border: Border.all(
                               width: 1.0, color: const Color(0xffffffff)),
-                        )
-                    ),
-                    Text("Ridmi Ekanayaka",
-                      style: TextStyle(
-                          color: Colors.white, fontSize: 20
-                      ),
+                        )),
+                    Text(
+                      "Ridmi Ekanayaka",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ],
                 ),
@@ -88,7 +87,8 @@ class Dashboard extends StatelessWidget {
                 title: Text('Profile'),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => UserProfile()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => UserProfile()));
                 },
               ),
               ListTile(
@@ -96,7 +96,8 @@ class Dashboard extends StatelessWidget {
                 title: Text('Edit Profile'),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => UserEdit()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => UserEdit()));
                 },
               ),
               ListTile(
@@ -104,7 +105,8 @@ class Dashboard extends StatelessWidget {
                 title: Text('Feedback'),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => UserFeedback()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => UserFeedback()));
                 },
               ),
               ListTile(
@@ -112,7 +114,8 @@ class Dashboard extends StatelessWidget {
                 title: Text('Contact us'),
                 onTap: () {
                   Navigator.pop(context);
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => ContactUs()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => ContactUs()));
                 },
               ),
             ],
@@ -206,17 +209,16 @@ class Dashboard extends StatelessWidget {
                             title: "Order Medicine",
                             svgSrc: "assets/icons/dashboard_OrderMedicine2.svg",
                             press: () {
-                              if(orderPlaced==1) {
+                              if (orderPlaced == 1) {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                      return OrderMedicineNew();
-                                    }));
-                              }
-                              else {
+                                  return OrderMedicineNew();
+                                }));
+                              } else {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                      return OrderMedicine();
-                                    }));
+                                  return OrderMedicine();
+                                }));
                               }
                             },
                           ),
@@ -224,17 +226,16 @@ class Dashboard extends StatelessWidget {
                             title: "Lab Reports",
                             svgSrc: "assets/icons/dashboard_LabReport.svg",
                             press: () {
-                              if(memberAdded==1) {
+                              if (memberAdded == 1) {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                      return MembersNew();
-                                    }));
-                              }
-                              else {
+                                  return MembersNew();
+                                }));
+                              } else {
                                 Navigator.push(context,
                                     MaterialPageRoute(builder: (context) {
-                                      return MembersCurrent();
-                                    }));
+                                  return MembersCurrent();
+                                }));
                               }
                             },
                           ),
@@ -244,8 +245,8 @@ class Dashboard extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                    return UserFeedback();
-                                  }));
+                                return UserFeedback();
+                              }));
                             },
                           ),
                           CategoryCard(
@@ -254,8 +255,8 @@ class Dashboard extends StatelessWidget {
                             press: () {
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
-                                    return DoctorDetails();
-                                  }));
+                                return ConfirmDoctor();
+                              }));
                             },
                           ),
                           CategoryCard(

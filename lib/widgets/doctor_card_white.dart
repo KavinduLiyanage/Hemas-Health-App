@@ -6,7 +6,9 @@ class DoctorCardWhiteBox extends StatelessWidget {
   final String svgSrc;
   final String name;
   final String hint;
-  const DoctorCardWhiteBox({Key key, this.svgSrc, this.name, this.hint})
+  final Function press;
+  const DoctorCardWhiteBox(
+      {Key key, this.svgSrc, this.name, this.hint, this.press})
       : super(key: key);
 
   @override
@@ -31,7 +33,7 @@ class DoctorCardWhiteBox extends StatelessWidget {
         child: Material(
           color: Colors.transparent,
           child: InkWell(
-            //onTap: press,
+            onTap: press,
             child: Padding(
               padding: const EdgeInsets.all(2.0),
               child: Row(

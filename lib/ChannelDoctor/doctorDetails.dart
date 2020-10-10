@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'package:hemashealth/ContactUs/contactUs.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hemashealth/widgets/Drop_down_card.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 
 import '../constants.dart';
+import 'confirmDoctorAppoint.dart';
 
 class DoctorDetails extends StatelessWidget {
   DoctorDetails({
@@ -13,8 +14,7 @@ class DoctorDetails extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context)
-        .size;
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       bottomNavigationBar: BottomNavBar(),
@@ -26,7 +26,7 @@ class DoctorDetails extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .display1
-              .copyWith(fontWeight: FontWeight.w500,  fontSize: 20),
+              .copyWith(fontWeight: FontWeight.w500, fontSize: 20),
         ),
         backgroundColor: Color(0x44000000),
         elevation: 0,
@@ -44,8 +44,7 @@ class DoctorDetails extends StatelessWidget {
                   colors: [
                     kBackgroundColor1,
                     kBackgroundColor2,
-                  ]
-              ),
+                  ]),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(26),
                 bottomRight: Radius.circular(26),
@@ -178,7 +177,7 @@ class DoctorDetails extends StatelessWidget {
                                 transition: LinkTransition.Fade,
                                 ease: Curves.easeOut,
                                 duration: 0.3,
-                                pageBuilder: () => ContactUs(),
+                                pageBuilder: () => ConfirmDoctor(),
                               ),
                             ],
                             child: Stack(
@@ -267,7 +266,7 @@ class DoctorDetails extends StatelessWidget {
                                 transition: LinkTransition.Fade,
                                 ease: Curves.easeOut,
                                 duration: 0.3,
-                                pageBuilder: () => ContactUs(),
+                                pageBuilder: () => ConfirmDoctor(),
                               ),
                             ],
                             child: Stack(
@@ -355,7 +354,7 @@ class DoctorDetails extends StatelessWidget {
                                 transition: LinkTransition.Fade,
                                 ease: Curves.easeOut,
                                 duration: 0.3,
-                                pageBuilder: () => ContactUs(),
+                                pageBuilder: () => ConfirmDoctor(),
                               ),
                             ],
                             child: Stack(
@@ -443,7 +442,7 @@ class DoctorDetails extends StatelessWidget {
                                 transition: LinkTransition.Fade,
                                 ease: Curves.easeOut,
                                 duration: 0.3,
-                                pageBuilder: () => ContactUs(),
+                                pageBuilder: () => ConfirmDoctor(),
                               ),
                             ],
                             child: Stack(
@@ -531,7 +530,7 @@ class DoctorDetails extends StatelessWidget {
                                 transition: LinkTransition.Fade,
                                 ease: Curves.easeOut,
                                 duration: 0.3,
-                                pageBuilder: () => ContactUs(),
+                                pageBuilder: () => ConfirmDoctor(),
                               ),
                             ],
                             child: Stack(
@@ -626,43 +625,12 @@ class DoctorDetails extends StatelessWidget {
                                 pinBottom: true,
                                 fixedHeight: true,
                                 child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(4.0),
-                                    color: const Color(0xffffffff),
-                                    border: Border.all(
-                                        width: 1.0,
-                                        color: const Color(0xffdededf)),
-                                  ),
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(17.0, 31.0, 264.0, 20.0),
-                                size: Size(352.0, 61.0),
-                                pinLeft: true,
-                                fixedWidth: true,
-                                fixedHeight: true,
-                                child: Text(
-                                  'Hemas Hospital - Thalawathugoda     ',
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 14,
-                                    color: const Color(0xffb5b5b5),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(324.0, 40.8, 8.3, 4.7),
-                                size: Size(352.0, 61.0),
-                                pinRight: true,
-                                fixedWidth: true,
-                                fixedHeight: true,
-                                child:
-                                    // Adobe XD layer: 'caret-down' (shape)
-                                    SvgPicture.string(
-                                  _svg_woxqp2,
-                                  allowDrawingOutsideViewBox: true,
-                                  fit: BoxFit.fill,
+                                  child: DropDownCard(
+                                      hint: "Select Hospital",
+                                      list: [
+                                        'Hemas - Thalawathugoda',
+                                        'Hemas - Wattala'
+                                      ]),
                                 ),
                               ),
                               Pinned.fromSize(
@@ -911,7 +879,7 @@ class DoctorDetails extends StatelessWidget {
                                 pinBottom: true,
                                 child:
                                     // Adobe XD layer: 'happyyoungdoc1' (shape)
-                                Container(
+                                    Container(
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.all(
                                         Radius.elliptical(9999.0, 9999.0)),
@@ -921,7 +889,8 @@ class DoctorDetails extends StatelessWidget {
                                       fit: BoxFit.cover,
                                     ),
                                     border: Border.all(
-                                        width: 4.0, color: const Color(0xffffffff)),
+                                        width: 4.0,
+                                        color: const Color(0xffffffff)),
                                   ),
                                 ),
                               ),

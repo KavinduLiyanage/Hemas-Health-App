@@ -5,6 +5,7 @@ import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/doctor_card.dart';
 import 'package:hemashealth/widgets/doctor_card_white.dart';
 import '../constants.dart';
+import 'doctorDetails.dart';
 import 'doctorInfo.dart';
 
 void main() {
@@ -116,11 +117,25 @@ class DoctorSearchResult extends StatelessWidget {
                               Expanded(
                                   child: MiniDropDownCard(
                                       hint: "Select Doctor",
-                                      list: ['A', 'B', 'C', 'D'])),
+                                      list: [
+                                    'Dr. Sherley Abraham',
+                                    'Dr. Turgut Alagoz',
+                                    'Dr. Stacey Akersmd',
+                                    'Dr. Mariam Al Hillim',
+                                    'Dr. Edwin Alvarez',
+                                    'Dr. Louisiana Johns'
+                                  ])),
                               Expanded(
                                   child: MiniDropDownCard(
-                                      hint: "Select Doctor",
-                                      list: ['A', 'B', 'C', 'D']))
+                                      hint: "Select Speciali",
+                                      list: [
+                                    'General Physician',
+                                    'Eye Surgeon',
+                                    'Dermitologist',
+                                    'General Obstetrics & Gynecology',
+                                    'Cardiologist',
+                                    'Obstetrics & Gynecology'
+                                  ]))
                             ]))
                           ]),
                           Row(children: <Widget>[
@@ -129,11 +144,46 @@ class DoctorSearchResult extends StatelessWidget {
                               Expanded(
                                   child: MiniDropDownCard(
                                       hint: "Select Hospital",
-                                      list: ['A', 'B', 'C', 'D'])),
+                                      list: [
+                                    'Hemas - Thalawathugoda',
+                                    'Hemas - Wattala'
+                                  ])),
                               Expanded(
                                   child: MiniDropDownCard(
                                       hint: "Select Date",
-                                      list: ['A', 'B', 'C', 'D']))
+                                      list: [
+                                    '01',
+                                    '02',
+                                    '03',
+                                    '04',
+                                    '05',
+                                    '06',
+                                    '07',
+                                    '08',
+                                    '09',
+                                    '10',
+                                    '11',
+                                    '12',
+                                    '13',
+                                    '14',
+                                    '15',
+                                    '16',
+                                    '17',
+                                    '18',
+                                    '19',
+                                    '20',
+                                    '21',
+                                    '22',
+                                    '23',
+                                    '24',
+                                    '25',
+                                    '26',
+                                    '27',
+                                    '28',
+                                    '29',
+                                    '30',
+                                    '31'
+                                  ]))
                             ]))
                           ])
                         ],
@@ -185,37 +235,82 @@ class DoctorSearchResult extends StatelessWidget {
                         children: <Widget>[
                           DoctorCardBox(
                             svgSrc: "assets/icons/doc01.svg",
+                            name: "Dr. Edwin Alvarez",
+                            hint: "MBBS - Cardiologist",
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return DoctorDetails();
+                                }),
+                              );
+                            },
+                          ),
+                          DoctorCardWhiteBox(
+                            svgSrc: "assets/icons/doc02.svg",
                             name: "Dr. Sherley Abraham",
                             hint: "General Physician",
                             press: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) {
-                                  return SelectedDoctor();
+                                  return DoctorDetails();
+                                }),
+                              );
+                            },
+                          ),
+                          DoctorCardBox(
+                            svgSrc: "assets/icons/doc03.svg",
+                            name: "Dr. Stacey AkersMD",
+                            hint: "Dermitologist",
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return DoctorDetails();
                                 }),
                               );
                             },
                           ),
                           DoctorCardWhiteBox(
-                              svgSrc: "assets/icons/doc02.svg",
-                              name: "Dr. Sherley Abraham",
-                              hint: "General Physician"),
+                            svgSrc: "assets/icons/doc01.svg",
+                            name: "Dr. Louisiana Johns",
+                            hint: "Obstetrics & Gynecology",
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return DoctorDetails();
+                                }),
+                              );
+                            },
+                          ),
                           DoctorCardBox(
-                              svgSrc: "assets/icons/doc03.svg",
-                              name: "Dr. Sherley Abraham",
-                              hint: "General Physician"),
+                            svgSrc: "assets/icons/doc02.svg",
+                            name: "Dr. Turgut Alagoz",
+                            hint: "Eye Surgeon",
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return DoctorDetails();
+                                }),
+                              );
+                            },
+                          ),
                           DoctorCardWhiteBox(
-                              svgSrc: "assets/icons/doc01.svg",
-                              name: "Dr. Sherley Abraham",
-                              hint: "General Physician"),
-                          DoctorCardBox(
-                              svgSrc: "assets/icons/doc02.svg",
-                              name: "Dr. Sherley Abraham",
-                              hint: "General Physician"),
-                          DoctorCardWhiteBox(
-                              svgSrc: "assets/icons/doc03.svg",
-                              name: "Dr. Sherley Abraham",
-                              hint: "General Physician"),
+                            svgSrc: "assets/icons/doc03.svg",
+                            name: "Dr. Mariam Al HilliM",
+                            hint: "General Obstetrics & Gynecology",
+                            press: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) {
+                                  return DoctorDetails();
+                                }),
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ),
