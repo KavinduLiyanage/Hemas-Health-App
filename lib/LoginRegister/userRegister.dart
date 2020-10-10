@@ -572,7 +572,7 @@ class UserRegister extends StatelessWidget {
                                           EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
                                           hintText: "Enter Nic",
                                         ),
-                                        keyboardType: TextInputType.number,
+                                        keyboardType: TextInputType.text,
                                         cursorColor: Colors.black12,
                                         inputFormatters: <TextInputFormatter>[
                                           LengthLimitingTextInputFormatter(12),

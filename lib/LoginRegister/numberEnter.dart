@@ -340,7 +340,7 @@ class NumberEnter extends StatelessWidget {
                                                               bounds:
                                                                   Rect.fromLTWH(
                                                                       77.0,
-                                                                      14.0,
+                                                                      15.0,
                                                                       150.0,
                                                                       20.0),
                                                               size: Size(
@@ -353,6 +353,9 @@ class NumberEnter extends StatelessWidget {
                                                                     fontSize: 16
                                                                 ),
                                                                 decoration: new InputDecoration(
+                                                                  contentPadding:
+                                                                  EdgeInsets.only(left: 0, bottom: 12, top: 0, right: 0),
+                                                                  hintText: "Enter number",
                                                                   focusedBorder: UnderlineInputBorder(
                                                                     borderSide: BorderSide(color: Colors.green),
                                                                   ), ),
