@@ -253,10 +253,7 @@ class Dashboard extends StatelessWidget {
                             title: "Video Calls",
                             svgSrc: "assets/icons/dashboard_VideoCalls.svg",
                             press: () {
-                              Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) {
-                                //return ConfirmDoctor();
-                              }));
+
                             },
                           ),
                           CategoryCard(

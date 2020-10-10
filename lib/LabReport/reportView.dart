@@ -96,7 +96,7 @@ class ReportView extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 86.0, 21.0),
+                          bounds: Rect.fromLTWH(0.0, 0.0, 250.0, 21.0),
                           size: Size(175.0, 93.0),
                           pinLeft: true,
                           pinTop: true,
@@ -115,14 +115,14 @@ class ReportView extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 20.0, 175.0, 83.0),
+                          bounds: Rect.fromLTWH(0.0, 20.0, 300.0, 90.0),
                           size: Size(175.0, 93.0),
                           pinLeft: true,
                           pinRight: true,
                           pinBottom: true,
                           fixedHeight: true,
                           child: Text(
-                            'Average Hemoglobin Ranges\nAdult Males - 14-18 gm/dl\nAdult Females - 12-16 gm/dl',
+                            'Average Hemoglobin Ranges\nAdult Males - 14-18 gm/dl\nAdult Females - 12-16 gm/dl ',
                             style: TextStyle(
                               fontFamily: 'Poppins',
                               fontSize: 13,
@@ -136,13 +136,13 @@ class ReportView extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 216.2, 129.0, 20.0),
+                    bounds: Rect.fromLTWH(0.0, 216.2, 250.0, 20.0),
                     size: Size(274.0, 534.2),
                     pinLeft: true,
                     fixedWidth: true,
                     fixedHeight: true,
                     child: Text(
-                      'Date : 01 . 05 . 2020',
+                      'Date : 01 . 05 . 2020 ',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 14,
@@ -170,24 +170,28 @@ class ReportView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(38.0, 0.0, 236.0, 28.0),
-                    size: Size(274.0, 534.2),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    fixedHeight: true,
-                    child: Text(
-                      'Reports - Haemoglobin',
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontSize: 20,
-                        color: const Color(0xff3f4079),
-                        fontWeight: FontWeight.w500,
+                  Container(
+                    alignment: Alignment.center,
+                    child: Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 0.0, 300.0, 28.0),
+                      size: Size(274.0, 534.2),
+                      pinLeft: true,
+                      pinRight: true,
+                      pinTop: true,
+                      fixedHeight: true,
+                      child: Text(
+                        'Reports - Haemoglobin',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontSize: 20,
+                          color: const Color(0xff3f4079),
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
+
                 ],
               ),
             ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hemashealth/LoginRegister/userProfile.dart';
+import 'package:hemashealth/dashboard.dart';
 
 import '../constants.dart';
 
@@ -26,19 +28,38 @@ class BottomNavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          Spacer(),
           BottomNavItem(
             title: "Home",
             svgScr: "assets/icons/bottom_nav_bar_home.svg",
             isActive: true,
+            press: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return Dashboard();
+                }),
+              );
+
+            },
           ),
-          BottomNavItem(
-            title: "Discover",
-            svgScr: "assets/icons/bottom_nav_bar_heart.svg",
-          ),
+          Spacer(),
+          Spacer(),
+          Spacer(),
           BottomNavItem(
             title: "Me",
             svgScr: "assets/icons/bottom_nav_bar_me.svg",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return UserProfile();
+                }),
+              );
+
+            },
           ),
+          Spacer(),
         ],
       ),
     );

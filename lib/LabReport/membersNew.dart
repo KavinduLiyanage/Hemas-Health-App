@@ -180,7 +180,7 @@ class MembersNew extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(92.0, 8.0, 113.0, 18.0),
+                                          Rect.fromLTWH(92.0, 8.0, 230.0, 18.0),
                                       size: Size(272.0, 65.3),
                                       pinTop: true,
                                       fixedWidth: true,
@@ -530,7 +530,7 @@ class MembersNew extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(93.0, 8.0, 97.0, 18.0),
+                                          Rect.fromLTWH(93.0, 8.0, 200.0, 18.0),
                                       size: Size(270.0, 65.0),
                                       pinTop: true,
                                       fixedWidth: true,

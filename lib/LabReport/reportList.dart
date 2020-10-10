@@ -157,7 +157,7 @@ class ReportList extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(52.0, 95.8, 274.0, 28.0),
+                          bounds: Rect.fromLTWH(52.0, 95.8, 300.0, 28.0),
                           size: Size(376.0, 602.0),
                           pinLeft: true,
                           pinRight: true,
@@ -220,7 +220,7 @@ class ReportList extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 14.0, 80.0, 18.0),
+                                          Rect.fromLTWH(0.0, 14.0, 200.0, 18.0),
                                       size: Size(288.0, 30.0),
                                       pinLeft: true,
                                       fixedWidth: true,
@@ -228,7 +228,7 @@ class ReportList extends StatelessWidget {
                                       child: Text(
                                         'Cholesterol',
                                         style: TextStyle(
-                                          fontFamily: 'Muli',
+                                          fontFamily: 'Poppins',
                                           fontSize: 14,
                                           color: const Color(0xff000000),
                                           letterSpacing: -0.224,
@@ -596,7 +596,7 @@ class ReportList extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 14.0, 88.0, 18.0),
+                                          Rect.fromLTWH(0.0, 14.0, 200.0, 18.0),
                                       size: Size(289.0, 30.0),
                                       pinLeft: true,
                                       fixedWidth: true,
@@ -604,7 +604,7 @@ class ReportList extends StatelessWidget {
                                       child: Text(
                                         'Haemoglobin',
                                         style: TextStyle(
-                                          fontFamily: 'Muli',
+                                          fontFamily: 'Poppins',
                                           fontSize: 14,
                                           color: const Color(0xff000000),
                                           letterSpacing: -0.224,
@@ -962,15 +962,15 @@ class ReportList extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 14.0, 131.0, 18.0),
+                                bounds: Rect.fromLTWH(0.0, 14.0, 200.0, 18.0),
                                 size: Size(291.0, 30.0),
                                 pinLeft: true,
                                 fixedWidth: true,
                                 fixedHeight: true,
                                 child: Text(
-                                  'Fasting Blood Sugar',
+                                  'Fasting Blood Sugars',
                                   style: TextStyle(
-                                    fontFamily: 'Muli',
+                                    fontFamily: 'Poppins',
                                     fontSize: 14,
                                     color: const Color(0xff000000),
                                     letterSpacing: -0.224,

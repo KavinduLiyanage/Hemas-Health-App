@@ -124,7 +124,7 @@ class MemberUpdate extends StatelessWidget {
               ,
             ),
             child: Container(
-              child: Text("Update Member Details",
+              child: Text("Update Member Details.",
                 style: TextStyle(fontWeight: FontWeight.bold,
                     fontSize: 18
                 ),
@@ -160,7 +160,7 @@ class MemberUpdate extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 4.0, 93.0, 21.0),
+                                bounds: Rect.fromLTWH(0.0, 4.0, 180.0, 21.0),
                                 size: Size(341.0, 30.0),
                                 pinLeft: true,
                                 pinTop: true,
@@ -214,7 +214,7 @@ class MemberUpdate extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 4.0, 49.0, 21.0),
+                                bounds: Rect.fromLTWH(0.0, 4.0, 100.0, 21.0),
                                 size: Size(339.0, 30.0),
                                 pinLeft: true,
                                 pinTop: true,
@@ -302,7 +302,7 @@ class MemberUpdate extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 4.0, 53.0, 21.0),
+                                bounds: Rect.fromLTWH(0.0, 4.0, 120.0, 21.0),
                                 size: Size(339.0, 30.0),
                                 pinLeft: true,
                                 pinTop: true,
@@ -390,7 +390,7 @@ class MemberUpdate extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 4.0, 30.0, 21.0),
+                                bounds: Rect.fromLTWH(0.0, 4.0, 90.0, 21.0),
                                 size: Size(339.0, 30.0),
                                 pinLeft: true,
                                 pinTop: true,
@@ -478,7 +478,7 @@ class MemberUpdate extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 56.0, 21.0),
+                                bounds: Rect.fromLTWH(0.0, 0.0, 120.0, 21.0),
                                 size: Size(339.0, 21.0),
                                 pinLeft: true,
                                 pinTop: true,
@@ -639,7 +639,7 @@ class MemberUpdate extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 4.0, 92.0, 21.0),
+                                bounds: Rect.fromLTWH(0.0, 4.0, 180.0, 21.0),
                                 size: Size(339.0, 30.0),
                                 pinLeft: true,
                                 pinTop: true,
@@ -728,7 +728,7 @@ class MemberUpdate extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 4.0, 45.0, 21.0),
+                                bounds: Rect.fromLTWH(0.0, 4.0, 100.0, 21.0),
                                 size: Size(339.0, 30.0),
                                 pinLeft: true,
                                 pinTop: true,
