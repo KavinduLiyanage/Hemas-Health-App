@@ -6,7 +6,6 @@ import 'package:hemashealth/widgets/doctor_card.dart';
 import 'package:hemashealth/widgets/doctor_card_white.dart';
 import '../constants.dart';
 import 'doctorDetails.dart';
-import 'doctorInfo.dart';
 
 void main() {
   runApp(MyApp());
@@ -104,7 +103,7 @@ class DoctorSearchResult extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 20, 10, 0),
+                      padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                       child: GridView.count(
                         crossAxisCount: 1,
                         childAspectRatio: 8,
@@ -227,7 +226,7 @@ class DoctorSearchResult extends StatelessWidget {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 130, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 135, 0, 0),
                       child: GridView.count(
                         crossAxisCount: 1,
                         childAspectRatio: 5.20,

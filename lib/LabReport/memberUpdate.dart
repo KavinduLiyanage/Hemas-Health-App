@@ -196,7 +196,7 @@ class MemberUpdate extends StatelessWidget {
                                       pinTop: true,
                                       pinBottom: true,
                                       child: MiniDropDownCard(
-                                          hint: "Select Group",
+                                          hint: "O+",
                                           list: ['A+', 'B-', 'O+', 'AB-'])
                                     ),
                                   ],

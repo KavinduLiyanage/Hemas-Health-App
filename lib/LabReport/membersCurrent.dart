@@ -8,6 +8,7 @@ import 'package:hemashealth/LabReport/reportList.dart';
 import 'package:hemashealth/widgets/alert_dialog.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import '../constants.dart';
+import '../dashboard.dart';
 import 'memberAdd.dart';
 
 class MembersCurrent extends StatelessWidget {
@@ -22,6 +23,16 @@ class MembersCurrent extends StatelessWidget {
       bottomNavigationBar: BottomNavBar(),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: IconButton(
+          tooltip: 'Previous choice',
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Dashboard()),
+            );
+          },
+        ),
         centerTitle: true,
         title: new Text(
           "Lab Reports",

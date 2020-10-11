@@ -7,9 +7,11 @@ import 'package:hemashealth/LabReport/memberUpdate.dart';
 import 'package:hemashealth/LabReport/reportList.dart';
 import 'package:hemashealth/dashboard.dart';
 import 'package:hemashealth/widgets/alert_dialog.dart';
+import 'package:hemashealth/widgets/alert_dialog2.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import '../constants.dart';
 import 'memberAdd.dart';
+import 'membersCurrent.dart';
 
 class MembersNew extends StatelessWidget {
   MembersNew({
@@ -416,8 +418,16 @@ class MembersNew extends StatelessWidget {
                                           new GestureDetector(
                                             onTap: () => showDialog(
                                               context: context,
-                                              builder: (context) => AboutWidget(
-                                                title: "Member Profile Deleted.",
+                                              builder: (context) => AlertDialog2(
+                                                title2: "Member Profile Deleted.",
+                                                press: () {
+                                                  Navigator.pushReplacement(
+                                                    context,
+                                                    MaterialPageRoute(builder: (context) {
+                                                      return MembersCurrent();
+                                                    }),
+                                                  );
+                                                },
                                               ),
                                             ),
                                               child: Pinned.fromSize(

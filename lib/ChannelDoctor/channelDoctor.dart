@@ -165,7 +165,7 @@ class ChannelDoctor extends StatelessWidget {
                             'Cardiologist',
                             'Obstetrics & Gynecology'
                           ]),
-                          DropDownCard(hint: "Select Hospital", list: [
+                          DropDownCard(hint: "Hemas - Thalawathugoda", list: [
                             'Hemas - Thalawathugoda',
                             'Hemas - Wattala'
                           ]),

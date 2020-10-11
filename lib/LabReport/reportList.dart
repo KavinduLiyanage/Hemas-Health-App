@@ -4,9 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/LabReport/reportUpdate.dart';
 import 'package:hemashealth/LabReport/reportView.dart';
 import 'package:hemashealth/widgets/alert_dialog.dart';
+import 'package:hemashealth/widgets/alert_dialog2.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 
 import '../constants.dart';
+import 'membersNew.dart';
 
 class ReportList extends StatelessWidget {
 
@@ -859,8 +861,16 @@ class ReportList extends StatelessWidget {
                                                 new GestureDetector(
                                                   onTap: () => showDialog(
                                                     context: context,
-                                                    builder: (context) => AboutWidget(
-                                                      title: "Haemoglobin Report Deleted.",
+                                                    builder: (context) => AlertDialog2(
+                                                      title2: "Haemoglobin Report Deleted.",
+                                                      press: () {
+                                                        Navigator.pushReplacement(
+                                                          context,
+                                                          MaterialPageRoute(builder: (context) {
+                                                            return MembersNew();
+                                                          }),
+                                                        );
+                                                      },
                                                     ),
                                                   ),
                                                     child: Pinned.fromSize(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hemashealth/welcome.dart';
 import 'LoginRegister/welcomeNew.dart';
 import 'constants.dart';
 

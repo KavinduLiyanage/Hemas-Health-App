@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hemashealth/dashboard.dart';
-import 'package:hemashealth/widgets/Drop_down_card.dart';
 import 'package:hemashealth/widgets/alert_dialog2.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
-import 'package:hemashealth/widgets/doctor_card.dart';
 import 'dart:io';
 import '../constants.dart';
 import 'doctorDetails.dart';
@@ -210,7 +207,7 @@ class ConfirmDoctor extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(10, 155, 10, 0),
+              padding: const EdgeInsets.fromLTRB(10, 165, 10, 0),
               child: GridView.count(
                 crossAxisCount: 1,
                 childAspectRatio: 8,
@@ -255,7 +252,7 @@ class ConfirmDoctor extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(33.0, 290.0),
+            offset: Offset(33.0, 320.0),
             child: SizedBox(
               width: 332.0,
               height: 218.0,
