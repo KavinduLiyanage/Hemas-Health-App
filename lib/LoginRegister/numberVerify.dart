@@ -20,7 +20,8 @@ class NumberVerify extends StatelessWidget {
         children: <Widget>[
           Container(
             // Here the height of the container is 45% of our total height
-            height: size.height,
+            height: 640.0,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -32,10 +33,10 @@ class NumberVerify extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(32.0, 105.0),
+            offset: Offset(28.0, 55.0),
             child: SizedBox(
-              width: 350.0,
-              height: 542.0,
+              width: 300.0,
+              height: 450.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
@@ -171,7 +172,7 @@ class NumberVerify extends StatelessWidget {
                                                                             style:
                                                                                 TextStyle(
                                                                               fontFamily: 'Poppins',
-                                                                              fontSize: 30,
+                                                                              fontSize: 25,
                                                                               color: const Color(0xffffffff),
                                                                               fontWeight: FontWeight.w600,
                                                                               height: 0.5333333333333333,
@@ -483,7 +484,7 @@ class NumberVerify extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(144.0, 483.0, 59.0, 20.0),
+                          bounds: Rect.fromLTWH(144.0, 493.0, 59.0, 20.0),
                           size: Size(350.0, 542.0),
                           pinBottom: true,
                           fixedWidth: true,
@@ -511,7 +512,7 @@ class NumberVerify extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(96.0, 446.0, 152.0, 17.0),
+                          bounds: Rect.fromLTWH(96.0, 466.0, 152.0, 17.0),
                           size: Size(350.0, 542.0),
                           pinBottom: true,
                           fixedWidth: true,

@@ -20,7 +20,8 @@ class WelcomeNew extends StatelessWidget {
         children: <Widget>[
           Container(
             // Here the height of the container is 45% of our total height
-            height: size.height,
+            height: 640.0,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -32,7 +33,7 @@ class WelcomeNew extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(91.8, 469.0),
+            offset: Offset(61.8, 360.0),
             child: SizedBox(
               width: 230.0,
               child: Text(
@@ -49,7 +50,7 @@ class WelcomeNew extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(120.0, 160.0),
+            offset: Offset(90.0, 100.0),
             child:
                 // Adobe XD layer: 'Logo (1)_Crop' (shape)
                 Container(
@@ -64,7 +65,7 @@ class WelcomeNew extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(57.0, 652.0),
+            offset: Offset(52.0, 500.0),
             child: GestureDetector(
               onTap: () => g?.call(),
               child: PageLink(
@@ -77,7 +78,7 @@ class WelcomeNew extends StatelessWidget {
                   ),
                 ],
                 child: SizedBox(
-                  width: 300.0,
+                  width: 250.0,
                   height: 50.0,
                   child: Stack(
                     children: <Widget>[

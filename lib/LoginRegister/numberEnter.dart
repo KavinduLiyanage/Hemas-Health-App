@@ -22,7 +22,8 @@ class NumberEnter extends StatelessWidget {
         children: <Widget>[
           Container(
             // Here the height of the container is 45% of our total height
-            height: size.height,
+            height: 640.0,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -34,10 +35,10 @@ class NumberEnter extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(32.0, 105.0),
+            offset: Offset(28.0, 55.0),
             child: SizedBox(
-              width: 350.0,
-              height: 526.0,
+              width: 300.0,
+              height: 450.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
@@ -173,7 +174,7 @@ class NumberEnter extends StatelessWidget {
                                                                             style:
                                                                                 TextStyle(
                                                                               fontFamily: 'Poppins',
-                                                                              fontSize: 30,
+                                                                              fontSize: 25,
                                                                               color: const Color(0xffffffff),
                                                                               fontWeight: FontWeight.w600,
                                                                               height: 0.5333333333333333,
@@ -204,7 +205,7 @@ class NumberEnter extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 92.0, 350.0, 434.0),
+                                bounds: Rect.fromLTWH(0.0, 82.0, 350.0, 434.0),
                                 size: Size(350.0, 526.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -237,7 +238,7 @@ class NumberEnter extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds: Rect.fromLTWH(
-                                          27.0, 240.0, 293.0, 141.0),
+                                          27.0, 250.0, 293.0, 141.0),
                                       size: Size(350.0, 434.0),
                                       pinLeft: true,
                                       pinRight: true,
@@ -339,18 +340,18 @@ class NumberEnter extends StatelessWidget {
                                                             Pinned.fromSize(
                                                               bounds:
                                                                   Rect.fromLTWH(
-                                                                      77.0,
-                                                                      15.0,
-                                                                      150.0,
+                                                                      87.0,
+                                                                      12.0,
+                                                                      120.0,
                                                                       20.0),
                                                               size: Size(
-                                                                  293.0, 46.0),
+                                                                  253.0, 46.0),
                                                               fixedWidth: true,
                                                               fixedHeight: true,
                                                               child: new TextField(
                                                                 style: TextStyle(
                                                                     letterSpacing: 2.0,
-                                                                    fontSize: 16
+                                                                    fontSize: 14
                                                                 ),
                                                                 decoration: new InputDecoration(
                                                                   contentPadding:
@@ -584,7 +585,7 @@ class NumberEnter extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds: Rect.fromLTWH(
-                                          57.0, 161.0, 234.0, 35.0),
+                                          57.0, 151.0, 234.0, 35.0),
                                       size: Size(350.0, 434.0),
                                       fixedWidth: true,
                                       fixedHeight: true,
@@ -600,7 +601,7 @@ class NumberEnter extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds: Rect.fromLTWH(
-                                          123.1, 65.5, 101.8, 73.7),
+                                          123.1, 45.5, 101.8, 73.7),
                                       size: Size(350.0, 434.0),
                                       fixedWidth: true,
                                       fixedHeight: true,
