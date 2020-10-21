@@ -40,8 +40,8 @@ class UserEdit extends StatelessWidget {
       floatingActionButton: Align(
           child: Container(
               margin: EdgeInsets.fromLTRB(0, 0,0, 10),
-              width: 280.0,
-              height: 50.0,
+              width: 250.0,
+              height: 45.0,
               child: RaisedButton(
                 onPressed: () => showDialog(
                   context: context,
@@ -84,14 +84,15 @@ class UserEdit extends StatelessWidget {
                 ),
               )
           ),
-          alignment: Alignment(0.25, 0.9)
+          alignment: Alignment(0.25, 0.95)
       ),
       //backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
           Container(
             // Here the height of the container is 35% of our total height
-            height: size.height * .35,
+            height: size.height * .3,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -109,9 +110,9 @@ class UserEdit extends StatelessWidget {
           ),
           Container(
             //padding: EdgeInsets.all(100),
-            margin: EdgeInsets.fromLTRB(20, 155, 20, 0),
-            height: size.height * .7,
-            width: size.height * contentAreaWidth,
+            margin: EdgeInsets.fromLTRB(20, 100, 20, 0),
+            height: 465,
+            width: 320,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
               color: Colors.white,
@@ -129,14 +130,14 @@ class UserEdit extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(32.0, 127.0),
+            offset: Offset(28.0, 50.0),
             child: SizedBox(
-              width: 350.0,
-              height: 618.0,
+              width: 300.0,
+              height: 558.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 113.0, 350.0, 525.0),
+                    bounds: Rect.fromLTWH(0.0, 93.0, 350.0, 525.0),
                     size: Size(350.0, 618.0),
                     pinLeft: true,
                     pinRight: true,
@@ -145,7 +146,7 @@ class UserEdit extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(36.0, 34.0, 279.0, 330.0),
+                          bounds: Rect.fromLTWH(26.0, 15.0, 299.0, 330.0),
                           size: Size(350.0, 525.0),
                           pinLeft: true,
                           pinRight: true,
@@ -154,7 +155,7 @@ class UserEdit extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(1.0, 165.0, 230.0, 44.0),
+                                bounds: Rect.fromLTWH(1.0, 155.0, 230.0, 44.0),
                                 size: Size(300.0, 218.0),
                                 pinLeft: true,
                                 pinBottom: true,
@@ -173,7 +174,7 @@ class UserEdit extends StatelessWidget {
                                       child: Text(
                                         'Gender',
                                         style: TextStyle(
-                                          fontFamily: 'Lato',
+                                          fontFamily: 'Poppins',
                                           fontSize: 14,
                                           fontWeight: FontWeight.w500,
                                           color: const Color(0xff000000),
@@ -304,7 +305,7 @@ class UserEdit extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 196.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 201.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -313,7 +314,7 @@ class UserEdit extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
+                                      Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinRight: true,
@@ -322,7 +323,7 @@ class UserEdit extends StatelessWidget {
                                       child: Container(
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(4.0),
+                                          BorderRadius.circular(4.0),
                                           color: const Color(0xffffffff),
                                           border: Border.all(
                                               width: 1.0,
@@ -339,36 +340,35 @@ class UserEdit extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child:
-                                          // Adobe XD layer: 'calendar-alt' (shape)
-                                          SvgPicture.string(
+                                      // Adobe XD layer: 'calendar-alt' (shape)
+                                      SvgPicture.string(
                                         _svg_mmppk5,
                                         allowDrawingOutsideViewBox: true,
                                         fit: BoxFit.fill,
                                       ),
                                     ),
                                     Pinned.fromSize(
-                                      bounds: Rect.fromLTWH(
-                                          20.0, 25.0, 300.0, 25.0),
+                                      bounds:
+                                      Rect.fromLTWH(20.0, 25.0, 300.0, 25.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinBottom: true,
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
-                                          controller: myControllerDate,
+                                        controller: myControllerDate,
                                         style: TextStyle(
-                                            letterSpacing: 1.0, fontSize: 16),
+                                            letterSpacing: 1.0,
+                                            fontSize: 15
+                                        ),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           enabledBorder: InputBorder.none,
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
-                                          contentPadding: EdgeInsets.only(
-                                              left: 10,
-                                              bottom: 10,
-                                              top: 0,
-                                              right: 10),
+                                          contentPadding:
+                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
                                           hintText: "Select Date",
                                         ),
                                         keyboardType: TextInputType.datetime,
@@ -378,7 +378,7 @@ class UserEdit extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 0.0, 100.0, 17.0),
+                                      Rect.fromLTWH(0.0, 0.0, 100.0, 17.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinTop: true,
@@ -399,7 +399,7 @@ class UserEdit extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 114.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 134.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -408,7 +408,7 @@ class UserEdit extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
+                                      Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinRight: true,
@@ -417,7 +417,7 @@ class UserEdit extends StatelessWidget {
                                       child: Container(
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(4.0),
+                                          BorderRadius.circular(4.0),
                                           color: const Color(0xffffffff),
                                           border: Border.all(
                                               width: 1.0,
@@ -426,39 +426,37 @@ class UserEdit extends StatelessWidget {
                                       ),
                                     ),
                                     Pinned.fromSize(
-                                      bounds: Rect.fromLTWH(
-                                          20.0, 25.0, 300.0, 25.0),
+                                      bounds:
+                                      Rect.fromLTWH(20.0, 25.0, 300.0, 25.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinBottom: true,
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
-                                          controller: myControllerEmail,
+                                        controller: myControllerEmail,
                                         style: TextStyle(
-                                            letterSpacing: 1.0, fontSize: 16),
+                                            letterSpacing: 1.0,
+                                            fontSize: 15
+                                        ),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           enabledBorder: InputBorder.none,
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
-                                          contentPadding: EdgeInsets.only(
-                                              left: 10,
-                                              bottom: 10,
-                                              top: 0,
-                                              right: 10),
+                                          contentPadding:
+                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
                                           hintText: "Enter Email",
                                         ),
-                                        keyboardType:
-                                            TextInputType.emailAddress,
+                                        keyboardType: TextInputType.emailAddress,
                                         cursorColor: Colors.black12,
                                         // Only numbers can be entered
                                       ),
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 0.0, 50.0, 17.0),
+                                      Rect.fromLTWH(0.0, 0.0, 50.0, 17.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinTop: true,
@@ -479,7 +477,7 @@ class UserEdit extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 32.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 67.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -488,7 +486,7 @@ class UserEdit extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
+                                      Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinRight: true,
@@ -497,7 +495,7 @@ class UserEdit extends StatelessWidget {
                                       child: Container(
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(4.0),
+                                          BorderRadius.circular(4.0),
                                           color: const Color(0xffffffff),
                                           border: Border.all(
                                               width: 1.0,
@@ -506,31 +504,30 @@ class UserEdit extends StatelessWidget {
                                       ),
                                     ),
                                     Pinned.fromSize(
-                                      bounds: Rect.fromLTWH(
-                                          20.0, 25.0, 300.0, 25.0),
+                                      bounds:
+                                      Rect.fromLTWH(20.0, 25.0, 300.0, 25.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinBottom: true,
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
-                                          controller: myControllerNic,
+                                        controller: myControllerNic,
                                         style: TextStyle(
-                                            letterSpacing: 1.0, fontSize: 16),
+                                            letterSpacing: 1.0,
+                                            fontSize: 15
+                                        ),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           enabledBorder: InputBorder.none,
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
-                                          contentPadding: EdgeInsets.only(
-                                              left: 10,
-                                              bottom: 10,
-                                              top: 0,
-                                              right: 10),
+                                          contentPadding:
+                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
                                           hintText: "Enter Nic",
                                         ),
-                                        keyboardType: TextInputType.number,
+                                        keyboardType: TextInputType.text,
                                         cursorColor: Colors.black12,
                                         inputFormatters: <TextInputFormatter>[
                                           LengthLimitingTextInputFormatter(12),
@@ -540,7 +537,7 @@ class UserEdit extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 0.0, 50.0, 17.0),
+                                      Rect.fromLTWH(0.0, 0.0, 50.0, 17.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinTop: true,
@@ -561,7 +558,7 @@ class UserEdit extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, -50.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 0.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -571,7 +568,7 @@ class UserEdit extends StatelessWidget {
                                   children: <Widget>[
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
+                                      Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinRight: true,
@@ -580,7 +577,7 @@ class UserEdit extends StatelessWidget {
                                       child: Container(
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(4.0),
+                                          BorderRadius.circular(4.0),
                                           color: const Color(0xffffffff),
                                           border: Border.all(
                                               width: 1.0,
@@ -597,20 +594,19 @@ class UserEdit extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
-                                          controller: myControllerName,
+                                        controller: myControllerName,
                                         style: TextStyle(
-                                            letterSpacing: 1.0, fontSize: 16),
+                                            letterSpacing: 1.0,
+                                            fontSize: 15
+                                        ),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           enabledBorder: InputBorder.none,
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
-                                          contentPadding: EdgeInsets.only(
-                                              left: 10,
-                                              bottom: 10,
-                                              top: 0,
-                                              right: 10),
+                                          contentPadding:
+                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
                                           hintText: "Enter full name",
                                         ),
                                         keyboardType: TextInputType.text,
@@ -620,7 +616,7 @@ class UserEdit extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 0.0, 100.0, 17.0),
+                                      Rect.fromLTWH(0.0, 0.0, 100.0, 17.0),
                                       size: Size(279.0, 57.0),
                                       pinLeft: true,
                                       pinTop: true,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
-import 'package:adobe_xd/page_link.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/dashboard.dart';
@@ -19,11 +18,13 @@ class UserRegister extends StatelessWidget {
 
     return Scaffold(
       //backgroundColor: const Color(0xffffffff),
+      resizeToAvoidBottomPadding: false,
       body: Stack(
         children: <Widget>[
           Container(
             // Here the height of the container is 45% of our total height
-            height: size.height,
+            height: 640.0,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -35,10 +36,10 @@ class UserRegister extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(32.0, 127.0),
+            offset: Offset(28.0, 55.0),
             child: SizedBox(
-              width: 350.0,
-              height: 618.0,
+              width: 300.0,
+              height: 558.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
@@ -89,7 +90,7 @@ class UserRegister extends StatelessWidget {
                               );
                             },
                             child: Pinned.fromSize(
-                              bounds: Rect.fromLTWH(35.0, 437.0, 280.0, 50.0),
+                              bounds: Rect.fromLTWH(35.0, 447.0, 280.0, 50.0),
                               size: Size(350.0, 525.0),
                               pinLeft: true,
                               pinRight: true,
@@ -148,7 +149,7 @@ class UserRegister extends StatelessWidget {
                             ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(35.0, 385.0, 280.0, 33.0),
+                          bounds: Rect.fromLTWH(25.0, 390.0, 300.0, 43.0),
                           size: Size(350.0, 525.0),
                           pinLeft: true,
                           pinRight: true,
@@ -194,7 +195,7 @@ class UserRegister extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(36.0, 34.0, 279.0, 330.0),
+                          bounds: Rect.fromLTWH(26.0, 15.0, 299.0, 330.0),
                           size: Size(350.0, 525.0),
                           pinLeft: true,
                           pinRight: true,
@@ -203,7 +204,7 @@ class UserRegister extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(1.0, 175.0, 230.0, 44.0),
+                                bounds: Rect.fromLTWH(1.0, 155.0, 230.0, 44.0),
                                 size: Size(300.0, 218.0),
                                 pinLeft: true,
                                 pinBottom: true,
@@ -353,7 +354,7 @@ class UserRegister extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 216.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 201.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -406,7 +407,7 @@ class UserRegister extends StatelessWidget {
                                       child: TextField(
                                         style: TextStyle(
                                             letterSpacing: 1.0,
-                                            fontSize: 16
+                                            fontSize: 15
                                         ),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
@@ -446,7 +447,7 @@ class UserRegister extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 144.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 134.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -483,7 +484,7 @@ class UserRegister extends StatelessWidget {
                                       child: TextField(
                                         style: TextStyle(
                                             letterSpacing: 1.0,
-                                            fontSize: 16
+                                            fontSize: 15
                                         ),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
@@ -523,7 +524,7 @@ class UserRegister extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 72.0, 279.0, 57.0),
+                                bounds: Rect.fromLTWH(0.0, 67.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -560,7 +561,7 @@ class UserRegister extends StatelessWidget {
                                       child: TextField(
                                         style: TextStyle(
                                             letterSpacing: 1.0,
-                                            fontSize: 16
+                                            fontSize: 15
                                         ),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
@@ -641,7 +642,7 @@ class UserRegister extends StatelessWidget {
                                       child: TextField(
                                         style: TextStyle(
                                             letterSpacing: 1.0,
-                                            fontSize: 16
+                                            fontSize: 15
                                         ),
                                         decoration: new InputDecoration(
                                           border: InputBorder.none,
@@ -687,7 +688,7 @@ class UserRegister extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(48.0, 0.0, 254.0, 61.0),
+                    bounds: Rect.fromLTWH(48.0, 10.0, 254.0, 61.0),
                     size: Size(350.0, 618.0),
                     pinLeft: true,
                     pinRight: true,
@@ -695,7 +696,7 @@ class UserRegister extends StatelessWidget {
                     fixedHeight: true,
                     child:
                         // Adobe XD layer: 'content' (group)
-                        Stack(
+                    Stack(
                       children: <Widget>[
                         Pinned.fromSize(
                           bounds: Rect.fromLTWH(0.0, 0.0, 254.0, 37.0),
@@ -708,7 +709,7 @@ class UserRegister extends StatelessWidget {
                             'Register Account',
                             style: TextStyle(
                               fontFamily: 'Raleway',
-                              fontSize: 32,
+                              fontSize: 26,
                               color: const Color(0xffffffff),
                               letterSpacing: -0.32,
                               fontWeight: FontWeight.w600,
@@ -718,7 +719,7 @@ class UserRegister extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(56.0, 45.0, 162.0, 26.0),
+                          bounds: Rect.fromLTWH(56.0, 35.0, 162.0, 26.0),
                           size: Size(254.0, 61.0),
                           pinBottom: true,
                           fixedWidth: true,
@@ -727,7 +728,7 @@ class UserRegister extends StatelessWidget {
                             'Please fill the details below',
                             style: TextStyle(
                               fontFamily: 'Gibson',
-                              fontSize: 16,
+                              fontSize: 15,
                               color: const Color(0xd6ffffff),
                               height: 1.3333333333333333,
                               fontWeight: FontWeight.w600,

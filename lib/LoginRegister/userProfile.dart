@@ -50,14 +50,14 @@ class UserProfile extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(19.0, 123.0),
+            offset: Offset(20.0, 103.0),
             child: SizedBox(
-              width: 376.0,
+              width: 320.0,
               height: 602.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 254.6, 376.0, 347.9),
+                    bounds: Rect.fromLTWH(0.0, 194.6, 376.0, 310.9),
                     size: Size(376.0, 602.4),
                     pinLeft: true,
                     pinRight: true,
@@ -66,7 +66,7 @@ class UserProfile extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 376.0, 347.9),
+                          bounds: Rect.fromLTWH(0.0, 0.0, 376.0, 302.9),
                           size: Size(376.0, 347.9),
                           pinLeft: true,
                           pinRight: true,
@@ -87,7 +87,7 @@ class UserProfile extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(19.0, 24.4, 335.0, 260.0),
+                          bounds: Rect.fromLTWH(19.0, 15.0, 335.0, 260.0),
                           size: Size(376.0, 347.9),
                           pinLeft: true,
                           pinRight: true,
@@ -96,7 +96,7 @@ class UserProfile extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 210.0, 335.0, 50.0),
+                                bounds: Rect.fromLTWH(0.0, 180.0, 335.0, 42.0),
                                 size: Size(335.0, 260.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -159,7 +159,7 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 140.0, 335.0, 50.0),
+                                bounds: Rect.fromLTWH(0.0, 120.0, 335.0, 42.0),
                                 size: Size(335.0, 260.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -221,7 +221,7 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 70.0, 335.0, 50.0),
+                                bounds: Rect.fromLTWH(0.0, 60.0, 335.0, 42.0),
                                 size: Size(335.0, 260.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -282,7 +282,7 @@ class UserProfile extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 335.0, 50.0),
+                                bounds: Rect.fromLTWH(0.0, 0.0, 335.0, 42.0),
                                 size: Size(335.0, 260.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -350,7 +350,7 @@ class UserProfile extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 376.0, 234.0),
+                    bounds: Rect.fromLTWH(0.0, 0.0, 376.0, 200.0),
                     size: Size(376.0, 602.4),
                     pinLeft: true,
                     pinRight: true,
@@ -359,7 +359,7 @@ class UserProfile extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 33.0, 376.0, 201.0),
+                          bounds: Rect.fromLTWH(0.0, 33.0, 376.0, 181.0),
                           size: Size(376.0, 234.0),
                           pinLeft: true,
                           pinRight: true,
@@ -380,7 +380,7 @@ class UserProfile extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(143.5, 195.0, 86.0, 21.0),
+                          bounds: Rect.fromLTWH(148.5, 185.0, 86.0, 21.0),
                           size: Size(376.0, 234.0),
                           pinBottom: true,
                           fixedWidth: true,
@@ -389,14 +389,14 @@ class UserProfile extends StatelessWidget {
                             '0774229289',
                             style: TextStyle(
                               fontFamily: 'Poppins',
-                              fontSize: 15,
+                              fontSize: 14,
                               color: const Color(0xff898a8f),
                             ),
                             textAlign: TextAlign.left,
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(108.6, 163.0, 159.0, 25.0),
+                          bounds: Rect.fromLTWH(130.6, 153.0, 159.0, 25.0),
                           size: Size(376.0, 234.0),
                           fixedWidth: true,
                           fixedHeight: true,
@@ -404,7 +404,7 @@ class UserProfile extends StatelessWidget {
                             'Ridmi Ekanayaka',
                             style: TextStyle(
                               fontFamily: 'Poppins',
-                              fontSize: 18,
+                              fontSize: 16,
                               color: const Color(0xff313450),
                               fontWeight: FontWeight.w600,
                             ),
@@ -412,7 +412,7 @@ class UserProfile extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(111.0, 0.0, 150.0, 150.0),
+                          bounds: Rect.fromLTWH(100.0, 0.0, 120.0, 120.0),
                           size: Size(376.0, 234.0),
                           pinLeft: true,
                           pinTop: true,
