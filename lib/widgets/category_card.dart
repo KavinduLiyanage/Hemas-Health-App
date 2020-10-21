@@ -50,7 +50,7 @@ class CategoryCard extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .title
-                        .copyWith(fontSize: 15),
+                        .copyWith(fontSize: 13),
                   )
                 ],
               ),

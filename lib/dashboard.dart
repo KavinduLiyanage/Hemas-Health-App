@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hemashealth/widgets/bottom_nav_bar.dart';
 import 'package:hemashealth/widgets/category_card.dart';
-import 'ChannelDoctor/confirmDoctorAppoint.dart';
-import 'ChannelDoctor/doctorDetails.dart';
 import 'ContactUs/contactUs.dart';
 import 'ChannelDoctor/channelDoctor.dart';
 import 'Feedback/feedback.dart';
@@ -143,9 +141,9 @@ class Dashboard extends StatelessWidget {
           ),
           Container(
             //padding: EdgeInsets.all(100),
-            margin: EdgeInsets.fromLTRB(15, 120, 15, 0),
-            height: size.height * contentAreaHeight,
-            width: size.height * contentAreaWidth,
+            margin: EdgeInsets.fromLTRB(20, 95, 20, 0),
+            height: 475,
+            width: 320,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
               color: Colors.white,
@@ -154,9 +152,9 @@ class Dashboard extends StatelessWidget {
             child: Container(
               child: Text(
                 "Quick Links",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
-              padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
+              padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
             ),
           ),
           SafeArea(
@@ -185,7 +183,7 @@ class Dashboard extends StatelessWidget {
 
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 85.0),
+                      padding: const EdgeInsets.fromLTRB(10, 45, 10, 0),
                       child: GridView.count(
                         crossAxisCount: 2,
                         childAspectRatio: 1,
@@ -193,7 +191,7 @@ class Dashboard extends StatelessWidget {
                         mainAxisSpacing: 10,
                         children: <Widget>[
                           CategoryCard(
-                            title: "Channel a Doctor",
+                            title: "Channel Doctor",
                             svgSrc:
                                 "assets/icons/dashboard_ChannelaDoctor2.svg",
                             press: () {

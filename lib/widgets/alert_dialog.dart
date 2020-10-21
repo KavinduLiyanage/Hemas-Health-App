@@ -27,7 +27,7 @@ class AboutWidget extends StatelessWidget {
               child: Text(title,
                 style: TextStyle(
                   color: kActiveIconColor,
-                  fontSize: 16,
+                  fontSize: 14,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -42,7 +42,7 @@ class AboutWidget extends StatelessWidget {
             alignment: Alignment.topLeft,
             margin: EdgeInsets.fromLTRB(0, 0,40, 25),
             width: 200.0,
-            height: 50.0,
+            height: 45.0,
             child: RaisedButton(
               onPressed: () {
                 Navigator.of(context).pop();

@@ -91,7 +91,8 @@ class UserEdit extends StatelessWidget {
         children: <Widget>[
           Container(
             // Here the height of the container is 35% of our total height
-            height: size.height * .35,
+            height: size.height * .3,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
