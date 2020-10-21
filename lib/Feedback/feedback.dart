@@ -35,8 +35,8 @@ class UserFeedback extends StatelessWidget {
       floatingActionButton: Align(
           child: Container(
               margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
-              width: 280.0,
-              height: 50.0,
+              width: 250.0,
+              height: 45.0,
               child: RaisedButton(
                 onPressed: () => showDialog(
                   context: context,
@@ -79,12 +79,19 @@ class UserFeedback extends StatelessWidget {
                   ),
                 ),
               )),
-          alignment: Alignment(0.25, 0.9)),
+          alignment: Alignment(0.25, 0.95)),
       body: Stack(
         children: <Widget>[
           Container(
+            // Here the height of the container is 45% of our total height
+            height: 640.0,
+            width: 360.0,
+            color: kBlueColor,
+          ),
+          Container(
             // Here the height of the container is 35% of our total height
             height: size.height * .35,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -101,9 +108,9 @@ class UserFeedback extends StatelessWidget {
           ),
           Container(
             //padding: EdgeInsets.all(100),
-            margin: EdgeInsets.fromLTRB(15, 120, 15, 0),
-            height: size.height * contentAreaHeight,
-            width: size.height * contentAreaWidth,
+            margin: EdgeInsets.fromLTRB(15, 100, 15, 0),
+            height: 465,
+            width: 330,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
               color: Colors.white,
@@ -111,11 +118,11 @@ class UserFeedback extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(58.0, 145.0),
+            offset: Offset(40.0, 115.0),
             child:
                 // Adobe XD layer: '1' (group)
                 SizedBox(
-              width: 300.0,
+              width: 280.0,
               height: 451.0,
               child: Stack(
                 children: <Widget>[
@@ -131,7 +138,7 @@ class UserFeedback extends StatelessWidget {
                         Stack(
                       children: <Widget>[
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(10.5, 429.0, 280.0, 32.0),
+                          bounds: Rect.fromLTWH(10.5, 344.0, 280.0, 32.0),
                           size: Size(300.0, 451.0),
                           pinLeft: true,
                           pinRight: true,
@@ -141,7 +148,7 @@ class UserFeedback extends StatelessWidget {
                             'Please call our support line on 0720-111-222 \nfor further assistance',
                             style: TextStyle(
                               fontFamily: 'Poppins',
-                              fontSize: 14,
+                              fontSize: 12,
                               color: const Color(0xff898a8f),
                               height: 1.25,
                             ),
@@ -149,7 +156,7 @@ class UserFeedback extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 350.0, 248.8, 64.0),
+                          bounds: Rect.fromLTWH(0.0, 270.0, 248.8, 64.0),
                           size: Size(300.0, 451.0),
                           pinLeft: true,
                           pinRight: true,
@@ -160,7 +167,7 @@ class UserFeedback extends StatelessWidget {
                               Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(50.0, 28.0, 182, 36.0),
+                                bounds: Rect.fromLTWH(50.0, 28.0, 202, 36.0),
                                 size: Size(248.8, 64.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -203,7 +210,7 @@ class UserFeedback extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 165.0, 227.0, 168.0),
+                          bounds: Rect.fromLTWH(0.0, 130.0, 227.0, 168.0),
                           size: Size(300.0, 451.0),
                           pinLeft: true,
                           fixedWidth: true,
@@ -213,7 +220,7 @@ class UserFeedback extends StatelessWidget {
                               Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(74.0, 29.0, 153.0, 139.0),
+                                bounds: Rect.fromLTWH(74.0, 24.0, 123.0, 109.0),
                                 size: Size(227.0, 168.0),
                                 pinRight: true,
                                 pinBottom: true,
@@ -226,7 +233,7 @@ class UserFeedback extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(141.0, 89.0, 20.0, 20.0),
+                                bounds: Rect.fromLTWH(127.0, 69.0, 20.0, 20.0),
                                 size: Size(227.0, 168.0),
                                 fixedWidth: true,
                                 fixedHeight: true,
@@ -274,7 +281,7 @@ class UserFeedback extends StatelessWidget {
                           ),
                         ),
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 300.0, 147.0),
+                          bounds: Rect.fromLTWH(0.0, 0.0, 300.0, 142.0),
                           size: Size(300.0, 451.0),
                           pinLeft: true,
                           pinRight: true,
@@ -303,7 +310,7 @@ class UserFeedback extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 27.0, 300.0, 120.0),
+                                bounds: Rect.fromLTWH(0.0, 27.0, 300.0, 100.0),
                                 size: Size(300.0, 147.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -322,7 +329,7 @@ class UserFeedback extends StatelessWidget {
                                       errorBorder: InputBorder.none,
                                       disabledBorder: InputBorder.none,
                                       contentPadding:
-                                      EdgeInsets.only(left: 11, bottom: 11, top: 11, right: 11),
+                                      EdgeInsets.only(left: 11, bottom: 11, top: 6, right: 11),
                                       hintText: "Enter here",
                                     ),
                                     keyboardType: TextInputType.multiline,
