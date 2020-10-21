@@ -355,6 +355,7 @@ class UserEdit extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                        controller: myControllerDate,
                                         style: TextStyle(
                                             letterSpacing: 1.0,
                                             fontSize: 15
@@ -432,6 +433,7 @@ class UserEdit extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                        controller: myControllerEmail,
                                         style: TextStyle(
                                             letterSpacing: 1.0,
                                             fontSize: 15
@@ -509,6 +511,7 @@ class UserEdit extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                        controller: myControllerNic,
                                         style: TextStyle(
                                             letterSpacing: 1.0,
                                             fontSize: 15
@@ -590,6 +593,7 @@ class UserEdit extends StatelessWidget {
                                       fixedWidth: true,
                                       fixedHeight: true,
                                       child: TextField(
+                                        controller: myControllerName,
                                         style: TextStyle(
                                             letterSpacing: 1.0,
                                             fontSize: 15
