@@ -17,6 +17,7 @@ class NumberEnter extends StatelessWidget {
     var size = MediaQuery.of(context)
         .size;
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[

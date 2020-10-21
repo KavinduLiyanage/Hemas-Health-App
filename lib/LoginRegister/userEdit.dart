@@ -84,7 +84,7 @@ class UserEdit extends StatelessWidget {
                 ),
               )
           ),
-          alignment: Alignment(0.25, 0.73)
+          alignment: Alignment(0.25, 0.95)
       ),
       //backgroundColor: const Color(0xffffffff),
       body: Stack(

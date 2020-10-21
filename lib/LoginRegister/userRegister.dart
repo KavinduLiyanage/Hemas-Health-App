@@ -18,6 +18,7 @@ class UserRegister extends StatelessWidget {
 
     return Scaffold(
       //backgroundColor: const Color(0xffffffff),
+      resizeToAvoidBottomPadding: false,
       body: Stack(
         children: <Widget>[
           Container(
