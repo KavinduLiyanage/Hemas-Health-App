@@ -35,8 +35,8 @@ class ChannelDoctor extends StatelessWidget {
       floatingActionButton: Align(
           child: Container(
               margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
-              width: 280.0,
-              height: 50.0,
+              width: 250.0,
+              height: 45.0,
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(
@@ -72,7 +72,7 @@ class ChannelDoctor extends StatelessWidget {
                   ),
                 ),
               )),
-          alignment: Alignment(0.25, 0.9)),
+          alignment: Alignment(0.25, 0.95)),
       bottomNavigationBar: BottomNavBar(),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -92,6 +92,7 @@ class ChannelDoctor extends StatelessWidget {
           Container(
             // Here the height of the container is 35% of our total height
             height: size.height * .35,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -109,8 +110,8 @@ class ChannelDoctor extends StatelessWidget {
           Container(
             //padding: EdgeInsets.all(100),
             margin: EdgeInsets.fromLTRB(15, 120, 15, 0),
-            height: size.height * contentAreaHeight,
-            width: size.height * contentAreaWidth,
+            height: 465,
+            width: 330,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
               color: Colors.white,

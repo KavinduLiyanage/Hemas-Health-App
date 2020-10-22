@@ -83,12 +83,6 @@ class UserFeedback extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
-            // Here the height of the container is 45% of our total height
-            height: 640.0,
-            width: 360.0,
-            color: kBlueColor,
-          ),
-          Container(
             // Here the height of the container is 35% of our total height
             height: size.height * .35,
             width: 360.0,
