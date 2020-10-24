@@ -118,7 +118,7 @@ class ReportList extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 32.0, 376.0, 570.0),
+                          bounds: Rect.fromLTWH(0.0, 32.0, 376.0, 600.0),
                           size: Size(376.0, 602.0),
                           pinLeft: true,
                           pinRight: true,
