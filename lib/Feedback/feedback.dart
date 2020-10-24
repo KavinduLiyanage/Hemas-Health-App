@@ -83,12 +83,6 @@ class UserFeedback extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Container(
-            // Here the height of the container is 45% of our total height
-            height: 640.0,
-            width: 360.0,
-            color: kBlueColor,
-          ),
-          Container(
             // Here the height of the container is 35% of our total height
             height: size.height * .35,
             width: 360.0,
@@ -199,7 +193,7 @@ class UserFeedback extends StatelessWidget {
                                   'Are you satisfy with our service?',
                                   style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 16,
+                                    fontSize: 15,
                                     color: const Color(0xff000000),
                                     fontWeight: FontWeight.w500,
                                   ),

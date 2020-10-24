@@ -33,7 +33,7 @@ class Dashboard extends StatelessWidget {
         elevation: 0,
       ),
       drawer: Container(
-        width: 250,
+        width: 230,
         child: Drawer(
           child: ListView(
             // Important: Remove any padding from the ListView.

@@ -35,6 +35,8 @@ class ContactUs extends StatelessWidget {
       ),
       backgroundColor: const Color(0xffffffff),
       body: Stack(
+
+
         children: <Widget>[
           Container(
             // Here the height of the container is 35% of our total height
@@ -55,10 +57,10 @@ class ContactUs extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(19.0, 109.0),
+            offset: Offset(10.0, 95.0),
             child: SizedBox(
-              width: 376.0,
-              height: 613.0,
+              width: 340.0,
+              height: 583.0,
               child: Stack(
                 children: <Widget>[
                   Pinned.fromSize(
@@ -436,179 +438,6 @@ class ContactUs extends StatelessWidget {
                                   fixedWidth: true,
                                   child: SvgPicture.string(
                                     _svg_rmff9w,
-                                    allowDrawingOutsideViewBox: true,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 503.0, 376.0, 50.0),
-                          size: Size(376.0, 613.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinBottom: true,
-                          fixedHeight: true,
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                transition: LinkTransition.Fade,
-                                ease: Curves.easeOut,
-                                duration: 0.3,
-                                pageBuilder: () => Dashboard(),
-                              ),
-                            ],
-                            child: Stack(
-                              children: <Widget>[
-                                Pinned.fromSize(
-                                  bounds: Rect.fromLTWH(0.0, 0.0, 376.0, 50.0),
-                                  size: Size(376.0, 50.0),
-                                  pinLeft: true,
-                                  pinRight: true,
-                                  pinTop: true,
-                                  pinBottom: true,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                      color: const Color(0xffffffff),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: const Color(0x29000000),
-                                          offset: Offset(0, 9),
-                                          blurRadius: 38,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Pinned.fromSize(
-                                  bounds:
-                                      Rect.fromLTWH(112.0, 13.4, 118.0, 23.0),
-                                  size: Size(376.0, 50.0),
-                                  fixedWidth: true,
-                                  fixedHeight: true,
-                                  child: Text(
-                                    '+94 117888888',
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 16,
-                                      color: const Color(0xfff78002),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ),
-                                Pinned.fromSize(
-                                  bounds: Rect.fromLTWH(82.5, 6.5, 1.0, 38.0),
-                                  size: Size(376.0, 50.0),
-                                  pinTop: true,
-                                  pinBottom: true,
-                                  fixedWidth: true,
-                                  child: SvgPicture.string(
-                                    _svg_rmff9w,
-                                    allowDrawingOutsideViewBox: true,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                Pinned.fromSize(
-                                  bounds: Rect.fromLTWH(28.0, 15.0, 22.2, 20.0),
-                                  size: Size(376.0, 50.0),
-                                  pinLeft: true,
-                                  fixedWidth: true,
-                                  fixedHeight: true,
-                                  child:
-                                      // Adobe XD layer: 'ic_print_24px' (shape)
-                                      SvgPicture.string(
-                                    _svg_hhl08s,
-                                    allowDrawingOutsideViewBox: true,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 563.0, 376.0, 50.0),
-                          size: Size(376.0, 613.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinBottom: true,
-                          fixedHeight: true,
-                          child: PageLink(
-                            links: [
-                              PageLinkInfo(
-                                transition: LinkTransition.Fade,
-                                ease: Curves.easeOut,
-                                duration: 0.3,
-                                pageBuilder: () => Dashboard(),
-                              ),
-                            ],
-                            child: Stack(
-                              children: <Widget>[
-                                Pinned.fromSize(
-                                  bounds: Rect.fromLTWH(0.0, 0.0, 376.0, 50.0),
-                                  size: Size(376.0, 50.0),
-                                  pinLeft: true,
-                                  pinRight: true,
-                                  pinTop: true,
-                                  pinBottom: true,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                      color: const Color(0xffffffff),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: const Color(0x29000000),
-                                          offset: Offset(0, 9),
-                                          blurRadius: 38,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Pinned.fromSize(
-                                  bounds:
-                                      Rect.fromLTWH(112.0, 13.4, 214.0, 23.0),
-                                  size: Size(376.0, 50.0),
-                                  pinRight: true,
-                                  fixedWidth: true,
-                                  fixedHeight: true,
-                                  child: Text(
-                                    'www.hemashospitals.com',
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 16,
-                                      color: const Color(0xfff78002),
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                    textAlign: TextAlign.left,
-                                  ),
-                                ),
-                                Pinned.fromSize(
-                                  bounds: Rect.fromLTWH(82.5, 6.5, 1.0, 38.0),
-                                  size: Size(376.0, 50.0),
-                                  pinTop: true,
-                                  pinBottom: true,
-                                  fixedWidth: true,
-                                  child: SvgPicture.string(
-                                    _svg_rmff9w,
-                                    allowDrawingOutsideViewBox: true,
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                Pinned.fromSize(
-                                  bounds: Rect.fromLTWH(28.0, 15.0, 22.0, 22.0),
-                                  size: Size(376.0, 50.0),
-                                  pinLeft: true,
-                                  fixedWidth: true,
-                                  fixedHeight: true,
-                                  child:
-                                      // Adobe XD layer: 'ic_language_24px' (shape)
-                                      SvgPicture.string(
-                                    _svg_y06ha0,
                                     allowDrawingOutsideViewBox: true,
                                     fit: BoxFit.fill,
                                   ),

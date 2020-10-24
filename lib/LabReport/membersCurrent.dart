@@ -48,8 +48,8 @@ class MembersCurrent extends StatelessWidget {
       floatingActionButton: Align(
           child: Container(
               margin: EdgeInsets.fromLTRB(0, 0,0, 10),
-              width: 280.0,
-              height: 50.0,
+              width: 250.0,
+              height: 45.0,
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(
@@ -86,7 +86,7 @@ class MembersCurrent extends StatelessWidget {
                 ),
               )
           ),
-          alignment: Alignment(0.25, 0.9)
+          alignment: Alignment(0.25, 0.95)
       ),
       resizeToAvoidBottomPadding: false,
       body: Stack(
@@ -94,6 +94,7 @@ class MembersCurrent extends StatelessWidget {
           Container(
             // Here the height of the container is 35% of our total height
             height: size.height * .35,
+            width: 360.0,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.topLeft,
@@ -112,8 +113,8 @@ class MembersCurrent extends StatelessWidget {
           Container(
             //padding: EdgeInsets.all(100),
             margin: EdgeInsets.fromLTRB(15, 120, 15, 0),
-            height: size.height * contentAreaHeight,
-            width: size.height * contentAreaWidth,
+            height: 465,
+            width: 330,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
               color: Colors.white,
@@ -130,9 +131,9 @@ class MembersCurrent extends StatelessWidget {
             ),
           ),
           Transform.translate(
-            offset: Offset(40.0, 175.0),
+            offset: Offset(30.0, 175.0),
             child: SizedBox(
-              width: 335.0,
+              width: 315.0,
               height: 295.0,
               child: Stack(
                 children: <Widget>[
@@ -155,7 +156,7 @@ class MembersCurrent extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 335.0, 100.0),
+                                bounds: Rect.fromLTWH(0.0, 0.0, 320.0, 100.0),
                                 size: Size(335.0, 100.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -201,7 +202,7 @@ class MembersCurrent extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(0.0, 4.0, 61.0, 61.0),
+                                          Rect.fromLTWH(-15.0, 4.0, 61.0, 61.0),
                                       size: Size(270.0, 65.0),
                                       pinLeft: true,
                                       pinTop: true,
@@ -513,7 +514,7 @@ class MembersCurrent extends StatelessWidget {
                           child: Stack(
                             children: <Widget>[
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 200.0, 40.0),
+                                bounds: Rect.fromLTWH(0.0, 0.0, 180.0, 40.0),
                                 size: Size(200.0, 40.0),
                                 pinLeft: true,
                                 pinRight: true,
@@ -539,7 +540,7 @@ class MembersCurrent extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(47.5, 12.4, 150.0, 16.0),
+                                          Rect.fromLTWH(72.5, 12.4, 150.0, 16.0),
                                       size: Size(200.0, 40.0),
                                       fixedWidth: true,
                                       fixedHeight: true,
@@ -592,7 +593,7 @@ class MembersCurrent extends StatelessWidget {
                     ),
                   ),
                   Pinned.fromSize(
-                    bounds: Rect.fromLTWH(215.0, 0.0, 120.0, 40.0),
+                    bounds: Rect.fromLTWH(215.0, 0.0, 100.0, 40.0),
                     size: Size(335.0, 295.0),
                     pinRight: true,
                     pinTop: true,
@@ -638,7 +639,7 @@ class MembersCurrent extends StatelessWidget {
                             'Search',
                             style: TextStyle(
                               fontFamily: 'Poppins',
-                              fontSize: 15,
+                              fontSize: 14,
                               color: const Color(0xffffffff),
                               fontWeight: FontWeight.w500,
                             ),
