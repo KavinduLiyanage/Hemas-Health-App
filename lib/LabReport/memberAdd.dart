@@ -256,7 +256,7 @@ class MemberAdd extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(42.8, 7.0, 200.0, 30.0),
+                                          Rect.fromLTWH(42.8, 0.0, 200.0, 20.0),
                                       size: Size(200.0, 30.0),
                                       fixedWidth: true,
                                       fixedHeight: true,
@@ -272,7 +272,7 @@ class MemberAdd extends StatelessWidget {
                                           errorBorder: InputBorder.none,
                                           disabledBorder: InputBorder.none,
                                           contentPadding:
-                                          EdgeInsets.only(left: 10, bottom: 11, top: -16, right: 5),
+                                          EdgeInsets.only(left: 10, bottom: 11, top: -6, right: 5),
                                           hintText: "Enter height(cm)",
                                         ),
                                         keyboardType: TextInputType.number,

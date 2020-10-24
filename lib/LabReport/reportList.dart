@@ -104,7 +104,7 @@ class ReportList extends StatelessWidget {
           Transform.translate(
             offset: Offset(19.0, 125.0),
             child: SizedBox(
-              width: 376.0,
+              width: 386.0,
               height: 602.0,
               child: Stack(
                 children: <Widget>[
@@ -118,7 +118,7 @@ class ReportList extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 32.0, 376.0, 600.0),
+                          bounds: Rect.fromLTWH(0.0, 32.0, 376.0, 610.0),
                           size: Size(376.0, 602.0),
                           pinLeft: true,
                           pinRight: true,
