@@ -193,7 +193,7 @@ class UserFeedback extends StatelessWidget {
                                   'Are you satisfy with our service?',
                                   style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    fontSize: 16,
+                                    fontSize: 15,
                                     color: const Color(0xff000000),
                                     fontWeight: FontWeight.w500,
                                   ),

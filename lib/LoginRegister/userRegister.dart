@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hemashealth/dashboard.dart';
 import 'package:hemashealth/widgets/alert_dialog2.dart';
 import '../constants.dart';
+import 'datePicker.dart';
 
 class UserRegister extends StatelessWidget {
 
@@ -353,99 +354,7 @@ class UserRegister extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 201.0, 279.0, 57.0),
-                                size: Size(279.0, 330.0),
-                                pinLeft: true,
-                                pinRight: true,
-                                fixedHeight: true,
-                                child: Stack(
-                                  children: <Widget>[
-                                    Pinned.fromSize(
-                                      bounds:
-                                          Rect.fromLTWH(0.0, 22.0, 279.0, 35.0),
-                                      size: Size(279.0, 57.0),
-                                      pinLeft: true,
-                                      pinRight: true,
-                                      pinBottom: true,
-                                      fixedHeight: true,
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(4.0),
-                                          color: const Color(0xffffffff),
-                                          border: Border.all(
-                                              width: 1.0,
-                                              color: const Color(0xff868686)),
-                                        ),
-                                      ),
-                                    ),
-                                    Pinned.fromSize(
-                                      bounds: Rect.fromLTWH(
-                                          249.0, 28.0, 20.0, 22.9),
-                                      size: Size(279.0, 57.0),
-                                      pinRight: true,
-                                      pinBottom: true,
-                                      fixedWidth: true,
-                                      fixedHeight: true,
-                                      child:
-                                          // Adobe XD layer: 'calendar-alt' (shape)
-                                          SvgPicture.string(
-                                        _svg_mmppk5,
-                                        allowDrawingOutsideViewBox: true,
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                    Pinned.fromSize(
-                                      bounds:
-                                          Rect.fromLTWH(20.0, 25.0, 300.0, 25.0),
-                                      size: Size(279.0, 57.0),
-                                      pinLeft: true,
-                                      pinBottom: true,
-                                      fixedWidth: true,
-                                      fixedHeight: true,
-                                      child: TextField(
-                                        style: TextStyle(
-                                            letterSpacing: 1.0,
-                                            fontSize: 15
-                                        ),
-                                        decoration: new InputDecoration(
-                                          border: InputBorder.none,
-                                          focusedBorder: InputBorder.none,
-                                          enabledBorder: InputBorder.none,
-                                          errorBorder: InputBorder.none,
-                                          disabledBorder: InputBorder.none,
-                                          contentPadding:
-                                          EdgeInsets.only(left: 10, bottom: 10, top: 0, right: 10),
-                                          hintText: "Select Date",
-                                        ),
-                                        keyboardType: TextInputType.datetime,
-                                        cursorColor: Colors.black12,
-                                        // Only numbers can be entered
-                                      ),
-                                    ),
-                                    Pinned.fromSize(
-                                      bounds:
-                                          Rect.fromLTWH(0.0, 0.0, 100.0, 17.0),
-                                      size: Size(279.0, 57.0),
-                                      pinLeft: true,
-                                      pinTop: true,
-                                      fixedWidth: true,
-                                      fixedHeight: true,
-                                      child: Text(
-                                        'Date of Birth',
-                                        style: TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w500,
-                                          color: const Color(0xff000000),
-                                        ),
-                                        textAlign: TextAlign.left,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
+                              MyHomePage(),
                               Pinned.fromSize(
                                 bounds: Rect.fromLTWH(0.0, 134.0, 279.0, 57.0),
                                 size: Size(279.0, 330.0),
