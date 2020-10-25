@@ -179,7 +179,7 @@ class MemberUpdate extends StatelessWidget {
                                 ),
                               ),
                               Pinned.fromSize(
-                                bounds: Rect.fromLTWH(181.0, 0.0, 150.0, 30.0),
+                                bounds: Rect.fromLTWH(186.0, 0.0, 150.0, 30.0),
                                 size: Size(341.0, 30.0),
                                 pinRight: true,
                                 pinTop: true,
@@ -262,7 +262,7 @@ class MemberUpdate extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(42.8, 7.0, 200.0, 30.0),
+                                          Rect.fromLTWH(42.8, 0.0, 200.0, 20.0),
                                       size: Size(200.0, 30.0),
                                       fixedWidth: true,
                                       fixedHeight: true,
@@ -350,7 +350,7 @@ class MemberUpdate extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(42.8, 5.0, 200.0, 20.0),
+                                          Rect.fromLTWH(42.8, 0.0, 200.0, 20.0),
                                       size: Size(200.0, 30.0),
                                       fixedWidth: true,
                                       fixedHeight: true,
@@ -438,7 +438,7 @@ class MemberUpdate extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(42.8, 5.0, 200.0, 20.0),
+                                          Rect.fromLTWH(42.8, 0.0, 200.0, 20.0),
                                       size: Size(150.0, 30.0),
                                       fixedWidth: true,
                                       fixedHeight: true,
@@ -687,7 +687,7 @@ class MemberUpdate extends StatelessWidget {
                                     ),
                                     Pinned.fromSize(
                                       bounds:
-                                          Rect.fromLTWH(42.8, 5.0, 200.0, 20.0),
+                                          Rect.fromLTWH(42.8, 0.0, 200.0, 20.0),
                                       size: Size(150.0, 30.0),
                                       fixedWidth: true,
                                       fixedHeight: true,
@@ -787,7 +787,7 @@ class MemberUpdate extends StatelessWidget {
                                           ),
                                           Pinned.fromSize(
                                             bounds: Rect.fromLTWH(
-                                                45.0, 5.0, 200.0, 20.0),
+                                                45.0, 0.0, 200.0, 20.0),
                                             size: Size(150.0, 30.0),
                                             fixedWidth: true,
                                             fixedHeight: true,
